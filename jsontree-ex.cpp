@@ -23,6 +23,26 @@ pt::ptree ptreeOfData(Data d) {
     return p;
 }
 
+
+/*
+ * Output on stdout:
+ * {
+ *     "count": "1",
+ *     "sum": "4",
+ *     "children": [
+ *         {
+ *             "count": "5",
+ *             "sum": "2",
+ *             "children": ""
+ *         },
+ *         {
+ *             "count": "10",
+ *             "sum": "4",
+ *             "children": ""
+ *         }
+ *     ]
+ * }
+ */
 int main() {
     std::cout << "running jsontree ex" << std::endl;
 
