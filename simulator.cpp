@@ -5,13 +5,17 @@
 #include <map>
 #include <set>
 #include <vector>
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>
 
+namespace pt = boost::property_tree;
 using namespace std;
 
 #include "tokenizer.h"
 #include "classinfo.h"
 #include "execution.h"
 #include "heap.h"
+#include "heap_json.h"
 
 class Object;
 class CCNode;
@@ -151,7 +155,7 @@ unsigned int count_live(ObjectSet & objects, unsigned int at_time)
 // ----------------------------------------------------------------------
 //   Read and process trace events
 
-void read_trace_file(FILE * f)
+void *read_trace_file(FILE * f)
 {
     Tokenizer t(f);
   
@@ -318,6 +322,13 @@ int main(int argc, char * argv[])
     read_trace_file(f);
     cout << "Done at time " << Exec.Now() << endl;
     Heap.end_of_program(Exec.Now());
+    pt::ptree heapPtree = Heap.toPtree();
+
+    std::fstream jsonS;
+    jsonS.open("object.json", std::fstream::out | std::fstream::trunc);
+    pt::write_json(jsonS, heapPtree);
     analyze();
+
+    jsonS.close();
 }
 

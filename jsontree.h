@@ -43,7 +43,8 @@ using PTreeFunc = std::function<boost::property_tree::ptree(D)>;
 
 template <class D>
 boost::property_tree::ptree ptreeOf(const JSONNode<D>& t,
-                                    PTreeFunc<D> writeData) {
+                                    PTreeFunc<D> writeData,
+                                    std::string childrenStr) {
     using boost::property_tree::ptree;
     using std::vector;
 
@@ -52,7 +53,7 @@ boost::property_tree::ptree ptreeOf(const JSONNode<D>& t,
         children.push_back(std::make_pair("", ptreeOf<D>(*c, writeData)));
     }
     ptree node = writeData(t.getData());
-    node.add_child("children", children);
+    node.add_child(childrenStr, children);
 
     return node;
 }

@@ -51,7 +51,7 @@ int main() {
     root->addChild(Node<Data>({10, 4}));
 
 
-    auto tree = ptreeOf<Data>(*root, ptreeOfData);
+    auto tree = ptreeOf<Data>(*root, ptreeOfData, "children");
 
     pt::write_json(std::cout, tree);
 }
