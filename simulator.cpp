@@ -322,11 +322,11 @@ int main(int argc, char * argv[])
     read_trace_file(f);
     cout << "Done at time " << Exec.Now() << endl;
     Heap.end_of_program(Exec.Now());
-    pt::ptree heapPtree = Heap.toPtree();
+    pt::ptree heap_pt = heapPtree(&Heap);
 
     std::fstream jsonS;
     jsonS.open("object.json", std::fstream::out | std::fstream::trunc);
-    pt::write_json(jsonS, heapPtree);
+    pt::write_json(jsonS, heap_pt);
     analyze();
 
     jsonS.close();

@@ -7,10 +7,7 @@
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
 
-class HeapState
-{
-public:
-    boost::property_tree::ptree toPtree();
-}
+boost::property_tree::ptree heapPtree(HeapState *hs);
+
 
 #endif

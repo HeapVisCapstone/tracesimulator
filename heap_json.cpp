@@ -18,7 +18,7 @@ static pt::ptree ptreeOfObject(Object *o)
     p.put("createTime", o->getCreateTime());
     p.put("getDeathTime", o->getDeathTime());
     
-    EdgeMap &edges = o->getFields();
+    const EdgeMap &edges = o->getFields();
     
     for (auto it = edges.begin(); it != edges.end(); ++it) {
         unsigned int ptrId = it->first;
@@ -35,12 +35,12 @@ static pt::ptree ptreeOfObject(Object *o)
     return p;
 }
 
-pt::ptree HeapState::toPtree()
+pt::ptree heapPtree(HeapState *hs)
 {
     pt::ptree p, objects;
-    for (auto it = m_objects.begin(); it != m_objects.end; ++it) {
+    for (auto it = hs->begin(); it != hs->end(); ++it) {
         Object *o = it->second;
-        objects.push_back(ptreeOfObject(o));
+        objects.push_back(std::make_pair("", ptreeOfObject(o)));
     }
     p.add_child("objects", objects);
     return p;
