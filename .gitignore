@@ -2,4 +2,5 @@
 simulator
 jsontree-ex
 ~*
-traces/*
+traces/
+!traces/README
