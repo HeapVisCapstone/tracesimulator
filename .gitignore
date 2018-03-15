@@ -1,5 +1,6 @@
 *.o
 simulator
+planar_discrete_dump
 jsontree-ex
 ~*
 traces/*

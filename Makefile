@@ -29,6 +29,9 @@ simulator: simulator.o execution.o heap.o classinfo.o tokenizer.o analyze.o heap
 jsontree-ex: jsontree-ex.cpp jsontree.h
 	$(CXX) $(FLAGS) -o $@ $<
 
+planar_discrete_dump: planar_discrete_dump.cpp rollup_tree.h
+	$(CXX) $(FLAGS) -o $@ $<
+
 simulator.o: simulator.cpp classinfo.h tokenizer.h
 	$(CXX) $(FLAGS)  -c -o $@ $<
 
