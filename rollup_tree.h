@@ -1,8 +1,9 @@
-#ifndef aggtree_h
-#define aggtree_h
+#ifndef rollup_tree_h
+#define rollup_tree_h
 
 #include <string>
 #include <map> 
+#include <set>
 #include <vector> 
 #include <assert.h>
 #include <functional>
@@ -10,16 +11,23 @@
 #include <iostream>
 
 
+class NameValidator {
+public:
+    static std::string fresh(std::string name);
+    static std::string fresh();
+
+};
+
 template <typename D>
 class RollupNode
 {
 public:
 // TODO: add aggregate from nodes functionality
     RollupNode(const std::string& n, D d) : 
-        id(n), data(d) { }
+        id(NameValidator::fresh(n)), data(d) { }
 
     RollupNode(D d) : 
-        id(""), data(d) { }
+        id(NameValidator::fresh()), data(d) { } // TODO: FIXME 
 
     void addChild(RollupNode<D>* node) {    
         children.push_back(node);
@@ -34,7 +42,6 @@ private:
     std::string id;
     std::vector<RollupNode<D>*> children;
     D data;
-
 };
 
 
@@ -99,4 +106,4 @@ boost::property_tree::ptree ptreeOf(const RollupNode<D>& node,
 }
 
 
-#endif // aggtree_h
+#endif // rollup_tree_h

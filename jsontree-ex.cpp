@@ -17,7 +17,7 @@ struct Data
 };
 
 pt::ptree ptreeOfData(Data d) {
-    pt::ptree p;
+pt::ptree p;
     p.put("count", d.count);
     p.put("sum",   d.sum);
     return p;

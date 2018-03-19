@@ -1,25 +1,10 @@
-
-# SOURCES = $(wildcard *.cpp)
-# HEADERS = $(wildcard *.h)
-
-# OBJECTS = $(SOURCES:%.cpp=%.o)
-PROGRAMS = simulator jsontree-ex
+PROGRAMS = simulator jsontree-ex planar_discrete_driver
 
 CXX := g++
 CXXFLAGS = -g -std=c++11
 
 LIBS =
 LDFLAGS = $(LIBS:%=-l%)
-
-# $(PROGRAM) : $(OBJECTS)
-# 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^
-
-# %.o : %.cpp $(HEADERS)
-# 	$(CXX) $(CXXFLAGS) -c -o $@ $<
-
-# .PHONY : clean
-# clean :
-# 	rm -f $(PROGRAM) $(OBJECTS)
 
 FLAGS=-O2 $(CXXFLAGS)
 
@@ -29,8 +14,14 @@ simulator: simulator.o execution.o heap.o classinfo.o tokenizer.o analyze.o heap
 jsontree-ex: jsontree-ex.cpp jsontree.h
 	$(CXX) $(FLAGS) -o $@ $<
 
-planar_discrete_dump: planar_discrete_dump.cpp rollup_tree.h
-	$(CXX) $(FLAGS) -o $@ $<
+planar_discrete_driver: planar_discrete_driver.cpp rollup_tree.o planar_tree_discrete.o
+	$(CXX) $(FLAGS) -o $@ $^
+
+planar_tree_discrete.o: planar_tree_discrete.cpp planar_tree_discrete.h
+	$(CXX) $(FLAGS)  -c -o $@ $<
+
+rollup_tree.o: rollup_tree.cpp rollup_tree.h
+	$(CXX) $(FLAGS)  -c -o $@ $<
 
 simulator.o: simulator.cpp classinfo.h tokenizer.h
 	$(CXX) $(FLAGS)  -c -o $@ $<
