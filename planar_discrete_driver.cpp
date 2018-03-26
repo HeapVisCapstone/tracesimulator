@@ -75,14 +75,14 @@ Data AggregateData(const std::vector<DPNode<Data>*>& nodes) {
 
 int main() {                   
     auto points = gen( range(0, 10)   // size
-                     , range(0, 10000) // rows
-                     , range(0, 10000) // cols
-                     , 100000);
+                     , range(0, 100) // rows
+                     , range(0, 100) // cols
+                     , 1000);
 
     auto root = partitionBy( points
                            , Point(0, 0)
-                           , Point(10000, 10000)
-                           , range(50, 50)
+                           , Point(100, 100)
+                           , range(10, 10)
                            , AggregateData);
 
     assert(root);
