@@ -111,7 +111,7 @@ struct DPInfo {
 template <typename D>
 RollupNode<DPInfo<D>>* lower(const DPNode<D>& n) {
     const DPLayer<D>* layer;
-    if (layer = dynamic_cast<const DPLayer<D>*>(&n)) {
+    if ((layer = dynamic_cast<const DPLayer<D>*>(&n))) {
         // Process layer
         auto info = DPInfo<D> { layer->data
                               , layer->p0
@@ -128,16 +128,17 @@ RollupNode<DPInfo<D>>* lower(const DPNode<D>& n) {
     }
 
     const DPLeaf<D>* l;
-    if (l = dynamic_cast<const DPLeaf<D>*>(&n)) {
+    if ((l = dynamic_cast<const DPLeaf<D>*>(&n))) {
         auto info = DPInfo<D> { l->data
                               , l->p0
-                              , Point(0, 0)
+                              , Point(1, 1)
                               };
         return leaf(info);
         // Process leaf
     }
 
     assert(true);
+    return nullptr;
 
 } 
 

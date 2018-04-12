@@ -79,9 +79,8 @@ boost::property_tree::ptree ptreeOf(const RollupNode<D>& node,
                                     Encoding<D> writeData) {
     using std::vector;
 
-    boost::property_tree::ptree pt;
-    pt.put("id",     node.getId());
-    pt.add_child("data", writeData(node.getData()));
+    auto pt = writeData(node.getData());
+    pt.put("id", node.getId());
 
     boost::property_tree::ptree children;
     for (auto child : node.getChildren()) {

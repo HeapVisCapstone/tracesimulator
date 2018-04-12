@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+path {
+  stroke: #fff;
+}
+</style>
+<body>
+<form>
+
+  <label><input type="radio" name="mode" value="distinctColor" checked> Color Distinctly</label>
+  <label><input type="radio" name="mode" value="heatColor"> Color by Frequency </label>
+</form>
+<div id="chart"></div>
+</body>
+<script src="https://d3js.org/d3.v5.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="sunburst.js"></script>
+<script>
+    // https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    file = getParameterByName("file") + ".json"
+
+    console.log("go")
+    init("#chart",file);
+
+</script>

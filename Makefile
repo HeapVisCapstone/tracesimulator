@@ -1,12 +1,12 @@
 PROGRAMS = simulator jsontree-ex planar_discrete_driver
 
-CXX := g++
+CXX := clang++
 CXXFLAGS = -g -std=c++11
 
-LIBS =
-LDFLAGS = $(LIBS:%=-l%)
+LIBS = boost_program_options
+LDFLAGS =  -L /usr/lib $(LIBS:%=-l%)
 
-FLAGS=-O2 $(CXXFLAGS)
+FLAGS=-O2 $(CXXFLAGS) 
 
 simulator: simulator.o execution.o heap.o classinfo.o tokenizer.o analyze.o heap_json.o
 	g++ $(FLAGS) -o $@ $^
@@ -15,7 +15,7 @@ jsontree-ex: jsontree-ex.cpp jsontree.h
 	$(CXX) $(FLAGS) -o $@ $<
 
 planar_discrete_driver: planar_discrete_driver.cpp rollup_tree.o planar_tree_discrete.o
-	$(CXX) $(FLAGS) -o $@ $^
+	$(CXX) $(FLAGS)$(LDFLAGS) -o $@ $^
 
 planar_tree_discrete.o: planar_tree_discrete.cpp planar_tree_discrete.h
 	$(CXX) $(FLAGS)  -c -o $@ $<
