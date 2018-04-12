@@ -37,10 +37,10 @@ function fillData(tree) {
         var n = {}
         n.parent = p
         n.depth = d
-        n.x  = parseInt(node.col0)
-        n.dx = parseInt(node.dCol)
-        n.y  = parseInt(node.row0)
-        n.dy = parseInt(node.dRow)
+        n.x  = parseInt(node.x)
+        n.dx = parseInt(node.dx)
+        n.y  = parseInt(node.y)
+        n.dy = parseInt(node.dy)
         n.id = node.id
         n.data = node.rollup_data
 
@@ -56,11 +56,11 @@ function fillData(tree) {
 var parentOf = d => d.parent
 
 
-var fullnameOf   = d => d.parent ? fullnameOf(d.parent) + "." + d.id
+var fullnameOf = d => d.parent ? fullnameOf(d.parent) + "." + d.id
                                  : d.id
 var nameOf = d => d.id.substring(0, 5)
 
-d3.json("../json/smalltall.json").then( root => {
+d3.json("../json/small.json").then( root => {
     console.log(root)
     data = fillData(root)
     console.log(data)

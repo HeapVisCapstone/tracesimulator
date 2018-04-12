@@ -39,12 +39,12 @@ int randInRange(Range r) {
 }
 
 // Tries to make n random points. Drops overlaps.
-std::vector<DPLeaf<Data>*> gen(Range sizeR, Range hR, Range wR, int n) {
+std::vector<DPLeaf<Data>*> gen(Range sizeR, Range xRange, Range yRange, int n) {
   std::set<Point> points;
   std::vector<DPLeaf<Data>*> leaves;
 
   for (int i = 0; i < n; i++) {
-    Point p(randInRange(hR), randInRange(wR));
+    Point p(randInRange(xRange), randInRange(yRange));
     Data  d = Data {randInRange(sizeR)};
     // std::cerr << "Considering point: " << to_string(p) << std::endl;
     
@@ -79,8 +79,8 @@ int main(int argc, const char *argv[]) {
   Point initial(0, 0);
   Point distance(100, 100);
   Range scale;;
-  Range rRange;
-  Range cRange;
+  Range xRange;
+  Range yRange;
 
   Range sizeRange;
   int count;
@@ -90,10 +90,10 @@ int main(int argc, const char *argv[]) {
     options_description desc{"Options"};
     desc.add_options()
       ("help", "Help screen")
-      ("height",  value<int>()->default_value(0), "Height")
-      ("width",   value<int>()->default_value(0), "Width")
-      ("rscale",  value<int>()->default_value(0), "Row Scale")
-      ("cscale",  value<int>()->default_value(0), "Col Scale")
+      ("ymax",  value<int>()->default_value(0), "ymax")
+      ("xmax",   value<int>()->default_value(0), "xmax")
+      ("xscale",  value<int>()->default_value(0), "Row Scale")
+      ("yscale",  value<int>()->default_value(0), "Col Scale")
       ("sizemin", value<int>()->default_value(0), "Min leaf size")
       ("sizemax", value<int>()->default_value(0), "Max leaf size")
       ("count",  value<int>()->default_value(0), "Number of target leaves");
@@ -104,11 +104,11 @@ int main(int argc, const char *argv[]) {
 
 
       initial =  Point(0, 0);
-      distance = Point(vm["height"].as<int>(), vm["width"].as<int>());
-      scale    = Range(vm["rscale"].as<int>(), vm["cscale"].as<int>());
+      distance = Point(vm["xmax"].as<int>(), vm["ymax"].as<int>());
+      scale    = Range(vm["xscale"].as<int>(), vm["yscale"].as<int>());
 
-      rRange = range(0, vm["height"].as<int>());
-      cRange = range(0, vm["width"].as<int>());
+      xRange = range(0, vm["xmax"].as<int>());
+      yRange = range(0, vm["ymax"].as<int>());
 
       sizeRange = range(vm["sizemin"].as<int>(), vm["sizemax"].as<int>());
 
@@ -121,8 +121,8 @@ int main(int argc, const char *argv[]) {
 
 
   auto points = gen( sizeRange   // size
-                   , rRange // rows
-                   , cRange // cols
+                   , xRange // rows
+                   , yRange // cols
                    , count);
 
   auto root = partitionBy( points

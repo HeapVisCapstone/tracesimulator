@@ -10,33 +10,33 @@
  * Set of types to describes points in discrete 2d space
  *********************************************************************/
 using Range = std::pair<int, int>;
-Range range(int r, int c);
+Range range(int x, int y);
 
 struct Point {
-  int row, col;
+  int x, y;
 
-  Point(int r, int c) : row(r), col(c) {}
+  Point(int _x, int _y) : x(_x), y(_y) {}
 
   bool operator<(const Point& p) const {
-    if (row < p.row) 
+    if (x < p.x) 
       return true;
-    else if (row == p.row)
-      return col < p.col;
+    else if (x == p.x)
+      return y < p.y;
     else
       return false;     
   }
 
   bool operator==(const Point& p) const {
-    return (row == p.row) and (col == p.col);
+    return (x == p.x) and (y == p.y);
   }
 
   Point operator+(const Point& p) const {
-    return Point(row + p.row, col + p.col);
+    return Point(x + p.x, y + p.y);
   }
 
   bool inRange(const Point& p1, const Point& p2) {
-    return p1.row <= row and row <= p2.row
-       and p1.col <= col and col <= p2.col;
+    return p1.x <= x and x <= p2.x
+       and p1.y <= y and y <= p2.y;
   }
 
 };
@@ -154,10 +154,10 @@ boost::property_tree::ptree ptreeOf(const DPNode<D>& n,
                                     EncodingFn writeData) {
     auto encodeInfo = [&](const DPInfo<D>& d) {
                             boost::property_tree::ptree pt;
-                            pt.put("row0",   std::to_string(d.p0.row));
-                            pt.put("col0",   std::to_string(d.p0.col));
-                            pt.put("dRow",   std::to_string(d.dP.row));
-                            pt.put("dCol",   std::to_string(d.dP.col));
+                            pt.put("x",   std::to_string(d.p0.x));
+                            pt.put("y",   std::to_string(d.p0.y));
+                            pt.put("dx",   std::to_string(d.dP.x));
+                            pt.put("dy",   std::to_string(d.dP.y));
                             pt.add_child("rollup_data", writeData(d.data));
                             return pt;     
                         };
@@ -178,7 +178,7 @@ boost::property_tree::ptree ptreeOf(const DPNode<D>& n,
  * Partitions a list of DPleafs (points) into a Planar Tree.
  *
  * p0 is start of top level node and dP length of the rectangle along
- * row, col dimensions.
+ * x, y dimensions.
  *
  * Scale is how many sublayers each layer should be partitioned into.
  *
@@ -200,18 +200,18 @@ DPNode<D>* partitionBy( std::vector<DPLeaf<D>*> points
   } else if (not (dP == Point(1, 1))) {
     std::vector<DPNode<D>*> children;
     
-    int rStep = dP.row / scale.first;
-    int cStep = dP.col / scale.second;
-    if (rStep == 0)
-      rStep = 1;
-    if (cStep == 0)
-      cStep = 1;
+    int xStep = dP.x / scale.first;
+    int yStep = dP.y / scale.second;
+    if (xStep == 0)
+      xStep = 1;
+    if (yStep == 0)
+      yStep = 1;
 
-    for (int r = p0.row; r < p0.row + dP.row; r += rStep) {
-      for (int c = p0.col; c < p0.col + dP.col; c += cStep) {
+    for (int x = p0.x; x < p0.x + dP.x; x += xStep) {
+      for (int y = p0.y; y < p0.y + dP.y; y += yStep) {
         std::vector<DPLeaf<D>*> pointsInRange; 
-        Point startPoint(r, c);
-        Point endPoint(r + rStep - 1, c + cStep - 1);
+        Point startPoint(x, y);
+        Point endPoint(x + xStep - 1, y + yStep - 1);
 
         auto it = std::copy_if( points.begin(), points.end()
                               , std::back_inserter(pointsInRange)
@@ -221,7 +221,7 @@ DPNode<D>* partitionBy( std::vector<DPLeaf<D>*> points
 
         auto node = partitionBy( pointsInRange
                                , startPoint
-                               , Point(rStep, cStep)
+                               , Point(xStep, yStep)
                                , scale
                                , aggregate);
 
