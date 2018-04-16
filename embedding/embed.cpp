@@ -1,4 +1,8 @@
 #include "embed.h"
+#include <time.h>
+#include <stdlib.h>
+
+int embed_test(int npoints);
 
 float **embed_graph(float ** d, int n) {
 	Matrix<float> dist = Matrix<float>(n, n);
@@ -59,6 +63,7 @@ float **embed_graph(float ** d, int n) {
 		pts[i][1] = dist[i][second_dim] * s2;
 	}
 // TESTING PRINTS
+/*
 	printf("-----------------Testing Info-----------------\n");
 	printf("First dim is %d", first_dim);
 	printf("Second dim is %d", second_dim);
@@ -81,42 +86,68 @@ float **embed_graph(float ** d, int n) {
 		printf("%f\n", sqrt(w[j]));
 	}
 	printf("-----------------End Test Info-----------------\n");
+*/
 // END OF TESTING PRINTS
 	return pts;
 }
 
 int main() {
+	int arr[5] = { 5, 10, 25, 50, 100 };
+	int sz = 5;
+	for (int i = 0; i < sz; i++) {
+		embed_test(arr[i]);
+	}
+	return 0;
+}
+
+int embed_test(int npoints) {
 	// Currently a test for the dsvd approach.
 	// Four points on  a unit square, in order 0123 by index.
-	float ** d = new float*[4];
-	for (int i = 0; i < 4; i++) {
-		d[i] = new float[4];
+	printf("Setting up test\n");
+
+	float ** d = new float*[npoints];
+
+	for (int i = 0; i < npoints; i++) {
+		d[i] = new float[npoints];
 	}
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
-			if (i == j) {
-				d[i][j] = 0;
-			} else if (i - j == 2 || j - i == 2) {
-				d[i][j] = 1.414213562;
-			} else {
-				d[i][j] = 1;
-			}
+	// get distances
+	// randomly generates distances in range [0,100]
+	srand(time(NULL));
+/*
+	for (int i = 1; i < npoints; i++) {
+		for (int j = 0; j < i; j++) {
+			d[i][j] = 100.0 * ((static_cast <float> (rand())) / (static_cast <float> (RAND_MAX)));
+			d[j][i] = d[i][j];
+		}
+		d[i][i] = 0;
+	}
+*/
+	float * x = new float[npoints];
+	float * y = new float[npoints];
+	for (int i = 0; i < npoints; i++) {
+		x[i] = 100.0 * ((static_cast <float> (rand())) / (static_cast <float> (RAND_MAX)));
+		y[i] = 100.0 * ((static_cast <float> (rand())) / (static_cast <float> (RAND_MAX)));
+	}
+	for (int i = 0; i < npoints; i++) {
+		d[i][i] = 0;
+		for (int j = i + 1; j < npoints; j++) {
+			d[i][j] = sqrt(((x[i] - x[j]) * (x[i] - x[j])) + ((y[i] - y[j]) * (y[i] - y[j])));
+			d[j][i] = d[i][j];
 		}
 	}
 
-	for (int i = 0; i < 4; i++) {
-		printf("%f %f %f %f\n", d[i][0], d[i][1], d[i][2], d[i][3]);
-	}
-
-	float ** pts = embed_graph(d, 4);
-	for (int i = 0; i < 4; i++) {
-		printf("(%f, %f)\n", pts[i][0], pts[i][1]);
-	}
-	for (int i = 0; i < 4; i++) {
+	printf("Embedding\n");
+	time_t time_s, time_e;
+	time(&time_s);
+	float ** pts = embed_graph(d, npoints);
+	time(&time_e);
+	printf("Done embedding\n");
+	printf("Perfect on %d nodes took %f seconds\n", npoints, time_e - time_s);
+	for (int i = 0; i < npoints; i++) {
 		delete [] d[i];
 	}
 	delete [] d;
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < npoints; i++) {
 		delete pts[i];
 	}
 	delete [] pts;
