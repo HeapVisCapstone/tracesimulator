@@ -91,10 +91,10 @@ float **embed_graph(float ** d, int n) {
 	return pts;
 }
 
+#define SIZE 6
 int main() {
-	int arr[5] = { 5, 10, 25, 50, 100 };
-	int sz = 5;
-	for (int i = 0; i < sz; i++) {
+	int arr[SIZE] = { 5, 10, 25, 50, 500, 500 };
+	for (int i = 0; i < SIZE; i++) {
 		embed_test(arr[i]);
 	}
 	return 0;
@@ -131,8 +131,10 @@ int embed_test(int npoints) {
 	for (int i = 0; i < npoints; i++) {
 		d[i][i] = 0;
 		for (int j = i + 1; j < npoints; j++) {
-			d[i][j] = sqrt(((x[i] - x[j]) * (x[i] - x[j])) + ((y[i] - y[j]) * (y[i] - y[j])));
-			d[j][i] = d[i][j];
+			if (rand() * 20 == 0) {
+				d[i][j] = sqrt(((x[i] - x[j]) * (x[i] - x[j])) + ((y[i] - y[j]) * (y[i] - y[j])));
+				d[j][i] = d[i][j];
+			}
 		}
 	}
 

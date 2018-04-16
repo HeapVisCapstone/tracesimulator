@@ -8,6 +8,10 @@ LDFLAGS =  -L /usr/lib $(LIBS:%=-l%)
 
 FLAGS=-O2 $(CXXFLAGS) 
 
+eigen-ex: eigen-ex.cpp
+	$(CXX) $(FLAGS) -o $@ $<
+	
+
 simulator: simulator.o execution.o heap.o classinfo.o tokenizer.o analyze.o heap_json.o
 	g++ $(FLAGS) -o $@ $^
 
