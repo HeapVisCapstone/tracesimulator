@@ -1,4 +1,4 @@
-PROGRAMS = eigen-ex embed embed-red
+PROGRAMS = eigen-ex embed-red
 
 CXX := clang++
 CXXFLAGS = -g -std=c++11 -D EIGEN_MALLOC_ALREADY_ALIGNED=0
@@ -13,13 +13,6 @@ eigen-ex: eigen-ex.cpp
 
 embed-red: embed-red.cpp
 	$(CXX) $(FLAGS) -o $@ $^
-
-embed: embed.cpp SVD.o
-	$(CXX) $(FLAGS) -o $@ $^
-
-
-SVD.o: SVD.cpp Matrix.h Vector.h 
-	$(CXX) $(FLAGS)  -c -o $@ $<
 
 all: $(PROGRAMS)
 
