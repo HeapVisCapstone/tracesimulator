@@ -1,4 +1,4 @@
-PROGRAMS = simulator jsontree-ex planar_discrete_driver
+PROGRAMS = simulator_driver jsontree-ex planar_discrete_driver
 
 CXX := clang++
 CXXFLAGS = -g -std=c++11
@@ -12,7 +12,7 @@ eigen-ex: eigen-ex.cpp
 	$(CXX) $(FLAGS) -o $@ $<
 	
 
-simulator: simulator.o execution.o heap.o classinfo.o tokenizer.o analyze.o heap_json.o
+simulator_driver: simulator_driver.o simulator.o execution.o heap.o classinfo.o tokenizer.o analyze.o heap_json.o components.o
 	g++ $(FLAGS) -o $@ $^
 
 jsontree-ex: jsontree-ex.cpp jsontree.h
@@ -21,13 +21,19 @@ jsontree-ex: jsontree-ex.cpp jsontree.h
 planar_discrete_driver: planar_discrete_driver.cpp rollup_tree.o planar_tree_discrete.o
 	$(CXX) $(FLAGS)$(LDFLAGS) -o $@ $^
 
+simulator.o: simulator.cpp classinfo.h tokenizer.h
+	$(CXX) $(FLAGS)  -c -o $@ $<
+
+components.o: components.cpp heap.h components.h
+	$(CXX) $(FLAGS)  -c -o $@ $<
+
 planar_tree_discrete.o: planar_tree_discrete.cpp planar_tree_discrete.h
 	$(CXX) $(FLAGS)  -c -o $@ $<
 
 rollup_tree.o: rollup_tree.cpp rollup_tree.h
 	$(CXX) $(FLAGS)  -c -o $@ $<
 
-simulator.o: simulator.cpp classinfo.h tokenizer.h
+simulator_driver.o: simulator_driver.cpp classinfo.h tokenizer.h
 	$(CXX) $(FLAGS)  -c -o $@ $<
 
 analyze.o: analyze.cpp classinfo.h tokenizer.h

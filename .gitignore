@@ -1,5 +1,6 @@
 *.o
 simulator
+simulator_driver
 planar_discrete_driver
 jsontree-ex
 ~*

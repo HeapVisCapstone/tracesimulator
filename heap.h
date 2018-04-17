@@ -56,6 +56,9 @@ public:
   EdgeSet::iterator begin_edges() { return m_edges.begin(); }
   EdgeSet::iterator end_edges() { return m_edges.end(); }
 
+  EdgeSet getEdgeSet() { return m_edges; }
+  ObjectSet getObjectSet();
+
   void end_of_program(unsigned int cur_time);
 };
 

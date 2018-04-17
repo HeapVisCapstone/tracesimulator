@@ -26,6 +26,17 @@ Object * HeapState::get(unsigned int id)
     return 0;
 }
 
+ObjectSet HeapState::getObjectSet() {
+  ObjectSet objects;
+  for (ObjectMap::iterator i = m_objects.begin();
+       i != m_objects.end();
+       ++i) {
+    Object * obj = (*i).second;
+    objects.insert(obj);
+  }
+  return move(objects);
+}
+
 Edge * HeapState::make_edge(Object * source, unsigned int field_id, Object * target, unsigned int cur_time)
 {
   Edge * new_edge = new Edge(source, field_id, target, cur_time);

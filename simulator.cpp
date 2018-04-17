@@ -1,143 +1,15 @@
-#include <boost/property_tree/json_parser.hpp>
-#include <boost/property_tree/ptree.hpp>
-#include <cstdio>
-#include <fstream>
-#include <iostream>
-#include <map>
-#include <set>
-#include <sstream>
-#include <vector>
+#include "simulator.h"
 
-namespace pt = boost::property_tree;
-using namespace std;
 
-#include "classinfo.h"
-#include "execution.h"
-#include "heap.h"
-#include "heap_json.h"
-#include "tokenizer.h"
+pair<HeapState, ExecState> read_trace_file(char* nameFile, FILE *f) {
+  ExecState Exec(1);
 
-class Object;
-class CCNode;
+  ClassInfo::read_names_file(nameFile);
 
-// ----------------------------------------------------------------------
-//   Globals
 
-// -- The heap
-HeapState Heap;
-
-// -- Execution state
-ExecState Exec(1);
-
-// -- Turn on debugging
-bool debug = false;
-
-// ----------------------------------------------------------------------
-//   Analysis
-
-void sanity_check() {
-  // -- Sanity check
-  /*
-  const ObjectMap& fields = obj->getFields();
-  for (ObjectMap::const_iterator p = fields.begin();
-       p != fields.end();
-       p++)
-    {
-      Object * target = (*p).second;
-      if (target) {
-        if (Now > target->getDeathTime()) {
-          // -- Not good: live object points to a dead object
-          printf(" Live object %s points-to dead object %s\n",
-                 obj->info().c_str(), target->info().c_str());
-        }
-      }
-    }
-  }
-  */
-
-  /*
-  if (Now > obj->getDeathTime() && obj->getRefCount() != 0) {
-    nonzero_ref++;
-    printf(" Non-zero-ref-dead %X of type %s\n", obj->getId(),
-  obj->getType().c_str());
-  }
-  */
-}
-
-bool member(Object *obj, const ObjectSet &theset) {
-  return theset.find(obj) != theset.end();
-}
-
-int compute_roots(ObjectSet &roots) {
-  unsigned int live = 0;
-  for (ObjectMap::iterator p = Heap.begin(); p != Heap.end(); p++) {
-    Object *obj = (*p).second;
-    if (obj) {
-      if (obj->isLive(Exec.Now())) {
-        live++;
-        if (obj->getRefCount() == 0) roots.insert(obj);
-      }
-    }
-  }
-
-  return live;
-}
-
-unsigned int closure(ObjectSet &roots, ObjectSet &premarked,
-                     ObjectSet &result) {
-  unsigned int mark_work = 0;
-
-  vector<Object *> worklist;
-
-  // -- Initialize the worklist with only unmarked roots
-  for (ObjectSet::iterator i = roots.begin(); i != roots.end(); i++) {
-    Object *root = *i;
-    if (!member(root, premarked)) worklist.push_back(root);
-  }
-
-  // -- Do DFS until the worklist is empty
-  while (worklist.size() > 0) {
-    Object *obj = worklist.back();
-    worklist.pop_back();
-    result.insert(obj);
-    mark_work++;
-
-    const EdgeMap &fields = obj->getFields();
-    for (EdgeMap::const_iterator p = fields.begin(); p != fields.end(); p++) {
-      Edge *edge = (*p).second;
-      Object *target = edge->getTarget();
-      if (target) {
-        // if (target->isLive(Exec.Now())) {
-        if (!member(target, premarked) && !member(target, result)) {
-          worklist.push_back(target);
-        }
-        // } else {
-        // cout << "WEIRD: Found a dead object " << target->info() << " from "
-        // << obj->info() << endl;
-        // }
-      }
-    }
-  }
-
-  return mark_work;
-}
-
-unsigned int count_live(ObjectSet &objects, unsigned int at_time) {
-  int count = 0;
-  // -- How many are actually live
-  for (ObjectSet::iterator p = objects.begin(); p != objects.end(); p++) {
-    Object *obj = (*p);
-    if (obj->isLive(at_time)) count++;
-  }
-
-  return count;
-}
-
-// ----------------------------------------------------------------------
-//   Read and process trace events
-
-void read_trace_file(FILE *f) {
   Tokenizer t(f);
+
+  HeapState Heap;
 
   unsigned int method_id;
   unsigned int object_id;
@@ -289,27 +161,5 @@ void read_trace_file(FILE *f) {
         break;
     }
   }
-}
-
-// ----------------------------------------------------------------------
-
-void analyze();
-
-int main(int argc, char *argv[]) {
-  cout << "Read names file..." << endl;
-  ClassInfo::read_names_file(argv[1]);
-  cout << "Start trace..." << endl;
-  FILE *f = fdopen(0, "r");
-  read_trace_file(f);
-  cout << "DONE" << endl;
-  cout << "Done at time " << Exec.Now() << endl;
-  // Heap.end_of_program(Exec.Now());
-  // pt::ptree heap_pt = heapPtree(&Heap);
-
-  // std::fstream jsonS;
-  // jsonS.open("object.json", std::fstream::out | std::fstream::trunc);
-  // pt::write_json(jsonS, heap_pt);
-  // analyze();
-
-  // jsonS.close();
+  return make_pair(Heap, Exec);
 }
