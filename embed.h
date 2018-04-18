@@ -1,6 +1,6 @@
 #include "components.h"
 #include "Eigen/Dense"
-#include "RedSVD.h"
+#include "RedSVD/RedSVD.h"
 #include <cstdio>
 #include <iostream>
 #include <assert.h>

@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Eigen/Dense"
-#include "RedSVD.h"
+#include "RedSVD/RedSVD.h"
 using Eigen::MatrixXd;
 int main()
 {
