@@ -25,17 +25,6 @@ Eigen::MatrixXd embed_graph(Eigen::MatrixXd d, int n) {
 	return ret;
 }
 
-int main() {
-/*	int arr[7] = { 5, 10, 25, 50, 100, 250, 500};
-	int sz = 7;
-	for (int i = 0; i < sz; i++) {
-		embed_test(arr[i]);
-	}
-*/
-	embed_test(10000);
-	return 0;
-}
-
 int embed_test(int npoints) {
 	// Currently a test for the dsvd approach.
 	// Four points on  a unit square, in order 0123 by index.
