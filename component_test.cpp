@@ -3,10 +3,16 @@
 void run_test(int n, double p);
 
 int main() {
-	run_test(2500, 0.004);
-	run_test(2500, 0.01);
-	run_test(2500, 0.04);
-	run_test(2500, 0.1);
+	// run_test(500, 0.1);
+	// run_test(800, 0.1);
+	
+	// run_test(2500, 0.004);
+	// run_test(2500, 0.01);
+	// run_test(2500, 0.04);
+	// run_test(2500, 0.1);
+
+	run_test(10000, 0.004);
+
 
 	return 0;
 }
