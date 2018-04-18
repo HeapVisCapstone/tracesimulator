@@ -162,54 +162,85 @@ Eigen::MatrixXd build_dist_matrix(Component compnt) {
 	}
 	// next, assign indices to the node id's
 	std::set<struct Node*>::iterator it;
+	std::set<struct Node*> lst;
 	int *idx = new int[nnodes];
 	int *ids = new int[nnodes];
-	int i = 0;
+	int i_temp = 0;
 	struct Node **node_arr = new struct Node*[nnodes];
 	for (it = compnt.nodes.begin(); it != compnt.nodes.end(); it++) {
-		idx[i] = i;
-		ids[i] = it->id;
-		node_arr[i] = it;
-		i++;
+		idx[i_temp] = i_temp;
+		ids[i_temp] = (*it)->id;
+		node_arr[i_temp] = *it;
+		i_temp++;
 	}
 	parallel_quicksort(ids, idx, 0, nnodes);
-	// now, ids is sorted and if id = ids[i], that node corresponds to idx[i] in index
-	int *queue = new int[nnodes];
-	for (it = compnt.nodes.begin(); it != compnt.nodes.end(); it++) {
-		for (int i = 0; i < nnodes; i++) {
-			queue[i] = -1;
-		}
-		//run a BFS on *it
-		// queue_index is insertion index, curr_d is d of currently processing node,
-		//   step_index is index of currently processing node in queue,
-		//   step_nindex is the index of currently processing node in actual index
-		int queue_index = 0, step_index = 0, step_nindex = 0;
-		double curr_d = 0;
-		// curr_idx is the index of current source node in actual index
-		int curr_idx = idx[binary_search(ids, it->id, 0, npoints)];
+	// make a new graph, identical, but with Node id = index
+	std::set<struct Node *> s;
+	for (int i = 0; i < nnodes; i++) {
+		node_arr[i] = new Node(i);
+	}
 
-		queue[queue_index++] = curr_idx;
-		d(curr_idx, curr_idx) = 0;
-		Node *curr_node;
-		while (step_index < npoints && queue[step_index] != -1) {
-			Node *curr_node = node_arr[curr_idx];
-			curr_d = d(curr_idx, step_nindex);
-			std::set<struct Node*> next_set = curr_node->successors;
-			for (std::set<struct Node*>::iterator subit = next_set->begin(); subit < next_set->end(); subit++) {
-				int temp_idx = idx[binary_search(ids, subit->id, 0, npoints)];
-				double temp_d = d(curr_idx, temp_idx);
-				if (temp_d == -1) {
-					d(curr_idx, step_nindex) = curr_d + 1;
-					queue[queue_index++] = temp_idx;
+	i_temp = 0;
+	for (it = compnt.nodes.begin(); it != compnt.nodes.end(); it++) {
+		lst = (*it)->successors;
+		Node *target = node_arr[i_temp++];
+		for (std::set<struct Node*>::iterator subit = lst.begin(); subit != lst.end(); subit++) {
+			target->successors.insert(node_arr[idx[binary_search(ids, (*subit)->id, 0, nnodes)]]);
+		}
+	}
+	// Now, run BFS on the component
+	int que[nnodes];
+	int unmarked[nnodes];
+	int q_ins = 0;
+	int q_idx = 0;
+	for (int i = 0; i < nnodes; i++) {
+		for (int j = 0; j < nnodes; j++) {
+			que[j] = 0;
+			unmarked[j] = 1;
+		}
+		q_ins = 0;
+		q_idx = 0;
+		unmarked[i] = 0;
+		que[q_ins++] = i;
+		d(i,i) = 0;
+		int curr_d = 0;
+		while (q_idx < q_ins) {
+			int curr_idx = que[q_idx];
+			curr_d = d(i, curr_idx);
+			lst = node_arr[curr_idx]->successors;
+			for (it = lst.begin(); it != lst.end(); it++) {
+				int test_id = (*it)->id;
+				if (unmarked[test_id]) {
+					d(i, test_id) = curr_d + 1;
+					unmarked[test_id] = 0;
+					que[q_ins++] = test_id;
 				}
 			}
-			if (queue_index == nnodes) {
+			q_idx++;
+		}
+	}
+/*
+	for (int i = 0; i < nnodes; i++) {
+		for (int j = 0; j < nnodes; j++) {
+			int test = 0;
+			for (int k = 0; k < nnodes; k++) {
+				if (d(i,k) == j) {
+					std::set<struct Node*> sublist = node_arr[k]->successors;
+					for (std::set<struct Node*>::iterator subit = sublist.begin(); subit != sublist.end();  subit++) {
+						int check_idx = idx[binary_search(ids, (*subit)->id, 0, nnodes)];
+						if (d(i,check_idx) == -1) {
+							d(i,check_idx) = j + 1;
+							test = 1;
+						}
+					}
+				}
+			}
+			if (test == 0) {
 				break;
-			} else {
-				step_index++;
 			}
 		}
 	}
+*/
 	// Now, d is filled s.t. every value is either a distance or -1.
 	for (int i = 0; i < nnodes; i++) {
 		d(i,i) = 0;
@@ -221,8 +252,8 @@ Eigen::MatrixXd build_dist_matrix(Component compnt) {
 				temp = d(j,i);
 			}
 			if (temp == -1) {
-				d(i,j) = npoints;
-				d(j,i) = npoints;
+				d(i,j) = nnodes;
+				d(j,i) = nnodes;
 			} else {
 				d(i,j) = temp;
 				d(j,i) = temp;
@@ -234,7 +265,6 @@ Eigen::MatrixXd build_dist_matrix(Component compnt) {
 	delete [] idx;
 	delete [] ids;
 	delete [] node_arr;
-	delete [] queue;
 
 	return d;
 }
