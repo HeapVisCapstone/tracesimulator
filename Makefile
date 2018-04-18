@@ -1,4 +1,4 @@
-PROGRAMS = simulator_driver jsontree-ex planar_discrete_driver
+PROGRAMS = simulator_driver jsontree-ex planar_discrete_driver eigen-ex embed-red
 
 CXX := clang++
 CXXFLAGS = -g -std=c++11
@@ -11,6 +11,8 @@ FLAGS=-O2 $(CXXFLAGS)
 eigen-ex: eigen-ex.cpp
 	$(CXX) $(FLAGS) -o $@ $<
 	
+embed-red: embed-red.cpp
+	$(CXX) $(FLAGS) -o $@ $<
 
 simulator_driver: simulator_driver.o simulator.o execution.o heap.o classinfo.o tokenizer.o analyze.o heap_json.o components.o
 	g++ $(FLAGS) -o $@ $^
