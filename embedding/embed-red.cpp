@@ -5,7 +5,6 @@
 using Eigen::MatrixXd;
 
 int embed_test(int npoints);
-int embed_test2(int npoints);
 
 Eigen::MatrixXd embed_graph(Eigen::MatrixXd d, int n) {
 	RedSVD::RedSVD<Eigen::MatrixXd> red(d, 2);
@@ -107,4 +106,146 @@ Eigen::MatrixXd shift_embedding(Eigen::MatrixXd m, double x, double y) {
 		m(i,1) += y_shift;
 	}
 	return m;
+}
+
+// Helpful quicksort to sort one array and keep the other array parallel
+// runs on indexes [s, e)
+void parallel_quicksort(int *sort_arr, int *parallel_arr, int s, int e) {
+	if (e - s < 2) {
+		return;
+	}
+	int pivot_val = sort_arr[s];
+	int parallel_pivot_val = parallel_arr[s];
+	int pivot = s;
+	int end = e - 1;
+	while (pivot < end) {
+		if (sort_arr[pivot + 1] > pivot_val) {
+			int temp = sort_arr[end];
+			sort_arr[end] = sort_arr[pivot + 1];
+			sort_arr[pivot + 1] = temp;
+			temp = parallel_arr[end];
+			parallel_arr[end] = parallel_arr[pivot + 1];
+			parallel_arr[pivot + 1] = temp;
+			end--;
+		} else {
+			sort_arr[pivot] = sort_arr[pivot + 1];
+			parallel_arr[pivot] = parallel_arr[pivot + 1];
+			pivot++;
+			sort_arr[pivot] = pivot_val;
+			parallel_arr[pivot] = parallel_pivot_val;
+		}
+	}
+	parallel_quicksort(sort_arr, parallel_arr, s, pivot);
+	parallel_quicksort(sort_arr, parallel_arr, pivot + 1, e);
+}
+
+// Quick binary search, returns the index which is equal to val or the next smallest one if not equal
+// left is the leftmost index, right is one larger than the rightmost index
+int binary_search(int *arr, int val, int left, int right) {
+	if (right - left < 2) {
+		if (arr[left] <= val) {
+			return left;
+		} else {
+			return left - 1;
+		}
+	}
+	int idx = (left + right) / 2;
+	if (arr[idx] == val) {
+		return idx;
+	} else if (arr[idx] < val) {
+		return binary_search(arr, val, idx + 1, right);
+	} else {
+		return binary_search(arr, val, left, idx);
+	}
+}
+
+
+// build distance matrix on Component
+// Note: idx[binary_search(ids, id, 0, npoints)] gives the index of the point with id 'id'.
+Eigen::MatrixXd build_dist_matrix(Component compnt) {
+	// first, build the whole matrix.
+	int nnodes = compnt.nodes.size();
+	Eigen::MatrixXd d(nnodes, nnodes);
+	for (int i = 0; i < nnodes; i++) {
+		for (int j = 0; j < nnodes; j++) {
+			d(i,j) = -1;
+		}
+	}
+	// next, assign indices to the node id's
+	std::set<struct Node*>::iterator it;
+	int *idx = new int[nnodes];
+	int *ids = new int[nnodes];
+	int i = 0;
+	struct Node **node_arr = new struct Node*[nnodes];
+	for (it = compnt.nodes.begin(); it != compnt.nodes.end(); it++) {
+		idx[i] = i;
+		ids[i] = it->id;
+		node_arr[i] = it;
+		i++;
+	}
+	parallel_quicksort(ids, idx, 0, nnodes);
+	// now, ids is sorted and if id = ids[i], that node corresponds to idx[i] in index
+	int *queue = new int[nnodes];
+	for (it = compnt.nodes.begin(); it != compnt.nodes.end(); it++) {
+		for (int i = 0; i < nnodes; i++) {
+			queue[i] = -1;
+		}
+		//run a BFS on *it
+		// queue_index is insertion index, curr_d is d of currently processing node,
+		//   step_index is index of currently processing node in queue,
+		//   step_nindex is the index of currently processing node in actual index
+		int queue_index = 0, step_index = 0, step_nindex = 0;
+		double curr_d = 0;
+		// curr_idx is the index of current source node in actual index
+		int curr_idx = idx[binary_search(ids, it->id, 0, npoints)];
+
+		queue[queue_index++] = curr_idx;
+		d(curr_idx, curr_idx) = 0;
+		Node *curr_node;
+		while (step_index < npoints && queue[step_index] != -1) {
+			Node *curr_node = node_arr[curr_idx];
+			curr_d = d(curr_idx, step_nindex);
+			std::set<struct Node*> next_set = curr_node->successors;
+			for (std::set<struct Node*>::iterator subit = next_set->begin(); subit < next_set->end(); subit++) {
+				int temp_idx = idx[binary_search(ids, subit->id, 0, npoints)];
+				double temp_d = d(curr_idx, temp_idx);
+				if (temp_d == -1) {
+					d(curr_idx, step_nindex) = curr_d + 1;
+					queue[queue_index++] = temp_idx;
+				}
+			}
+			if (queue_index == nnodes) {
+				break;
+			} else {
+				step_index++;
+			}
+		}
+	}
+	// Now, d is filled s.t. every value is either a distance or -1.
+	for (int i = 0; i < nnodes; i++) {
+		d(i,i) = 0;
+		for (int j = i + 1; j < nnodes; j++) {
+			double temp = d(i,j);
+			if (temp == -1) {
+				temp = d(j,i);
+			} else if (d(j,i) < d(i,j) && d(j,i) != -1) {
+				temp = d(j,i);
+			}
+			if (temp == -1) {
+				d(i,j) = npoints;
+				d(j,i) = npoints;
+			} else {
+				d(i,j) = temp;
+				d(j,i) = temp;
+			}
+		}
+	}
+
+
+	delete [] idx;
+	delete [] ids;
+	delete [] node_arr;
+	delete [] queue;
+
+	return d;
 }
