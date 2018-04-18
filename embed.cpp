@@ -163,6 +163,7 @@ inline void setMat(int* mat, int dim1, int x, int y, int value) {
 // build distance matrix on Component
 // Note: idx[binary_search(ids, id, 0, npoints)] gives the index of the point with id 'id'.
 Eigen::MatrixXd build_dist_matrix(Component compnt) {
+	// first, build the whole matrix.
 	cout << "first, build the whole matrix." << endl;
 	int nnodes = compnt.nodes.size();
 	// Eigen::MatrixXd d(nnodes, nnodes);
@@ -175,15 +176,17 @@ Eigen::MatrixXd build_dist_matrix(Component compnt) {
 		}
 	}
 
-	cout << "next, assign indices to the node id's" << endl;
+	//
 	// next, assign indices to the node id's
-	std::set<struct Node*>::iterator it;
-	// std::set<struct Node*> lst;
+	//
+	cout << "next, assign indices to the node id's" << endl;
+
+
 	int *idx = new int[nnodes];
 	int *ids = new int[nnodes];
 	int i_temp = 0;
 	struct Node **node_arr = new struct Node*[nnodes];
-	for (it = compnt.nodes.begin(); it != compnt.nodes.end(); it++) {
+	for (auto it = compnt.nodes.begin(); it != compnt.nodes.end(); it++) {
 		idx[i_temp] = i_temp;
 		ids[i_temp] = (*it)->id;
 		node_arr[i_temp] = *it;
@@ -191,24 +194,37 @@ Eigen::MatrixXd build_dist_matrix(Component compnt) {
 	}
 	parallel_quicksort(ids, idx, 0, nnodes);
 
-	cout << "make a new graph, identical, but with Node id = index" << endl;
-
+	//
 	// make a new graph, identical, but with Node id = index
+	//
+	cout << "make a new graph, identical, but with Node id = index" << endl;
+	
+
 	std::set<struct Node *> s;
 	for (int i = 0; i < nnodes; i++) {
 		node_arr[i] = new Node(i);
 	}
 
+
 	i_temp = 0;
-	for (it = compnt.nodes.begin(); it != compnt.nodes.end(); it++) {
-		auto& lst = (*it)->successors;
-			Node *target = node_arr[i_temp++];
-		for (std::set<struct Node*>::iterator subit = lst.begin(); subit != lst.end(); subit++) {
-			target->successors.insert(node_arr[idx[binary_search(ids, (*subit)->id, 0, nnodes)]]);
+	for (auto node : compnt.nodes) {
+		Node *target = node_arr[i_temp++];
+
+		for (auto succ : node->successors) {
+			target->successors.insert(node_arr[idx[binary_search(ids, succ->id, 0, nnodes)]]);
+
 		}
 	}
 
+	//
 	// Construct a succ map for quick access to successor indices
+	//
+	// This appears in memory as a 2d arrays, where row i represents the
+	// successors of node i. 
+	//
+	// The successor ids appear unordered in the row, followed by -1 as a sentinel. 
+	//
+	cout << "Construct a succ map for quick access to successor indices" << endl;
 	int *successors = new int[nnodes * nnodes];
 
 	for (int i = 0; i < nnodes; i++) {
@@ -227,8 +243,9 @@ Eigen::MatrixXd build_dist_matrix(Component compnt) {
 
 	}
 
-
+	//
 	// Now, run BFS on the component
+	//
 	cout << "Now, run BFS on the component" << endl;
 
 	int que[nnodes];
@@ -245,7 +262,7 @@ Eigen::MatrixXd build_dist_matrix(Component compnt) {
 		q_idx = 0;
 		unmarked[i] = 0;
 		que[q_ins++] = i;
-		// d(i,i) = 0;
+
 		setMat(d, nnodes, i, i, 0);
 		int curr_d = 0;
 		while (q_idx < q_ins) {
@@ -262,30 +279,16 @@ Eigen::MatrixXd build_dist_matrix(Component compnt) {
 				; (test_id = getMat(successors, nnodes, curr_idx, curr_succ)) != -1
 				; curr_succ++)
 			{
-
-
-				// int test_id = getMat(successors, nnodes, curr_idx, curr_succ);
-
 				if (DEBUG) {
 					cout << "adding to queue : " << curr_succ << " with " << test_id << endl; 
 				}
 				if (unmarked[test_id]) {
 					setMat(d, nnodes, i, test_id, curr_d + 1);
-					// d(i, test_id) = curr_d + 1;
 					unmarked[test_id] = 0;
 					que[q_ins++] = test_id;
 				}
 			}
 
-			// for (it = lst.begin(); it != lst.end(); it++) {
-			// 	int test_id = (*it)->id;
-			// 	if (unmarked[test_id]) {
-			// 		setMat(d, nnodes, i, test_id, curr_d + 1);
-			// 		// d(i, test_id) = curr_d + 1;
-			// 		unmarked[test_id] = 0;
-			// 		que[q_ins++] = test_id;
-			// 	}
-			// }
 			q_idx++;
 		}
 	}
@@ -312,35 +315,7 @@ Eigen::MatrixXd build_dist_matrix(Component compnt) {
 	}
 */
 
-	// TODO : ADD THIS BACK
-	// Perhaps just have it operate on the Eigen distance matrix
-	
-	// Now, d is filled s.t. every value is either a distance or -1.
-	// for (int i = 0; i < nnodes; i++) {
-	// 	setMat(d, nnodes, i, i, 0);
-	// 	// d(i,i) = 0;
-	// 	for (int j = i + 1; j < nnodes; j++) {
-	// 		double temp = d(i,j);
-	// 		if (temp == -1) {
-	// 			temp = getMat(d, nnodes, j, i);
-	// 		} else if (d(j,i) < d(i,j) && d(j,i) != -1) {
-	// 			temp = getMat(d, nnodes, j, i);
-	// 		}
-	// 		if (temp == -1) {
-	// 			setMat(d, nnodes, i, j, nnodes)
-	// 			setMat(d, nnodes, j, i, nnodes)
 
-	// 			// d(i,j) = nnodes;
-	// 			// d(j,i) = nnodes;
-	// 		} else {
-	// 			setMat(d, nnodes, i, j, temp)
-	// 			setMat(d, nnodes, j, i, temp)
-
-	// 			// d(i,j) = temp;
-	// 			// d(j,i) = temp;
-	// 		}
-	// 	}
-	// }
 
 	Eigen::MatrixXd distances(nnodes, nnodes);
 
@@ -348,11 +323,30 @@ Eigen::MatrixXd build_dist_matrix(Component compnt) {
 		for (int j = 0; j < nnodes; j++)
 			distances(i, j) = getMat(d, nnodes, i, j);
 
+	// Now, d is filled s.t. every value is either a distance or -1.
+	for (int i = 0; i < nnodes; i++) {
+		for (int j = i + 1; j < nnodes; j++) {
+			double temp = distances(i,j);
+			if (temp == -1) {
+				temp = distances(j, i);
+			} else if (distances(j,i) < distances(i,j) && distances(j,i) != -1) {
+				temp = distances(j, i);
+			}
+			if (temp == -1) {
+				distances(i,j) = nnodes;
+				distances(j,i) = nnodes;
+			} else {
+				distances(i,j) = temp;
+				distances(j,i) = temp;
+			}
+		}
+	}
 
 
 	delete [] idx;
 	delete [] ids;
 	delete [] node_arr;
 	delete [] d;
+	delete [] successors;
 	return distances;
 }
