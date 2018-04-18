@@ -6,3 +6,7 @@ jsontree-ex
 ~*
 traces/*
 !traces/README
+embed-red
+eigen-ex
+embed
+*.gch
