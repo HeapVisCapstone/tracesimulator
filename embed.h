@@ -1,3 +1,6 @@
+#ifndef EMBED_RED_H
+#define EMBED_RED_H
+
 #include "components.h"
 #include "Eigen/Dense"
 #include "RedSVD/RedSVD.h"
@@ -24,3 +27,5 @@ Eigen::MatrixXd shift_embedding(Eigen::MatrixXd m, double x, double y);
 // - After running BFS from all nodes, if d(i,j) != d(j,i), set d(i,j) = d(j,i) = min(d(i,j), d(j,i))
 // - Hence, distances are integers within the double matrix
 Eigen::MatrixXd build_dist_matrix(Component compnt);
+
+#endif
