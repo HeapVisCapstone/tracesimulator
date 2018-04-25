@@ -20,9 +20,6 @@ using namespace std;
 #include "simulator.h"
 #include "components.h"
 
-class Object;
-class CCNode;
-
 // ----------------------------------------------------------------------
 //   Globals
 

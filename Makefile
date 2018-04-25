@@ -8,6 +8,10 @@ LDFLAGS =  -L /usr/lib $(LIBS:%=-l%)
 
 FLAGS=-O2 $(CXXFLAGS) 
 
+embed_trace: embed_trace.cpp embed.o simulator.o execution.o heap.o \
+             classinfo.o tokenizer.o components.o planar_tree_discrete.o rollup_tree.o
+	$(CXX) $(FLAGS) $(LDFLAGS) -o $@ $^
+
 eigen-ex: eigen-ex.cpp
 	$(CXX) $(FLAGS) -o $@ $<
 	

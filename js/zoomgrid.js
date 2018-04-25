@@ -60,7 +60,7 @@ var fullnameOf = d => d.parent ? fullnameOf(d.parent) + "." + d.id
                                  : d.id
 var nameOf = d => d.id.substring(0, 5)
 
-d3.json("../json/small.json").then( root => {
+d3.json("../json/batik-flat.json").then( root => {
     console.log(root)
     data = fillData(root)
     console.log(data)
@@ -103,12 +103,12 @@ d3.json("../json/small.json").then( root => {
         .attr("class", "parent")
         .call(rect)
       .append("title")
-        .text((d) => 5);
+        .text((d) => d.size);
 
-    g.append("text")
-        .attr("dy", ".75em")
-        .text(nameOf)
-        .call(text);
+    // g.append("text")
+    //     .attr("dy", ".75em")
+    //     .text(nameOf)
+    //     .call(text);
 
     function transition(d) {
       console.log("transitionign to ", d)

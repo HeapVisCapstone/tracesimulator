@@ -8,6 +8,10 @@
 #include <iostream>
 #include <assert.h>
 
+#include <vector>
+
+#include "planar_tree_discrete.h"
+
 // Receives a n-by-n distance matrix d
 // Outputs a n-by-2 matrix, such that dim 1 is the vertex and dim 2 is the x- and y-coordinates
 Eigen::MatrixXd embed_graph(Eigen::MatrixXd d, int n);
@@ -27,5 +31,9 @@ Eigen::MatrixXd shift_embedding(Eigen::MatrixXd m, double x, double y);
 // - After running BFS from all nodes, if d(i,j) != d(j,i), set d(i,j) = d(j,i) = min(d(i,j), d(j,i))
 // - Hence, distances are integers within the double matrix
 Eigen::MatrixXd build_dist_matrix(Component compnt);
+
+
+// Converts nx2 matrix into a list of points
+std::vector<Point> asPoints(const Eigen::MatrixXd &mat);
 
 #endif

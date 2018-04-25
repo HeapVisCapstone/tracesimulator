@@ -350,3 +350,17 @@ Eigen::MatrixXd build_dist_matrix(Component compnt) {
 	delete [] successors;
 	return distances;
 }
+
+
+vector<Point> asPoints(const Eigen::MatrixXd &mat) {
+	int n = mat.rows();
+
+	vector<Point> points;
+
+	for (int i = 0; i < n; i++) {
+		points.push_back(Point(mat(i, 0), mat(i, 1)));
+	}
+
+	return move(points);
+}
+
