@@ -31,13 +31,13 @@ var yAxis = d3.axisLeft()
 // again scaleOrdinal
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
-d3.json("../json/seperate-linkedlist-2-5.json").then( data => {
+d3.json("../json/seperate-linkedlist-2.json").then( data => {
     data = data.children;
 
     data.forEach( d => {
         d.x = +d.x
         d.y = +d.y
-        d.value = +d.rollup_data.size
+        d.value = + d.rollup_data.size
     })
 
     console.log(data)
@@ -80,7 +80,7 @@ d3.json("../json/seperate-linkedlist-2-5.json").then( data => {
     bubble.append('title')
         .attr('x', function(d){ return radius(d.value); })
         .text(function(d){
-            return "Count:"+d.value;
+            return "Count:"+d.value + "\n" + JSON.stringify(d.rollup_data.typecount);
         });
 
 })

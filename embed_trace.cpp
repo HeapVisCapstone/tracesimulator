@@ -2,6 +2,9 @@
 #include "components.h"
 #include "embed.h"
 
+#include <set>
+#include <map>
+
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
 
@@ -14,26 +17,58 @@ namespace pt = boost::property_tree;
 // -- Turn on debugging
 bool debug = false;
 
-int AggregateData(const std::vector<DPNode<int>*>& nodes) {
+struct PointData {
+  int    size;
+  map<string, int> typecount;
+};
+
+PointData AggregateData(const std::vector<DPNode<PointData>*>& nodes) {
   int sum = 0;
+  map<string, int> typecount;
   for (auto n : nodes) {
-    DPLayer<int>* layer;
-    DPLeaf<int>* leaf;
-    if ((layer = dynamic_cast<DPLayer<int>*>(n)))
-      sum += layer->data;
-    else if ((leaf = dynamic_cast<DPLeaf<int>*>(n)))
-      sum += leaf->data;
+    DPLayer<PointData>* layer;
+    DPLeaf<PointData>* leaf;
+    if ((layer = dynamic_cast<DPLayer<PointData>*>(n))) {
+      sum += layer->data.size;
+
+      for (auto pair : layer->data.typecount) {
+        if (typecount.count(pair.first)) {
+          typecount[pair.first] += pair.second;
+        } else {
+          typecount[pair.first] = pair.second;
+        }
+      }
+
+    }
+
+    else if ((leaf = dynamic_cast<DPLeaf<PointData>*>(n))) {
+      sum += leaf->data.size;
+      for (auto pair : leaf->data.typecount) {
+        if (typecount.count(pair.first)) {
+          typecount[pair.first] += pair.second;
+        } else {
+          typecount[pair.first] = pair.second;
+        }
+      }
+    }
   }
 
-  return sum;
+  return { sum, move(typecount) };
 }
 
-pt::ptree writePT(int d) {
+pt::ptree writePT(PointData d) {
     pt::ptree pt;
-    pt.put("size",   std::to_string(d));
+    pt.put("size", std::to_string(d.size));
 
+    pt::ptree types;
+    for (auto pair : d.typecount) {
+      types.put(pair.first, pair.second);
+    }
+
+    pt.add_child("typecount", types);
     return pt;
 }
+
 
 
 void analyze();
@@ -74,7 +109,9 @@ int main(int argc, char *argv[]) {
 
 
   cout << "BUILDING DISTANCE MATRIX " << endl;
-  auto distances = build_dist_matrix(components[0]);
+  auto distance_pairs = build_dist_matrix(components[0]);
+  auto distances = distance_pairs.first;
+  auto point_mapping = distance_pairs.second;
 
   for (int i = 0; i < size; i++) {
     int sum = 0;
@@ -113,23 +150,39 @@ int main(int argc, char *argv[]) {
   cout << "yMax : " << yMax << "  xMax : " << xMax << endl;
 
 
-  map<Point, int> pointCount;
+  int point_index = 0;
+  map<Point, PointData> pointCount;
   for (auto p : points) {
+    int id = point_mapping[point_index];
+    point_index++;
+    string type = Heap.get(id)->getType();
+
     if (not pointCount.count(p))
-      pointCount[p] = 0;
-    pointCount[p]++;
+      // pointCount[p] = 0;
+      pointCount[p] = {0, {{type, 1}}};
+    else {
+      // pointCount[p]++;
+      pointCount[p].size++;
+
+      if (pointCount[p].typecount.count(type)) {
+        pointCount[p].typecount[type]++;
+      } else {
+        pointCount[p].typecount[type] = 1;
+      }
+      
+    }
   }
 
   cout << "Unique points " << pointCount.size();
 
   for (auto pair : pointCount) {
-    cout << to_string(pair.first) << " : " << pair.second << endl; 
+    cout << to_string(pair.first) << " : " << pair.second.size << endl; 
   }
 
 
-  vector<DPLeaf<int>*> leaves;
+  vector<DPLeaf<PointData>*> leaves;
   for (auto pair : pointCount) {
-    leaves.push_back( new DPLeaf<int>(pair.first, pair.second) );
+    leaves.push_back( new DPLeaf<PointData>(pair.first, pair.second) );
   }
 
 

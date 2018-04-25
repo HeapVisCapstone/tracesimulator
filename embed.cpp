@@ -6,6 +6,7 @@
 #define DEBUG false
 
 using Eigen::MatrixXd;
+using namespace std;
 
 int embed_test(int npoints);
 
@@ -162,7 +163,7 @@ inline void setMat(int* mat, int dim1, int x, int y, int value) {
 
 // build distance matrix on Component
 // Note: idx[binary_search(ids, id, 0, npoints)] gives the index of the point with id 'id'.
-Eigen::MatrixXd build_dist_matrix(Component compnt) {
+std::pair<Eigen::MatrixXd, std::map<int, int>> build_dist_matrix(Component compnt) {
 	// first, build the whole matrix.
 	cout << "first, build the whole matrix." << endl;
 	int nnodes = compnt.nodes.size();
@@ -193,6 +194,15 @@ Eigen::MatrixXd build_dist_matrix(Component compnt) {
 		i_temp++;
 	}
 	parallel_quicksort(ids, idx, 0, nnodes);
+
+	//
+	// Create a mapping from new id (index in node_arr) to old object id
+	//
+	map<int, int> mapping;
+	for (int i = 0; i < nnodes; i++) {
+		mapping[i] = node_arr[i]->id;
+	}
+
 
 	//
 	// make a new graph, identical, but with Node id = index
@@ -343,12 +353,15 @@ Eigen::MatrixXd build_dist_matrix(Component compnt) {
 	}
 
 
+
+
 	delete [] idx;
 	delete [] ids;
 	delete [] node_arr;
 	delete [] d;
 	delete [] successors;
-	return distances;
+
+	return make_pair(distances, mapping);
 }
 
 

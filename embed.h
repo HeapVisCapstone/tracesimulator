@@ -10,6 +10,7 @@
 
 #include <vector>
 
+#include "heap.h"
 #include "planar_tree_discrete.h"
 
 // Receives a n-by-n distance matrix d
@@ -24,13 +25,15 @@ Eigen::MatrixXd shift_embedding(Eigen::MatrixXd m, double x, double y);
 
 // builds a (double) distance matrix of integer distance for the set of nodes in
 //   connected component 'compnt'.
+// Also returns a mapping from index in return matrix to id in original heap
+
 // - Component's "graph" has edges but not edge weights. As a result, existing edges are
 //     assumed to have weight 1
 // - Distance is built using SSSP. Since edge weights are equal, BFS is sufficient to get
 //     SSSP from one node.
 // - After running BFS from all nodes, if d(i,j) != d(j,i), set d(i,j) = d(j,i) = min(d(i,j), d(j,i))
 // - Hence, distances are integers within the double matrix
-Eigen::MatrixXd build_dist_matrix(Component compnt);
+std::pair<Eigen::MatrixXd, std::map<int, int>> build_dist_matrix(Component compnt);
 
 
 // Converts nx2 matrix into a list of points
