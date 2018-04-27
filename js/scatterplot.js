@@ -4,11 +4,15 @@ var height = 800 - margin.top - margin.bottom;
 
 var svg = d3.select('body')
     .append('svg')
+    .attr("id", "#svg")
     .attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.top + margin.bottom)
 .append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
+
+var display = d3.select('body')
+    .append('div')
 
 // The API for scales have changed in v4. There is a separate module d3-scale which can be used instead. The main change here is instead of d3.scale.linear, we have d3.scaleLinear.
 var xScale = d3.scaleLinear()
@@ -31,59 +35,140 @@ var yAxis = d3.axisLeft()
 // again scaleOrdinal
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
-d3.json("../json/seperate-linkedlist-2.json").then( data => {
-    data = data.children;
 
-    data.forEach( d => {
-        d.x = +d.x
-        d.y = +d.y
-        d.value = + d.rollup_data.size
-    })
+// https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 
-    console.log(data)
-
-    xScale.domain(d3.extent(data, function(d){
-        return d.x;
-    })).nice();
-
-    yScale.domain(d3.extent(data, function(d){
-        return d.y;
-    })).nice();
-
-    radius.domain(d3.extent(data, function(d){
-        return d.value;
-    })).nice();
+file = getParameterByName("file")
 
 
-    // adding axes is also simpler now, just translate x-axis to (0,height) and it's alread defined to be a bottom axis. 
-    svg.append('g')
-        .attr('transform', 'translate(0,' + height + ')')
-        .attr('class', 'x axis')
-        .call(xAxis);
+d3.json("../json/"+file).then( data => {
 
-    // y-axis is translated to (0,0)
-    svg.append('g')
-        .attr('transform', 'translate(0,0)')
-        .attr('class', 'y axis')
-        .call(yAxis);
+data = data.children;
 
 
-    var bubble = svg.selectAll('.bubble')
-        .data(data)
-        .enter().append('circle')
-        .attr('class', 'bubble')
-        .attr('cx', function(d){return xScale(d.x);})
-        .attr('cy', function(d){ return yScale(d.y); })
-        .attr('r', function(d){ return radius(d.value); })
-        .style('fill', function(d){ return color(0); });
+data.forEach( d => {
+    d.x = +d.x
+    d.y = +d.y
+    d.value = + d.rollup_data.size
+    d.typecount = d.rollup_data.typecount
 
-    bubble.append('title')
-        .attr('x', function(d){ return radius(d.value); })
-        .text(function(d){
-            return "Count:"+d.value + "\n" + JSON.stringify(d.rollup_data.typecount);
-        });
+
+    Object.entries(d.typecount).forEach(
+        ([k, v]) => d.typecount[k] = +v)
 
 })
+
+console.log(data)
+
+xScale.domain(d3.extent(data, function(d){
+    return d.x;
+})).nice();
+
+yScale.domain(d3.extent(data, function(d){
+    return d.y;
+})).nice();
+
+radius.domain(d3.extent(data, function(d){
+    return d.value;
+})).nice();
+
+
+// adding axes is also simpler now, just translate x-axis to (0,height) and it's alread defined to be a bottom axis. 
+svg.append('g')
+    .attr('transform', 'translate(0,' + height + ')')
+    .attr('class', 'x axis')
+    .call(xAxis);
+
+// y-axis is translated to (0,0)
+svg.append('g')
+    .attr('transform', 'translate(0,0)')
+    .attr('class', 'y axis')
+    .call(yAxis);
+
+
+var bubble = svg.selectAll('.bubble')
+    .data(data)
+    .enter().append('circle')
+    .attr('class', 'bubble')
+    .attr('cx', function(d){return xScale(d.x);})
+    .attr('cy', function(d){ return yScale(d.y); })
+    .attr('r', function(d){ return radius(d.value); })
+    .style('fill', function(d){ return color(0); });
+
+bubble.append('title')
+    .attr('x', function(d){ return radius(d.value); })
+    .text(function(d){
+        return "Count:"+d.value + "\n" + JSON.stringify(d.typecount);
+    });
+
+var pointStart = null
+var pointEnd   = null
+
+function fromAbsX(x) {
+    return xScale.invert(x - margin.left)
+}
+function fromAbsY(y) {
+    return yScale.invert(y - margin.top)
+}
+var inRange = (dim, range) => v => (range[0] <= v[dim] && v[dim] <= range[1])
+
+var svgelement = document.getElementById("#svg");
+svgelement.onmousedown = function(p) {
+    // var p = d3.mouse(this);
+    pointStart = {x : fromAbsX(p.clientX), y : fromAbsY(p.clientY) }
+}
+
+svgelement.onmouseup = function(p) {
+    pointEnd = {x : fromAbsX(p.clientX), y : fromAbsY(p.clientY) }
+
+    renderPoints()
+}
+
+function renderPoints() {
+    var xRange = pointStart.x < pointEnd.x ? [pointStart.x, pointEnd.x]
+                                           : [pointEnd.x,   pointStart.x] 
+
+    var yRange = pointStart.y < pointEnd.y ? [pointStart.y, pointEnd.y]
+                                           : [pointEnd.y,   pointStart.y]                                     
+
+    var points = data.filter(inRange("x", xRange)).filter(inRange("y",  yRange))
+
+    var mergeInto = (from, to) => {
+        Object.entries(from).forEach(
+            ([k, v]) => to.hasOwnProperty(k) ? to[k] = to[k] + v
+                                             : to[k] = v )
+        return to;
+    }
+
+    var alltypes = points.reduce( (acc, point) => mergeInto(point.typecount, acc)
+                            , {})
+
+    console.log("Types", "x", xRange, "y", yRange)
+
+    console.log(alltypes)
+
+    var html = ""
+    Object.entries(alltypes).forEach( 
+        ([k, v]) => html += "<p>"+k + ": " + v + "</p>")
+
+    display.html(html)
+}
+
+
+})
+
+
+
+
 
 /*
 d3.csv('iris.csv').then( function(data){
