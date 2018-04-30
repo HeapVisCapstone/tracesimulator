@@ -47,7 +47,7 @@ void run_test(int n, double p, int print_d, int verif) {
 		}
 	}
 	clock_t time1 = clock();
-	Eigen::MatrixXd d = build_dist_matrix(c);
+	Eigen::MatrixXd d = build_dist_matrix(c).first;
 	clock_t time2 = clock();
 	if (print_d) {
 		std::cout << d << std::endl;

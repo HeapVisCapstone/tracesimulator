@@ -1,5 +1,5 @@
 To install boost statically linked libraries:
-* https://stackoverflow.com/questions/12578499/how-to-install-boost-on-ubuntu
+https://stackoverflow.com/a/24086375
 
 To run embed trace
 make embed_trace
