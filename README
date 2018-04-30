@@ -1,2 +1,13 @@
 To install boost statically linked libraries:
 * https://stackoverflow.com/questions/12578499/how-to-install-boost-on-ubuntu
+
+To run embed trace
+make embed_trace
+./embed_trace traces/[file].names json/[write to file].json [--trimdegree=n] < traces/[file].trace
+
+cd tracesimulator
+python -m SimpleHTTPServer
+
+Open
+"http://localhost:8000/js/scatterplot.html?file=[write to file].json"
+You'll need to wait a bit for file to load

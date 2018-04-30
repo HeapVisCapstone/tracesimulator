@@ -1,0 +1,62 @@
+{
+    "x": "0",
+    "y": "0",
+    "dx": "4",
+    "dy": "3",
+    "rollup_data": {
+        "size": "22"
+    },
+    "id": "<0,0><4,3>",
+    "children": [
+        {
+            "x": "0",
+            "y": "1",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1"
+            },
+            "id": "autogen"
+        },
+        {
+            "x": "1",
+            "y": "0",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "16"
+            },
+            "id": "autogen0"
+        },
+        {
+            "x": "1",
+            "y": "1",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2"
+            },
+            "id": "autogen1"
+        },
+        {
+            "x": "2",
+            "y": "1",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1"
+            },
+            "id": "autogen2"
+        },
+        {
+            "x": "3",
+            "y": "2",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2"
+            },
+            "id": "autogen3"
+        }
+    ]
+}

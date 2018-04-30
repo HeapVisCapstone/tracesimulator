@@ -1,0 +1,1374 @@
+{
+    "x": "0",
+    "y": "0",
+    "dx": "123",
+    "dy": "45",
+    "rollup_data": {
+        "size": "273",
+        "typecount": {
+            "Lcom\/ibm\/misc\/SignalDispatcher$1;": "1",
+            "Lcom\/ibm\/misc\/SignalDispatcher;": "1",
+            "Lcom\/ibm\/tools\/attach\/javaSE\/AttachHandler$WaitLoop;": "1",
+            "Lcom\/ibm\/tools\/attach\/javaSE\/AttachHandler$teardownHook;": "1",
+            "Lcom\/ibm\/tools\/attach\/javaSE\/AttachHandler;": "1",
+            "Ljava\/io\/BufferedWriter;": "2",
+            "Ljava\/io\/OutputStreamWriter;": "2",
+            "Ljava\/io\/PrintStream;": "2",
+            "Ljava\/lang\/String;": "138",
+            "Ljava\/lang\/Thread;": "13",
+            "Ljava\/lang\/ThreadGroup;": "2",
+            "Ljava\/security\/AccessControlContext;": "1",
+            "Ljava\/util\/Hashtable$Entry;": "175",
+            "Ljava\/util\/Properties;": "1",
+            "Ljava\/util\/regex\/Matcher;": "1",
+            "Ljava\/util\/regex\/Pattern$Curly;": "1",
+            "Ljava\/util\/regex\/Pattern;": "1",
+            "Lsun\/misc\/Launcher$AppClassLoader;": "1",
+            "Lsun\/misc\/Launcher$ExtClassLoader;": "1",
+            "Lsun\/misc\/URLClassPath;": "2",
+            "Lsun\/nio\/cs\/StreamEncoder$CharsetSE;": "2",
+            "Lsun\/nio\/cs\/UTF_8$Encoder;": "2",
+            "Lsun\/nio\/cs\/UTF_8;": "1",
+            "[Ljava\/lang\/String;": "2",
+            "[Ljava\/lang\/Thread;": "4",
+            "[Ljava\/util\/Hashtable$Entry;": "16"
+        }
+    },
+    "id": "<0,0><123,45>",
+    "children": [
+        {
+            "x": "0",
+            "y": "36",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen"
+        },
+        {
+            "x": "18",
+            "y": "37",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen0"
+        },
+        {
+            "x": "18",
+            "y": "38",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen1"
+        },
+        {
+            "x": "37",
+            "y": "38",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Lsun\/nio\/cs\/UTF_8$Encoder;": "2"
+                }
+            },
+            "id": "autogen2"
+        },
+        {
+            "x": "37",
+            "y": "39",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lsun\/nio\/cs\/UTF_8;": "1"
+                }
+            },
+            "id": "autogen3"
+        },
+        {
+            "x": "41",
+            "y": "4",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/security\/AccessControlContext;": "1",
+                    "Lsun\/misc\/URLClassPath;": "1"
+                }
+            },
+            "id": "autogen4"
+        },
+        {
+            "x": "42",
+            "y": "0",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/Thread;": "2"
+                }
+            },
+            "id": "autogen5"
+        },
+        {
+            "x": "42",
+            "y": "2",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Thread;": "1"
+                }
+            },
+            "id": "autogen6"
+        },
+        {
+            "x": "47",
+            "y": "28",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/regex\/Pattern$Curly;": "1"
+                }
+            },
+            "id": "autogen7"
+        },
+        {
+            "x": "55",
+            "y": "39",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Lsun\/nio\/cs\/StreamEncoder$CharsetSE;": "2"
+                }
+            },
+            "id": "autogen8"
+        },
+        {
+            "x": "60",
+            "y": "4",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/ThreadGroup;": "1"
+                }
+            },
+            "id": "autogen9"
+        },
+        {
+            "x": "60",
+            "y": "5",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "12",
+                "typecount": {
+                    "Ljava\/lang\/Thread;": "13"
+                }
+            },
+            "id": "autogen10"
+        },
+        {
+            "x": "60",
+            "y": "6",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "Lcom\/ibm\/misc\/SignalDispatcher$1;": "1",
+                    "Lcom\/ibm\/misc\/SignalDispatcher;": "1",
+                    "Lcom\/ibm\/tools\/attach\/javaSE\/AttachHandler$WaitLoop;": "1",
+                    "Lcom\/ibm\/tools\/attach\/javaSE\/AttachHandler$teardownHook;": "1",
+                    "Lsun\/misc\/Launcher$ExtClassLoader;": "1",
+                    "Lsun\/misc\/URLClassPath;": "1"
+                }
+            },
+            "id": "autogen11"
+        },
+        {
+            "x": "66",
+            "y": "29",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/regex\/Pattern;": "1"
+                }
+            },
+            "id": "autogen12"
+        },
+        {
+            "x": "73",
+            "y": "39",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/io\/OutputStreamWriter;": "2",
+                    "Ljava\/io\/PrintStream;": "2"
+                }
+            },
+            "id": "autogen13"
+        },
+        {
+            "x": "77",
+            "y": "11",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/ThreadGroup;": "1"
+                }
+            },
+            "id": "autogen14"
+        },
+        {
+            "x": "77",
+            "y": "13",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Thread;": "1"
+                }
+            },
+            "id": "autogen15"
+        },
+        {
+            "x": "77",
+            "y": "41",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Properties;": "1"
+                }
+            },
+            "id": "autogen16"
+        },
+        {
+            "x": "78",
+            "y": "8",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lsun\/misc\/Launcher$AppClassLoader;": "1"
+                }
+            },
+            "id": "autogen17"
+        },
+        {
+            "x": "79",
+            "y": "36",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen18"
+        },
+        {
+            "x": "79",
+            "y": "40",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen19"
+        },
+        {
+            "x": "82",
+            "y": "32",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen20"
+        },
+        {
+            "x": "82",
+            "y": "36",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen21"
+        },
+        {
+            "x": "82",
+            "y": "42",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen22"
+        },
+        {
+            "x": "84",
+            "y": "31",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/regex\/Matcher;": "1"
+                }
+            },
+            "id": "autogen23"
+        },
+        {
+            "x": "84",
+            "y": "38",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen24"
+        },
+        {
+            "x": "86",
+            "y": "34",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen25"
+        },
+        {
+            "x": "87",
+            "y": "38",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen26"
+        },
+        {
+            "x": "91",
+            "y": "34",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "3"
+                }
+            },
+            "id": "autogen27"
+        },
+        {
+            "x": "91",
+            "y": "39",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/io\/BufferedWriter;": "2"
+                }
+            },
+            "id": "autogen28"
+        },
+        {
+            "x": "91",
+            "y": "43",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen29"
+        },
+        {
+            "x": "92",
+            "y": "36",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen30"
+        },
+        {
+            "x": "92",
+            "y": "37",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen31"
+        },
+        {
+            "x": "92",
+            "y": "41",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen32"
+        },
+        {
+            "x": "93",
+            "y": "35",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen33"
+        },
+        {
+            "x": "93",
+            "y": "36",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "4"
+                }
+            },
+            "id": "autogen34"
+        },
+        {
+            "x": "93",
+            "y": "37",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "3"
+                }
+            },
+            "id": "autogen35"
+        },
+        {
+            "x": "93",
+            "y": "38",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "2"
+                }
+            },
+            "id": "autogen36"
+        },
+        {
+            "x": "94",
+            "y": "33",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen37"
+        },
+        {
+            "x": "94",
+            "y": "35",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "2"
+                }
+            },
+            "id": "autogen38"
+        },
+        {
+            "x": "94",
+            "y": "36",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "6",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "7"
+                }
+            },
+            "id": "autogen39"
+        },
+        {
+            "x": "94",
+            "y": "37",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "13",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "14"
+                }
+            },
+            "id": "autogen40"
+        },
+        {
+            "x": "94",
+            "y": "38",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "14",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "15"
+                }
+            },
+            "id": "autogen41"
+        },
+        {
+            "x": "94",
+            "y": "39",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "14",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "15"
+                }
+            },
+            "id": "autogen42"
+        },
+        {
+            "x": "94",
+            "y": "40",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "8",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "9"
+                }
+            },
+            "id": "autogen43"
+        },
+        {
+            "x": "95",
+            "y": "17",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lcom\/ibm\/tools\/attach\/javaSE\/AttachHandler;": "1"
+                }
+            },
+            "id": "autogen44"
+        },
+        {
+            "x": "95",
+            "y": "26",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen45"
+        },
+        {
+            "x": "95",
+            "y": "28",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen46"
+        },
+        {
+            "x": "95",
+            "y": "32",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "2"
+                }
+            },
+            "id": "autogen47"
+        },
+        {
+            "x": "95",
+            "y": "33",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "4"
+                }
+            },
+            "id": "autogen48"
+        },
+        {
+            "x": "95",
+            "y": "34",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "3"
+                }
+            },
+            "id": "autogen49"
+        },
+        {
+            "x": "95",
+            "y": "35",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen50"
+        },
+        {
+            "x": "95",
+            "y": "37",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "4"
+                }
+            },
+            "id": "autogen51"
+        },
+        {
+            "x": "95",
+            "y": "38",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "2"
+                }
+            },
+            "id": "autogen52"
+        },
+        {
+            "x": "95",
+            "y": "39",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "3",
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen53"
+        },
+        {
+            "x": "95",
+            "y": "40",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "6",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "7"
+                }
+            },
+            "id": "autogen54"
+        },
+        {
+            "x": "95",
+            "y": "44",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen55"
+        },
+        {
+            "x": "96",
+            "y": "25",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen56"
+        },
+        {
+            "x": "96",
+            "y": "27",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen57"
+        },
+        {
+            "x": "96",
+            "y": "32",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "2"
+                }
+            },
+            "id": "autogen58"
+        },
+        {
+            "x": "96",
+            "y": "33",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "10",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "11"
+                }
+            },
+            "id": "autogen59"
+        },
+        {
+            "x": "96",
+            "y": "34",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "8",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "9"
+                }
+            },
+            "id": "autogen60"
+        },
+        {
+            "x": "96",
+            "y": "35",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen61"
+        },
+        {
+            "x": "96",
+            "y": "36",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "6"
+                }
+            },
+            "id": "autogen62"
+        },
+        {
+            "x": "96",
+            "y": "37",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "9",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "10"
+                }
+            },
+            "id": "autogen63"
+        },
+        {
+            "x": "96",
+            "y": "38",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "4"
+                }
+            },
+            "id": "autogen64"
+        },
+        {
+            "x": "96",
+            "y": "39",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen65"
+        },
+        {
+            "x": "96",
+            "y": "40",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen66"
+        },
+        {
+            "x": "96",
+            "y": "42",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen67"
+        },
+        {
+            "x": "97",
+            "y": "28",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen68"
+        },
+        {
+            "x": "97",
+            "y": "32",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen69"
+        },
+        {
+            "x": "97",
+            "y": "33",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "3"
+                }
+            },
+            "id": "autogen70"
+        },
+        {
+            "x": "97",
+            "y": "34",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "4"
+                }
+            },
+            "id": "autogen71"
+        },
+        {
+            "x": "97",
+            "y": "36",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen72"
+        },
+        {
+            "x": "97",
+            "y": "37",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "4"
+                }
+            },
+            "id": "autogen73"
+        },
+        {
+            "x": "97",
+            "y": "38",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "6",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "7"
+                }
+            },
+            "id": "autogen74"
+        },
+        {
+            "x": "97",
+            "y": "43",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen75"
+        },
+        {
+            "x": "97",
+            "y": "44",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/lang\/String;": "4"
+                }
+            },
+            "id": "autogen76"
+        },
+        {
+            "x": "98",
+            "y": "36",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen77"
+        },
+        {
+            "x": "98",
+            "y": "37",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen78"
+        },
+        {
+            "x": "98",
+            "y": "43",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen79"
+        },
+        {
+            "x": "98",
+            "y": "44",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen80"
+        },
+        {
+            "x": "99",
+            "y": "44",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen81"
+        },
+        {
+            "x": "101",
+            "y": "32",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen82"
+        },
+        {
+            "x": "101",
+            "y": "36",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen83"
+        },
+        {
+            "x": "102",
+            "y": "32",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen84"
+        },
+        {
+            "x": "102",
+            "y": "33",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen85"
+        },
+        {
+            "x": "103",
+            "y": "32",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "3"
+                }
+            },
+            "id": "autogen86"
+        },
+        {
+            "x": "103",
+            "y": "34",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen87"
+        },
+        {
+            "x": "104",
+            "y": "33",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen88"
+        },
+        {
+            "x": "107",
+            "y": "35",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "13",
+                "typecount": {
+                    "Ljava\/lang\/String;": "14"
+                }
+            },
+            "id": "autogen89"
+        },
+        {
+            "x": "107",
+            "y": "36",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "25",
+                "typecount": {
+                    "Ljava\/lang\/String;": "26"
+                }
+            },
+            "id": "autogen90"
+        },
+        {
+            "x": "107",
+            "y": "37",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/lang\/String;": "4"
+                }
+            },
+            "id": "autogen91"
+        },
+        {
+            "x": "108",
+            "y": "35",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "Ljava\/lang\/String;": "6"
+                }
+            },
+            "id": "autogen92"
+        },
+        {
+            "x": "108",
+            "y": "36",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "30",
+                "typecount": {
+                    "Ljava\/lang\/String;": "31"
+                }
+            },
+            "id": "autogen93"
+        },
+        {
+            "x": "108",
+            "y": "37",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "12",
+                "typecount": {
+                    "Ljava\/lang\/String;": "13"
+                }
+            },
+            "id": "autogen94"
+        },
+        {
+            "x": "109",
+            "y": "35",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "3"
+                }
+            },
+            "id": "autogen95"
+        },
+        {
+            "x": "109",
+            "y": "36",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "9",
+                "typecount": {
+                    "Ljava\/lang\/String;": "10"
+                }
+            },
+            "id": "autogen96"
+        },
+        {
+            "x": "109",
+            "y": "37",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "8",
+                "typecount": {
+                    "Ljava\/lang\/String;": "9"
+                }
+            },
+            "id": "autogen97"
+        },
+        {
+            "x": "109",
+            "y": "39",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen98"
+        },
+        {
+            "x": "111",
+            "y": "27",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen99"
+        },
+        {
+            "x": "120",
+            "y": "33",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen100"
+        }
+    ]
+}

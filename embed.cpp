@@ -263,7 +263,8 @@ std::pair<Eigen::MatrixXd, std::map<int, int>> build_dist_matrix(Component compn
 	int q_ins = 0;
 	int q_idx = 0;
 	for (int i = 0; i < nnodes; i++) {
-		cout << "On node " << i << endl;
+		if (i % 1000 == 0)
+			cout << "On node " << i << endl;
 		for (int j = 0; j < nnodes; j++) {
 			que[j] = 0;
 			unmarked[j] = 1;

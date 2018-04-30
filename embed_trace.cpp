@@ -7,10 +7,12 @@
 
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
+#include <boost/program_options.hpp>
 
 
 using namespace std;
 
+using namespace boost::program_options;
 
 namespace pt = boost::property_tree;
 
@@ -70,10 +72,38 @@ pt::ptree writePT(PointData d) {
 }
 
 
+struct Flags {
+  int trimdegree;
+};
 
-void analyze();
+Flags readFlags(int argc, char *argv[]) {
+  Flags flags;
+  try {
+    options_description desc{"Options"};
+    desc.add_options()
+      ("help", "Help screen")
+      ("trimdegree",  value<int>()->default_value(10), "trim degree");
+
+
+      variables_map vm;
+      store(parse_command_line(argc, argv, desc), vm);
+      notify(vm);
+
+      flags.trimdegree = vm["trimdegree"].as<int>();
+
+  } catch (const error &ex) {
+    std::cerr << ex.what() << '\n';
+    exit(1);
+  }
+  return flags;
+}
+
+
 
 int main(int argc, char *argv[]) {
+  Flags flags = readFlags(argc, argv);
+
+
   cout << "Read names file..." << endl;
 
   cout << "Start trace..." << endl;
@@ -87,7 +117,7 @@ int main(int argc, char *argv[]) {
   Graph gTrim = makeGraph(Heap);
   cout << "BEFORE TRIM GRAPH #: " << gTrim.nodes.size() << endl;
   
-  trimGraph(&gTrim, 3);
+  trimGraph(&gTrim, flags.trimdegree);
   cout << "AFTER TRIM GRAPH #: " << gTrim.nodes.size() << endl;
 
 
@@ -113,17 +143,6 @@ int main(int argc, char *argv[]) {
   auto distances = distance_pairs.first;
   auto point_mapping = distance_pairs.second;
 
-  for (int i = 0; i < size; i++) {
-    int sum = 0;
-    // cout << "NODE " << i;
-    for (int j = 0; j < size; j++) {
-      sum += distances(i, j);
-      // cout << " " << distances(i, j) << " ";
-    }
-    // cout << endl;
-    cout << "NODE " << i << " AVERAGE DISTANCE TO EVERYTHING ELSE " << (float)sum/(float)size << endl;
-
-  }
 
   cout << "EMBEDDING" << endl;
   auto embedding = embed_graph(distances, size);
@@ -134,10 +153,10 @@ int main(int argc, char *argv[]) {
   cout << "CREATING POINTS " << endl;
   auto points = asPoints(embedding);
 
-  int i = 0;
-  for (auto p : points) {
-    cout << i++ << " : " << to_string(p) << endl;
-  }
+  // int i = 0;
+  // for (auto p : points) {
+  //   cout << i++ << " : " << to_string(p) << endl;
+  // }
 
 
   int xMax = 0, yMax = 0;

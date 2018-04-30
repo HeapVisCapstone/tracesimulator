@@ -61,6 +61,7 @@ data.forEach( d => {
     d.value = + d.rollup_data.size
     d.typecount = d.rollup_data.typecount
 
+    // console.log(d)
 
     Object.entries(d.typecount).forEach(
         ([k, v]) => d.typecount[k] = +v)

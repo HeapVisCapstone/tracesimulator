@@ -1,0 +1,5842 @@
+{
+    "x": "0",
+    "y": "0",
+    "dx": "2097",
+    "dy": "701",
+    "rollup_data": {
+        "size": "19685",
+        "typecount": {
+            "LSeparateLinkedList$Writer;": "2",
+            "Lcom\/ibm\/misc\/SignalDispatcher$1;": "1",
+            "Lcom\/ibm\/misc\/SignalDispatcher;": "1",
+            "Lcom\/ibm\/misc\/SystemIntialization$1;": "1",
+            "Lcom\/ibm\/oti\/vm\/BootstrapClassLoader;": "1",
+            "Lcom\/ibm\/tools\/attach\/javaSE\/AttachHandler$WaitLoop;": "1",
+            "Lcom\/ibm\/tools\/attach\/javaSE\/AttachHandler$teardownHook;": "1",
+            "Lcom\/ibm\/tools\/attach\/javaSE\/AttachHandler;": "1",
+            "Ljava\/io\/BufferedOutputStream;": "2",
+            "Ljava\/io\/BufferedWriter;": "2",
+            "Ljava\/io\/ExpiringCache$1;": "1",
+            "Ljava\/io\/FileInputStream;": "2",
+            "Ljava\/io\/FileOutputStream;": "2",
+            "Ljava\/io\/ObjectStreamField;": "13",
+            "Ljava\/io\/OutputStreamWriter;": "2",
+            "Ljava\/io\/PrintStream;": "2",
+            "Ljava\/io\/UnixFileSystem;": "2",
+            "Ljava\/lang\/Class;": "30",
+            "Ljava\/lang\/ClassLoader$1;": "3",
+            "Ljava\/lang\/Integer;": "29",
+            "Ljava\/lang\/String;": "569",
+            "Ljava\/lang\/StringBuilder;": "22",
+            "Ljava\/lang\/StringCoding$DecoderCache;": "1",
+            "Ljava\/lang\/StringCoding$EncoderCache;": "2",
+            "Ljava\/lang\/Terminator$1;": "1",
+            "Ljava\/lang\/Thread;": "17",
+            "Ljava\/lang\/ThreadGroup;": "2",
+            "Ljava\/lang\/ThreadLocal$ThreadLocalMap$Entry;": "2",
+            "Ljava\/lang\/reflect\/Field;": "11",
+            "Ljava\/lang\/reflect\/Method;": "7",
+            "Ljava\/math\/RoundingMode;": "1",
+            "Ljava\/net\/URL;": "49",
+            "Ljava\/net\/URLClassLoader$5;": "3",
+            "Ljava\/nio\/charset\/CodingErrorAction;": "2",
+            "Ljava\/security\/AccessControlContext;": "1",
+            "Ljava\/security\/CodeSource;": "1",
+            "Ljava\/security\/ProtectionDomain;": "1",
+            "Ljava\/text\/DecimalFormat;": "2000",
+            "Ljava\/text\/DecimalFormatSymbols;": "2000",
+            "Ljava\/text\/DigitList;": "2000",
+            "Ljava\/util\/ArrayList;": "7",
+            "Ljava\/util\/Collections$UnmodifiableRandomAccessList;": "1",
+            "Ljava\/util\/Currency;": "1",
+            "Ljava\/util\/Formatter$FormatToken;": "6000",
+            "Ljava\/util\/Formatter$ParserStateMachine;": "2000",
+            "Ljava\/util\/Formatter$Transformer;": "2000",
+            "Ljava\/util\/Formatter;": "1",
+            "Ljava\/util\/HashMap$Entry;": "102",
+            "Ljava\/util\/HashMap;": "1",
+            "Ljava\/util\/Hashtable$Entry;": "332",
+            "Ljava\/util\/Hashtable;": "4",
+            "Ljava\/util\/IdentityHashMap$1;": "1",
+            "Ljava\/util\/IdentityHashMap;": "1",
+            "Ljava\/util\/LinkedHashMap$LinkedHashMapEntry;": "52",
+            "Ljava\/util\/LinkedList$Link;": "2002",
+            "Ljava\/util\/Locale;": "22",
+            "Ljava\/util\/Properties;": "1",
+            "Ljava\/util\/ResourceBundle$Control$1;": "5",
+            "Ljava\/util\/ResourceBundle$RBClassLoader;": "1",
+            "Ljava\/util\/ServiceLoader$ServiceIterator;": "3",
+            "Ljava\/util\/ServiceLoader;": "3",
+            "Ljava\/util\/Vector;": "1",
+            "Ljava\/util\/concurrent\/ConcurrentHashMap$HashEntry;": "24",
+            "Ljava\/util\/concurrent\/ConcurrentHashMap$Segment;": "16",
+            "Ljava\/util\/jar\/JarFile;": "49",
+            "Ljava\/util\/regex\/Matcher;": "1",
+            "Ljava\/util\/regex\/Pattern$Curly;": "1",
+            "Ljava\/util\/regex\/Pattern;": "1",
+            "Ljava\/util\/zip\/Inflater;": "19",
+            "Ljava\/util\/zip\/ZipFile$1;": "19",
+            "Lsun\/misc\/FileURLMapper;": "22",
+            "Lsun\/misc\/Launcher$AppClassLoader$1;": "1",
+            "Lsun\/misc\/Launcher$AppClassLoader;": "1",
+            "Lsun\/misc\/Launcher$ExtClassLoader;": "1",
+            "Lsun\/misc\/Signal;": "3",
+            "Lsun\/misc\/URLClassPath$2;": "3",
+            "Lsun\/misc\/URLClassPath$FileLoader$1;": "2",
+            "Lsun\/misc\/URLClassPath$FileLoader;": "1",
+            "Lsun\/misc\/URLClassPath$JarLoader;": "22",
+            "Lsun\/misc\/URLClassPath;": "2",
+            "Lsun\/net\/www\/MessageHeader;": "1",
+            "Lsun\/net\/www\/protocol\/file\/FileURLConnection;": "1",
+            "Lsun\/net\/www\/protocol\/file\/Handler;": "1",
+            "Lsun\/net\/www\/protocol\/jar\/Handler;": "1",
+            "Lsun\/nio\/cs\/StreamEncoder$CharsetSE;": "2",
+            "Lsun\/nio\/cs\/US_ASCII$Decoder;": "2",
+            "Lsun\/nio\/cs\/US_ASCII$Encoder;": "2",
+            "Lsun\/nio\/cs\/US_ASCII;": "1",
+            "Lsun\/text\/resources\/FormatData;": "1",
+            "Lsun\/text\/resources\/FormatData_en;": "1",
+            "Lsun\/text\/resources\/FormatData_en_US;": "1",
+            "Lsun\/util\/LocaleServiceProviderPool;": "3",
+            "Lsun\/util\/resources\/CurrencyNames;": "1",
+            "Lsun\/util\/resources\/CurrencyNames_en_US;": "1",
+            "Lsun\/util\/resources\/LocaleData$LocaleDataResourceBundleControl;": "1",
+            "[B": "1",
+            "[C": "54",
+            "[Ljava\/io\/File;": "1",
+            "[Ljava\/io\/ObjectStreamField;": "2",
+            "[Ljava\/lang\/Class;": "13",
+            "[Ljava\/lang\/Integer;": "1",
+            "[Ljava\/lang\/Object;": "393",
+            "[Ljava\/lang\/String;": "67",
+            "[Ljava\/lang\/Thread;": "4",
+            "[Ljava\/lang\/ThreadLocal$ThreadLocalMap$Entry;": "1",
+            "[Ljava\/math\/RoundingMode;": "1",
+            "[Ljava\/net\/URL;": "1",
+            "[Ljava\/text\/FieldPosition;": "1",
+            "[Ljava\/util\/HashMap$Entry;": "6",
+            "[Ljava\/util\/Hashtable$Entry;": "23",
+            "[Ljava\/util\/LinkedHashMap$LinkedHashMapEntry;": "3",
+            "[Ljava\/util\/concurrent\/ConcurrentHashMap$HashEntry;": "4",
+            "[Ljava\/util\/concurrent\/ConcurrentHashMap$Segment;": "1",
+            "[[Ljava\/lang\/Object;": "1"
+        }
+    },
+    "id": "<0,0><2097,701>",
+    "children": [
+        {
+            "x": "0",
+            "y": "378",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "2"
+                }
+            },
+            "id": "autogen"
+        },
+        {
+            "x": "137",
+            "y": "356",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen0"
+        },
+        {
+            "x": "206",
+            "y": "429",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "1"
+                }
+            },
+            "id": "autogen1"
+        },
+        {
+            "x": "214",
+            "y": "430",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[C": "2"
+                }
+            },
+            "id": "autogen2"
+        },
+        {
+            "x": "274",
+            "y": "333",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen3"
+        },
+        {
+            "x": "343",
+            "y": "407",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/Class;": "2"
+                }
+            },
+            "id": "autogen4"
+        },
+        {
+            "x": "351",
+            "y": "407",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[C": "1"
+                }
+            },
+            "id": "autogen5"
+        },
+        {
+            "x": "352",
+            "y": "407",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen6"
+        },
+        {
+            "x": "411",
+            "y": "311",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "1"
+                }
+            },
+            "id": "autogen7"
+        },
+        {
+            "x": "479",
+            "y": "384",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "1"
+                }
+            },
+            "id": "autogen8"
+        },
+        {
+            "x": "480",
+            "y": "384",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "4",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "5"
+                }
+            },
+            "id": "autogen9"
+        },
+        {
+            "x": "488",
+            "y": "385",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen10"
+        },
+        {
+            "x": "489",
+            "y": "385",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "47",
+                "typecount": {
+                    "Ljava\/util\/LinkedHashMap$LinkedHashMapEntry;": "47",
+                    "[Ljava\/util\/LinkedHashMap$LinkedHashMapEntry;": "1"
+                }
+            },
+            "id": "autogen11"
+        },
+        {
+            "x": "548",
+            "y": "289",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/io\/ObjectStreamField;": "1"
+                }
+            },
+            "id": "autogen12"
+        },
+        {
+            "x": "549",
+            "y": "289",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/io\/ObjectStreamField;": "1"
+                }
+            },
+            "id": "autogen13"
+        },
+        {
+            "x": "600",
+            "y": "691",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen14"
+        },
+        {
+            "x": "616",
+            "y": "362",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/reflect\/Method;": "1"
+                }
+            },
+            "id": "autogen15"
+        },
+        {
+            "x": "617",
+            "y": "362",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/lang\/reflect\/Method;": "2",
+                    "[Ljava\/lang\/Class;": "1",
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen16"
+        },
+        {
+            "x": "618",
+            "y": "362",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "[Ljava\/lang\/Class;": "6"
+                }
+            },
+            "id": "autogen17"
+        },
+        {
+            "x": "619",
+            "y": "362",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "2"
+                }
+            },
+            "id": "autogen18"
+        },
+        {
+            "x": "625",
+            "y": "362",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/util\/LinkedHashMap$LinkedHashMapEntry;": "3"
+                }
+            },
+            "id": "autogen19"
+        },
+        {
+            "x": "626",
+            "y": "362",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/io\/ExpiringCache$1;": "1",
+                    "[Ljava\/util\/LinkedHashMap$LinkedHashMapEntry;": "2"
+                }
+            },
+            "id": "autogen20"
+        },
+        {
+            "x": "686",
+            "y": "266",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1",
+                    "[Ljava\/io\/ObjectStreamField;": "1"
+                }
+            },
+            "id": "autogen21"
+        },
+        {
+            "x": "686",
+            "y": "512",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/StringCoding$DecoderCache;": "1"
+                }
+            },
+            "id": "autogen22"
+        },
+        {
+            "x": "733",
+            "y": "655",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen23"
+        },
+        {
+            "x": "737",
+            "y": "665",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen24"
+        },
+        {
+            "x": "737",
+            "y": "666",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen25"
+        },
+        {
+            "x": "737",
+            "y": "667",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen26"
+        },
+        {
+            "x": "738",
+            "y": "668",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen27"
+        },
+        {
+            "x": "739",
+            "y": "672",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen28"
+        },
+        {
+            "x": "748",
+            "y": "679",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen29"
+        },
+        {
+            "x": "754",
+            "y": "339",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "6",
+                "typecount": {
+                    "Lcom\/ibm\/misc\/SystemIntialization$1;": "1",
+                    "Ljava\/lang\/Class;": "2",
+                    "Ljava\/lang\/String;": "1",
+                    "Ljava\/util\/Hashtable$Entry;": "3"
+                }
+            },
+            "id": "autogen30"
+        },
+        {
+            "x": "755",
+            "y": "340",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "1"
+                }
+            },
+            "id": "autogen31"
+        },
+        {
+            "x": "756",
+            "y": "339",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen32"
+        },
+        {
+            "x": "756",
+            "y": "340",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "38",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "39"
+                }
+            },
+            "id": "autogen33"
+        },
+        {
+            "x": "756",
+            "y": "681",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen34"
+        },
+        {
+            "x": "757",
+            "y": "684",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen35"
+        },
+        {
+            "x": "758",
+            "y": "340",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "26",
+                "typecount": {
+                    "[C": "27"
+                }
+            },
+            "id": "autogen36"
+        },
+        {
+            "x": "762",
+            "y": "340",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/LinkedHashMap$LinkedHashMapEntry;": "2"
+                }
+            },
+            "id": "autogen37"
+        },
+        {
+            "x": "822",
+            "y": "244",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/reflect\/Field;": "3"
+                }
+            },
+            "id": "autogen38"
+        },
+        {
+            "x": "823",
+            "y": "244",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/io\/ObjectStreamField;": "2"
+                }
+            },
+            "id": "autogen39"
+        },
+        {
+            "x": "823",
+            "y": "490",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/ThreadLocal$ThreadLocalMap$Entry;": "1"
+                }
+            },
+            "id": "autogen40"
+        },
+        {
+            "x": "869",
+            "y": "627",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen41"
+        },
+        {
+            "x": "870",
+            "y": "631",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen42"
+        },
+        {
+            "x": "870",
+            "y": "632",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen43"
+        },
+        {
+            "x": "871",
+            "y": "633",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen44"
+        },
+        {
+            "x": "873",
+            "y": "641",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen45"
+        },
+        {
+            "x": "874",
+            "y": "642",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "7",
+                "typecount": {
+                    "Ljava\/lang\/String;": "6",
+                    "[Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen46"
+        },
+        {
+            "x": "874",
+            "y": "643",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "10",
+                "typecount": {
+                    "Ljava\/lang\/String;": "4",
+                    "[Ljava\/lang\/String;": "7"
+                }
+            },
+            "id": "autogen47"
+        },
+        {
+            "x": "874",
+            "y": "644",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2",
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen48"
+        },
+        {
+            "x": "875",
+            "y": "644",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2",
+                    "[Ljava\/lang\/Object;": "1",
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen49"
+        },
+        {
+            "x": "875",
+            "y": "645",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen50"
+        },
+        {
+            "x": "875",
+            "y": "646",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "2"
+                }
+            },
+            "id": "autogen51"
+        },
+        {
+            "x": "876",
+            "y": "647",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen52"
+        },
+        {
+            "x": "876",
+            "y": "648",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen53"
+        },
+        {
+            "x": "876",
+            "y": "649",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "3"
+                }
+            },
+            "id": "autogen54"
+        },
+        {
+            "x": "877",
+            "y": "650",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "2"
+                }
+            },
+            "id": "autogen55"
+        },
+        {
+            "x": "877",
+            "y": "652",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen56"
+        },
+        {
+            "x": "880",
+            "y": "620",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen57"
+        },
+        {
+            "x": "881",
+            "y": "641",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen58"
+        },
+        {
+            "x": "884",
+            "y": "650",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen59"
+        },
+        {
+            "x": "884",
+            "y": "651",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "3"
+                }
+            },
+            "id": "autogen60"
+        },
+        {
+            "x": "886",
+            "y": "656",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen61"
+        },
+        {
+            "x": "891",
+            "y": "317",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "Ljava\/io\/ObjectStreamField;": "1",
+                    "Ljava\/lang\/reflect\/Field;": "1",
+                    "Ljava\/lang\/reflect\/Method;": "4"
+                }
+            },
+            "id": "autogen62"
+        },
+        {
+            "x": "892",
+            "y": "317",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/Class;": "2"
+                }
+            },
+            "id": "autogen63"
+        },
+        {
+            "x": "892",
+            "y": "655",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "6",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "7"
+                }
+            },
+            "id": "autogen64"
+        },
+        {
+            "x": "892",
+            "y": "656",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen65"
+        },
+        {
+            "x": "893",
+            "y": "317",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "28",
+                "typecount": {
+                    "Ljava\/util\/jar\/JarFile;": "27",
+                    "[Ljava\/util\/Hashtable$Entry;": "2"
+                }
+            },
+            "id": "autogen66"
+        },
+        {
+            "x": "893",
+            "y": "657",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen67"
+        },
+        {
+            "x": "893",
+            "y": "658",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen68"
+        },
+        {
+            "x": "894",
+            "y": "661",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen69"
+        },
+        {
+            "x": "895",
+            "y": "317",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "51",
+                "typecount": {
+                    "Ljava\/lang\/String;": "52"
+                }
+            },
+            "id": "autogen70"
+        },
+        {
+            "x": "895",
+            "y": "662",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen71"
+        },
+        {
+            "x": "897",
+            "y": "317",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen72"
+        },
+        {
+            "x": "959",
+            "y": "222",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "2",
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen73"
+        },
+        {
+            "x": "960",
+            "y": "222",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "1",
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen74"
+        },
+        {
+            "x": "960",
+            "y": "467",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/ThreadLocal$ThreadLocalMap$Entry;": "1"
+                }
+            },
+            "id": "autogen75"
+        },
+        {
+            "x": "995",
+            "y": "592",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen76"
+        },
+        {
+            "x": "996",
+            "y": "595",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen77"
+        },
+        {
+            "x": "996",
+            "y": "596",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen78"
+        },
+        {
+            "x": "997",
+            "y": "597",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen79"
+        },
+        {
+            "x": "997",
+            "y": "599",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen80"
+        },
+        {
+            "x": "998",
+            "y": "601",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen81"
+        },
+        {
+            "x": "998",
+            "y": "602",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen82"
+        },
+        {
+            "x": "1005",
+            "y": "319",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/IdentityHashMap$1;": "1"
+                }
+            },
+            "id": "autogen83"
+        },
+        {
+            "x": "1005",
+            "y": "601",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen84"
+        },
+        {
+            "x": "1006",
+            "y": "604",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen85"
+        },
+        {
+            "x": "1008",
+            "y": "609",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "3"
+                }
+            },
+            "id": "autogen86"
+        },
+        {
+            "x": "1008",
+            "y": "610",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "9",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "10"
+                }
+            },
+            "id": "autogen87"
+        },
+        {
+            "x": "1008",
+            "y": "611",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "4",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "5"
+                }
+            },
+            "id": "autogen88"
+        },
+        {
+            "x": "1009",
+            "y": "612",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen89"
+        },
+        {
+            "x": "1009",
+            "y": "613",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen90"
+        },
+        {
+            "x": "1010",
+            "y": "319",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Lsun\/util\/LocaleServiceProviderPool;": "3"
+                }
+            },
+            "id": "autogen91"
+        },
+        {
+            "x": "1011",
+            "y": "618",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "33",
+                "typecount": {
+                    "Ljava\/lang\/String;": "34"
+                }
+            },
+            "id": "autogen92"
+        },
+        {
+            "x": "1011",
+            "y": "619",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "57",
+                "typecount": {
+                    "Ljava\/lang\/String;": "52",
+                    "[Ljava\/lang\/Object;": "6"
+                }
+            },
+            "id": "autogen93"
+        },
+        {
+            "x": "1011",
+            "y": "620",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "62",
+                "typecount": {
+                    "Ljava\/lang\/String;": "51",
+                    "[Ljava\/lang\/Object;": "12"
+                }
+            },
+            "id": "autogen94"
+        },
+        {
+            "x": "1011",
+            "y": "621",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1",
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen95"
+        },
+        {
+            "x": "1012",
+            "y": "621",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "12",
+                "typecount": {
+                    "Ljava\/lang\/String;": "7",
+                    "[Ljava\/lang\/Object;": "6"
+                }
+            },
+            "id": "autogen96"
+        },
+        {
+            "x": "1012",
+            "y": "622",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "7",
+                "typecount": {
+                    "Ljava\/lang\/String;": "5",
+                    "[Ljava\/lang\/Object;": "3"
+                }
+            },
+            "id": "autogen97"
+        },
+        {
+            "x": "1012",
+            "y": "623",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen98"
+        },
+        {
+            "x": "1013",
+            "y": "606",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen99"
+        },
+        {
+            "x": "1013",
+            "y": "624",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen100"
+        },
+        {
+            "x": "1014",
+            "y": "609",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen101"
+        },
+        {
+            "x": "1016",
+            "y": "595",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/lang\/String;": "4"
+                }
+            },
+            "id": "autogen102"
+        },
+        {
+            "x": "1017",
+            "y": "617",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "2"
+                }
+            },
+            "id": "autogen103"
+        },
+        {
+            "x": "1019",
+            "y": "623",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen104"
+        },
+        {
+            "x": "1020",
+            "y": "605",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen105"
+        },
+        {
+            "x": "1020",
+            "y": "626",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen106"
+        },
+        {
+            "x": "1021",
+            "y": "627",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen107"
+        },
+        {
+            "x": "1021",
+            "y": "628",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen108"
+        },
+        {
+            "x": "1023",
+            "y": "603",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen109"
+        },
+        {
+            "x": "1023",
+            "y": "614",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen110"
+        },
+        {
+            "x": "1023",
+            "y": "615",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1",
+                    "Ljava\/util\/HashMap$Entry;": "2"
+                }
+            },
+            "id": "autogen111"
+        },
+        {
+            "x": "1025",
+            "y": "621",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen112"
+        },
+        {
+            "x": "1027",
+            "y": "616",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen113"
+        },
+        {
+            "x": "1028",
+            "y": "294",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "6"
+                }
+            },
+            "id": "autogen114"
+        },
+        {
+            "x": "1028",
+            "y": "295",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "1"
+                }
+            },
+            "id": "autogen115"
+        },
+        {
+            "x": "1029",
+            "y": "295",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "2",
+                    "Ljava\/util\/Hashtable;": "1",
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen116"
+        },
+        {
+            "x": "1029",
+            "y": "631",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "4",
+                "typecount": {
+                    "Ljava\/lang\/String;": "5"
+                }
+            },
+            "id": "autogen117"
+        },
+        {
+            "x": "1029",
+            "y": "632",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "6",
+                "typecount": {
+                    "Ljava\/lang\/String;": "7"
+                }
+            },
+            "id": "autogen118"
+        },
+        {
+            "x": "1030",
+            "y": "633",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen119"
+        },
+        {
+            "x": "1030",
+            "y": "635",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen120"
+        },
+        {
+            "x": "1033",
+            "y": "295",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen121"
+        },
+        {
+            "x": "1033",
+            "y": "619",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen122"
+        },
+        {
+            "x": "1037",
+            "y": "632",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen123"
+        },
+        {
+            "x": "1038",
+            "y": "635",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen124"
+        },
+        {
+            "x": "1043",
+            "y": "621",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen125"
+        },
+        {
+            "x": "1048",
+            "y": "636",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "4",
+                "typecount": {
+                    "Ljava\/lang\/String;": "5"
+                }
+            },
+            "id": "autogen126"
+        },
+        {
+            "x": "1049",
+            "y": "638",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen127"
+        },
+        {
+            "x": "1081",
+            "y": "399",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/regex\/Pattern$Curly;": "1"
+                }
+            },
+            "id": "autogen128"
+        },
+        {
+            "x": "1096",
+            "y": "200",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[C": "1"
+                }
+            },
+            "id": "autogen129"
+        },
+        {
+            "x": "1097",
+            "y": "199",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/reflect\/Field;": "1"
+                }
+            },
+            "id": "autogen130"
+        },
+        {
+            "x": "1097",
+            "y": "200",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "6",
+                "typecount": {
+                    "Ljava\/io\/ObjectStreamField;": "1",
+                    "Ljava\/lang\/reflect\/Field;": "6"
+                }
+            },
+            "id": "autogen131"
+        },
+        {
+            "x": "1098",
+            "y": "445",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/ThreadLocal$ThreadLocalMap$Entry;": "1",
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen132"
+        },
+        {
+            "x": "1114",
+            "y": "490",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen133"
+        },
+        {
+            "x": "1118",
+            "y": "548",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "3"
+                }
+            },
+            "id": "autogen134"
+        },
+        {
+            "x": "1119",
+            "y": "549",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "3"
+                }
+            },
+            "id": "autogen135"
+        },
+        {
+            "x": "1121",
+            "y": "449",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/util\/Hashtable;": "3"
+                }
+            },
+            "id": "autogen136"
+        },
+        {
+            "x": "1132",
+            "y": "569",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/lang\/String;": "4"
+                }
+            },
+            "id": "autogen137"
+        },
+        {
+            "x": "1133",
+            "y": "570",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen138"
+        },
+        {
+            "x": "1133",
+            "y": "571",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen139"
+        },
+        {
+            "x": "1133",
+            "y": "572",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen140"
+        },
+        {
+            "x": "1134",
+            "y": "573",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "3"
+                }
+            },
+            "id": "autogen141"
+        },
+        {
+            "x": "1134",
+            "y": "574",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/lang\/String;": "4"
+                }
+            },
+            "id": "autogen142"
+        },
+        {
+            "x": "1134",
+            "y": "575",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/lang\/String;": "4"
+                }
+            },
+            "id": "autogen143"
+        },
+        {
+            "x": "1135",
+            "y": "577",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen144"
+        },
+        {
+            "x": "1142",
+            "y": "297",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/ArrayList;": "1",
+                    "Ljava\/util\/IdentityHashMap;": "1"
+                }
+            },
+            "id": "autogen145"
+        },
+        {
+            "x": "1142",
+            "y": "578",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1",
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen146"
+        },
+        {
+            "x": "1142",
+            "y": "579",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen147"
+        },
+        {
+            "x": "1143",
+            "y": "296",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lsun\/util\/resources\/LocaleData$LocaleDataResourceBundleControl;": "1"
+                }
+            },
+            "id": "autogen148"
+        },
+        {
+            "x": "1143",
+            "y": "580",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen149"
+        },
+        {
+            "x": "1144",
+            "y": "573",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen150"
+        },
+        {
+            "x": "1145",
+            "y": "547",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "18",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "19"
+                }
+            },
+            "id": "autogen151"
+        },
+        {
+            "x": "1148",
+            "y": "297",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/util\/concurrent\/ConcurrentHashMap$HashEntry;": "3"
+                }
+            },
+            "id": "autogen152"
+        },
+        {
+            "x": "1148",
+            "y": "595",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "8",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "9"
+                }
+            },
+            "id": "autogen153"
+        },
+        {
+            "x": "1148",
+            "y": "596",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "164",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "165"
+                }
+            },
+            "id": "autogen154"
+        },
+        {
+            "x": "1148",
+            "y": "597",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "21",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "22"
+                }
+            },
+            "id": "autogen155"
+        },
+        {
+            "x": "1149",
+            "y": "559",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen156"
+        },
+        {
+            "x": "1149",
+            "y": "560",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen157"
+        },
+        {
+            "x": "1149",
+            "y": "597",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "8",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "9"
+                }
+            },
+            "id": "autogen158"
+        },
+        {
+            "x": "1150",
+            "y": "562",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "2"
+                }
+            },
+            "id": "autogen159"
+        },
+        {
+            "x": "1150",
+            "y": "582",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen160"
+        },
+        {
+            "x": "1150",
+            "y": "583",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen161"
+        },
+        {
+            "x": "1152",
+            "y": "586",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen162"
+        },
+        {
+            "x": "1153",
+            "y": "571",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "4"
+                }
+            },
+            "id": "autogen163"
+        },
+        {
+            "x": "1153",
+            "y": "572",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "6"
+                }
+            },
+            "id": "autogen164"
+        },
+        {
+            "x": "1154",
+            "y": "572",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "4"
+                }
+            },
+            "id": "autogen165"
+        },
+        {
+            "x": "1154",
+            "y": "573",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "2"
+                }
+            },
+            "id": "autogen166"
+        },
+        {
+            "x": "1154",
+            "y": "574",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen167"
+        },
+        {
+            "x": "1155",
+            "y": "575",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen168"
+        },
+        {
+            "x": "1156",
+            "y": "600",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen169"
+        },
+        {
+            "x": "1157",
+            "y": "601",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen170"
+        },
+        {
+            "x": "1165",
+            "y": "272",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lcom\/ibm\/oti\/vm\/BootstrapClassLoader;": "1"
+                }
+            },
+            "id": "autogen171"
+        },
+        {
+            "x": "1165",
+            "y": "604",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "4",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "5"
+                }
+            },
+            "id": "autogen172"
+        },
+        {
+            "x": "1165",
+            "y": "605",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "2"
+                }
+            },
+            "id": "autogen173"
+        },
+        {
+            "x": "1170",
+            "y": "567",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen174"
+        },
+        {
+            "x": "1174",
+            "y": "298",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/ClassLoader$1;": "3"
+                }
+            },
+            "id": "autogen175"
+        },
+        {
+            "x": "1174",
+            "y": "579",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "2"
+                }
+            },
+            "id": "autogen176"
+        },
+        {
+            "x": "1219",
+            "y": "377",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/regex\/Pattern;": "1"
+                }
+            },
+            "id": "autogen177"
+        },
+        {
+            "x": "1221",
+            "y": "379",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "3"
+                }
+            },
+            "id": "autogen178"
+        },
+        {
+            "x": "1222",
+            "y": "380",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "3"
+                }
+            },
+            "id": "autogen179"
+        },
+        {
+            "x": "1224",
+            "y": "179",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[B": "1"
+                }
+            },
+            "id": "autogen180"
+        },
+        {
+            "x": "1225",
+            "y": "383",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "6",
+                "typecount": {
+                    "Ljava\/lang\/String;": "7"
+                }
+            },
+            "id": "autogen181"
+        },
+        {
+            "x": "1226",
+            "y": "383",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen182"
+        },
+        {
+            "x": "1231",
+            "y": "403",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Properties;": "1"
+                }
+            },
+            "id": "autogen183"
+        },
+        {
+            "x": "1233",
+            "y": "177",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen184"
+        },
+        {
+            "x": "1234",
+            "y": "177",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "1"
+                }
+            },
+            "id": "autogen185"
+        },
+        {
+            "x": "1235",
+            "y": "422",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1",
+                    "Ljava\/lang\/StringCoding$EncoderCache;": "1"
+                }
+            },
+            "id": "autogen186"
+        },
+        {
+            "x": "1236",
+            "y": "244",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen187"
+        },
+        {
+            "x": "1238",
+            "y": "424",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen188"
+        },
+        {
+            "x": "1238",
+            "y": "425",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen189"
+        },
+        {
+            "x": "1241",
+            "y": "428",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "3"
+                }
+            },
+            "id": "autogen190"
+        },
+        {
+            "x": "1243",
+            "y": "413",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/io\/FileOutputStream;": "1"
+                }
+            },
+            "id": "autogen191"
+        },
+        {
+            "x": "1244",
+            "y": "223",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Collections$UnmodifiableRandomAccessList;": "1"
+                }
+            },
+            "id": "autogen192"
+        },
+        {
+            "x": "1249",
+            "y": "506",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "6",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "7"
+                }
+            },
+            "id": "autogen193"
+        },
+        {
+            "x": "1249",
+            "y": "507",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "4"
+                }
+            },
+            "id": "autogen194"
+        },
+        {
+            "x": "1250",
+            "y": "508",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen195"
+        },
+        {
+            "x": "1251",
+            "y": "467",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/StringCoding$EncoderCache;": "1"
+                }
+            },
+            "id": "autogen196"
+        },
+        {
+            "x": "1252",
+            "y": "184",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "1"
+                }
+            },
+            "id": "autogen197"
+        },
+        {
+            "x": "1252",
+            "y": "514",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen198"
+        },
+        {
+            "x": "1255",
+            "y": "524",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen199"
+        },
+        {
+            "x": "1258",
+            "y": "427",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "3"
+                }
+            },
+            "id": "autogen200"
+        },
+        {
+            "x": "1258",
+            "y": "513",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen201"
+        },
+        {
+            "x": "1268",
+            "y": "513",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen202"
+        },
+        {
+            "x": "1270",
+            "y": "547",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "6"
+                }
+            },
+            "id": "autogen203"
+        },
+        {
+            "x": "1270",
+            "y": "548",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "3"
+                }
+            },
+            "id": "autogen204"
+        },
+        {
+            "x": "1271",
+            "y": "200",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "1"
+                }
+            },
+            "id": "autogen205"
+        },
+        {
+            "x": "1271",
+            "y": "533",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "3"
+                }
+            },
+            "id": "autogen206"
+        },
+        {
+            "x": "1279",
+            "y": "275",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "LSeparateLinkedList$Writer;": "2",
+                    "Ljava\/security\/AccessControlContext;": "1",
+                    "[Ljava\/lang\/Object;": "2",
+                    "[Ljava\/lang\/Thread;": "1"
+                }
+            },
+            "id": "autogen207"
+        },
+        {
+            "x": "1280",
+            "y": "274",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "4",
+                "typecount": {
+                    "Ljava\/util\/ResourceBundle$Control$1;": "5"
+                }
+            },
+            "id": "autogen208"
+        },
+        {
+            "x": "1280",
+            "y": "275",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/Thread;": "2"
+                }
+            },
+            "id": "autogen209"
+        },
+        {
+            "x": "1282",
+            "y": "525",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen210"
+        },
+        {
+            "x": "1285",
+            "y": "274",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "3",
+                    "Ljava\/util\/ArrayList;": "3"
+                }
+            },
+            "id": "autogen211"
+        },
+        {
+            "x": "1285",
+            "y": "573",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen212"
+        },
+        {
+            "x": "1291",
+            "y": "301",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen213"
+        },
+        {
+            "x": "1292",
+            "y": "301",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/ThreadGroup;": "1"
+                }
+            },
+            "id": "autogen214"
+        },
+        {
+            "x": "1302",
+            "y": "275",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "3"
+                }
+            },
+            "id": "autogen215"
+        },
+        {
+            "x": "1303",
+            "y": "327",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/ThreadGroup;": "1",
+                    "Ljava\/util\/Vector;": "1",
+                    "[Ljava\/lang\/Thread;": "1"
+                }
+            },
+            "id": "autogen216"
+        },
+        {
+            "x": "1314",
+            "y": "199",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen217"
+        },
+        {
+            "x": "1333",
+            "y": "152",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/Terminator$1;": "1",
+                    "[Ljava\/util\/Hashtable$Entry;": "2"
+                }
+            },
+            "id": "autogen218"
+        },
+        {
+            "x": "1338",
+            "y": "156",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen219"
+        },
+        {
+            "x": "1347",
+            "y": "156",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/StringBuilder;": "3"
+                }
+            },
+            "id": "autogen220"
+        },
+        {
+            "x": "1348",
+            "y": "156",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "18",
+                "typecount": {
+                    "Ljava\/lang\/StringBuilder;": "19"
+                }
+            },
+            "id": "autogen221"
+        },
+        {
+            "x": "1351",
+            "y": "198",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen222"
+        },
+        {
+            "x": "1352",
+            "y": "198",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen223"
+        },
+        {
+            "x": "1356",
+            "y": "168",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/ArrayList;": "1"
+                }
+            },
+            "id": "autogen224"
+        },
+        {
+            "x": "1356",
+            "y": "354",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/regex\/Matcher;": "1"
+                }
+            },
+            "id": "autogen225"
+        },
+        {
+            "x": "1357",
+            "y": "159",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "18",
+                "typecount": {
+                    "Ljava\/util\/zip\/Inflater;": "19"
+                }
+            },
+            "id": "autogen226"
+        },
+        {
+            "x": "1357",
+            "y": "355",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "15",
+                "typecount": {
+                    "Ljava\/io\/UnixFileSystem;": "2",
+                    "Ljava\/util\/Hashtable$Entry;": "14"
+                }
+            },
+            "id": "autogen227"
+        },
+        {
+            "x": "1357",
+            "y": "356",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "6"
+                }
+            },
+            "id": "autogen228"
+        },
+        {
+            "x": "1358",
+            "y": "355",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "4"
+                }
+            },
+            "id": "autogen229"
+        },
+        {
+            "x": "1358",
+            "y": "356",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "216",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "217"
+                }
+            },
+            "id": "autogen230"
+        },
+        {
+            "x": "1359",
+            "y": "356",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "4",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "5"
+                }
+            },
+            "id": "autogen231"
+        },
+        {
+            "x": "1363",
+            "y": "360",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen232"
+        },
+        {
+            "x": "1364",
+            "y": "355",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "3"
+                }
+            },
+            "id": "autogen233"
+        },
+        {
+            "x": "1365",
+            "y": "355",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen234"
+        },
+        {
+            "x": "1368",
+            "y": "354",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "4"
+                }
+            },
+            "id": "autogen235"
+        },
+        {
+            "x": "1368",
+            "y": "380",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen236"
+        },
+        {
+            "x": "1371",
+            "y": "155",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/io\/ObjectStreamField;": "2"
+                }
+            },
+            "id": "autogen237"
+        },
+        {
+            "x": "1372",
+            "y": "377",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen238"
+        },
+        {
+            "x": "1372",
+            "y": "400",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "2",
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen239"
+        },
+        {
+            "x": "1373",
+            "y": "221",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "4",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "5"
+                }
+            },
+            "id": "autogen240"
+        },
+        {
+            "x": "1374",
+            "y": "221",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "4"
+                }
+            },
+            "id": "autogen241"
+        },
+        {
+            "x": "1374",
+            "y": "354",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "4"
+                }
+            },
+            "id": "autogen242"
+        },
+        {
+            "x": "1374",
+            "y": "401",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "11",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "12"
+                }
+            },
+            "id": "autogen243"
+        },
+        {
+            "x": "1378",
+            "y": "156",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/io\/ObjectStreamField;": "4"
+                }
+            },
+            "id": "autogen244"
+        },
+        {
+            "x": "1379",
+            "y": "463",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "2"
+                }
+            },
+            "id": "autogen245"
+        },
+        {
+            "x": "1380",
+            "y": "390",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/io\/BufferedOutputStream;": "1"
+                }
+            },
+            "id": "autogen246"
+        },
+        {
+            "x": "1380",
+            "y": "467",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen247"
+        },
+        {
+            "x": "1385",
+            "y": "480",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "4",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1",
+                    "[Ljava\/lang\/Object;": "4"
+                }
+            },
+            "id": "autogen248"
+        },
+        {
+            "x": "1387",
+            "y": "450",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen249"
+        },
+        {
+            "x": "1388",
+            "y": "445",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen250"
+        },
+        {
+            "x": "1389",
+            "y": "162",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/Class;": "2"
+                }
+            },
+            "id": "autogen251"
+        },
+        {
+            "x": "1391",
+            "y": "461",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen252"
+        },
+        {
+            "x": "1392",
+            "y": "499",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "14",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "15"
+                }
+            },
+            "id": "autogen253"
+        },
+        {
+            "x": "1395",
+            "y": "473",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "4",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "5"
+                }
+            },
+            "id": "autogen254"
+        },
+        {
+            "x": "1397",
+            "y": "476",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen255"
+        },
+        {
+            "x": "1398",
+            "y": "200",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "3"
+                }
+            },
+            "id": "autogen256"
+        },
+        {
+            "x": "1412",
+            "y": "178",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "12",
+                "typecount": {
+                    "Ljava\/util\/concurrent\/ConcurrentHashMap$Segment;": "13"
+                }
+            },
+            "id": "autogen257"
+        },
+        {
+            "x": "1417",
+            "y": "252",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "22",
+                "typecount": {
+                    "Lcom\/ibm\/misc\/SignalDispatcher$1;": "1",
+                    "Lcom\/ibm\/misc\/SignalDispatcher;": "1",
+                    "Lcom\/ibm\/tools\/attach\/javaSE\/AttachHandler$WaitLoop;": "1",
+                    "Lcom\/ibm\/tools\/attach\/javaSE\/AttachHandler$teardownHook;": "1",
+                    "Ljava\/lang\/Thread;": "17",
+                    "Ljava\/util\/ResourceBundle$RBClassLoader;": "1",
+                    "Lsun\/misc\/URLClassPath;": "1"
+                }
+            },
+            "id": "autogen258"
+        },
+        {
+            "x": "1422",
+            "y": "202",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1",
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen259"
+        },
+        {
+            "x": "1422",
+            "y": "252",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "6",
+                "typecount": {
+                    "Ljava\/util\/ServiceLoader$ServiceIterator;": "3",
+                    "Ljava\/util\/ServiceLoader;": "3",
+                    "[Ljava\/io\/File;": "1"
+                }
+            },
+            "id": "autogen260"
+        },
+        {
+            "x": "1430",
+            "y": "253",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/net\/URLClassLoader$5;": "3"
+                }
+            },
+            "id": "autogen261"
+        },
+        {
+            "x": "1440",
+            "y": "305",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lcom\/ibm\/tools\/attach\/javaSE\/AttachHandler;": "1"
+                }
+            },
+            "id": "autogen262"
+        },
+        {
+            "x": "1446",
+            "y": "304",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lsun\/misc\/Launcher$AppClassLoader$1;": "1"
+                }
+            },
+            "id": "autogen263"
+        },
+        {
+            "x": "1455",
+            "y": "225",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen264"
+        },
+        {
+            "x": "1470",
+            "y": "129",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "6"
+                }
+            },
+            "id": "autogen265"
+        },
+        {
+            "x": "1471",
+            "y": "129",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "Ljava\/util\/concurrent\/ConcurrentHashMap$Segment;": "2",
+                    "[Ljava\/lang\/Object;": "4"
+                }
+            },
+            "id": "autogen266"
+        },
+        {
+            "x": "1476",
+            "y": "134",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen267"
+        },
+        {
+            "x": "1477",
+            "y": "309",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "4",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "5"
+                }
+            },
+            "id": "autogen268"
+        },
+        {
+            "x": "1478",
+            "y": "330",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "[Ljava\/util\/Hashtable$Entry;": "3"
+                }
+            },
+            "id": "autogen269"
+        },
+        {
+            "x": "1479",
+            "y": "291",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "6",
+                "typecount": {
+                    "Ljava\/lang\/String;": "7"
+                }
+            },
+            "id": "autogen270"
+        },
+        {
+            "x": "1480",
+            "y": "291",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "51",
+                "typecount": {
+                    "Ljava\/lang\/String;": "52"
+                }
+            },
+            "id": "autogen271"
+        },
+        {
+            "x": "1485",
+            "y": "134",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "21",
+                "typecount": {
+                    "[C": "22"
+                }
+            },
+            "id": "autogen272"
+        },
+        {
+            "x": "1489",
+            "y": "176",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen273"
+        },
+        {
+            "x": "1492",
+            "y": "137",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "18",
+                "typecount": {
+                    "Ljava\/util\/zip\/ZipFile$1;": "19"
+                }
+            },
+            "id": "autogen274"
+        },
+        {
+            "x": "1493",
+            "y": "332",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "6",
+                "typecount": {
+                    "Ljava\/lang\/String;": "7"
+                }
+            },
+            "id": "autogen275"
+        },
+        {
+            "x": "1494",
+            "y": "332",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "47",
+                "typecount": {
+                    "Ljava\/lang\/String;": "48"
+                }
+            },
+            "id": "autogen276"
+        },
+        {
+            "x": "1494",
+            "y": "333",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "8",
+                "typecount": {
+                    "Ljava\/lang\/String;": "9"
+                }
+            },
+            "id": "autogen277"
+        },
+        {
+            "x": "1500",
+            "y": "395",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen278"
+        },
+        {
+            "x": "1503",
+            "y": "402",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen279"
+        },
+        {
+            "x": "1505",
+            "y": "331",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen280"
+        },
+        {
+            "x": "1506",
+            "y": "133",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen281"
+        },
+        {
+            "x": "1506",
+            "y": "412",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen282"
+        },
+        {
+            "x": "1507",
+            "y": "133",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/io\/ObjectStreamField;": "1"
+                }
+            },
+            "id": "autogen283"
+        },
+        {
+            "x": "1508",
+            "y": "418",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1",
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen284"
+        },
+        {
+            "x": "1510",
+            "y": "199",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1",
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen285"
+        },
+        {
+            "x": "1510",
+            "y": "331",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen286"
+        },
+        {
+            "x": "1510",
+            "y": "377",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen287"
+        },
+        {
+            "x": "1511",
+            "y": "198",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen288"
+        },
+        {
+            "x": "1511",
+            "y": "199",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "19",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "9",
+                    "[Ljava\/lang\/Object;": "11"
+                }
+            },
+            "id": "autogen289"
+        },
+        {
+            "x": "1513",
+            "y": "431",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "Ljava\/lang\/String;": "6"
+                }
+            },
+            "id": "autogen290"
+        },
+        {
+            "x": "1514",
+            "y": "134",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/Class;": "1"
+                }
+            },
+            "id": "autogen291"
+        },
+        {
+            "x": "1515",
+            "y": "151",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen292"
+        },
+        {
+            "x": "1515",
+            "y": "152",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen293"
+        },
+        {
+            "x": "1515",
+            "y": "436",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen294"
+        },
+        {
+            "x": "1516",
+            "y": "439",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen295"
+        },
+        {
+            "x": "1518",
+            "y": "368",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/io\/OutputStreamWriter;": "1",
+                    "Ljava\/io\/PrintStream;": "1"
+                }
+            },
+            "id": "autogen296"
+        },
+        {
+            "x": "1523",
+            "y": "139",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "951",
+                "typecount": {
+                    "Ljava\/util\/LinkedList$Link;": "952"
+                }
+            },
+            "id": "autogen297"
+        },
+        {
+            "x": "1527",
+            "y": "134",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "948",
+                "typecount": {
+                    "Ljava\/util\/LinkedList$Link;": "949"
+                }
+            },
+            "id": "autogen298"
+        },
+        {
+            "x": "1535",
+            "y": "178",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Lsun\/misc\/URLClassPath$2;": "3"
+                }
+            },
+            "id": "autogen299"
+        },
+        {
+            "x": "1550",
+            "y": "155",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/concurrent\/ConcurrentHashMap$Segment;": "1"
+                }
+            },
+            "id": "autogen300"
+        },
+        {
+            "x": "1550",
+            "y": "156",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen301"
+        },
+        {
+            "x": "1554",
+            "y": "230",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lsun\/misc\/Launcher$AppClassLoader;": "1"
+                }
+            },
+            "id": "autogen302"
+        },
+        {
+            "x": "1559",
+            "y": "179",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1",
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen303"
+        },
+        {
+            "x": "1560",
+            "y": "229",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lsun\/misc\/Launcher$ExtClassLoader;": "1"
+                }
+            },
+            "id": "autogen304"
+        },
+        {
+            "x": "1569",
+            "y": "166",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1966",
+                "typecount": {
+                    "Ljava\/util\/Formatter$FormatToken;": "1967"
+                }
+            },
+            "id": "autogen305"
+        },
+        {
+            "x": "1583",
+            "y": "159",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "10",
+                "typecount": {
+                    "Ljava\/util\/Formatter$FormatToken;": "11"
+                }
+            },
+            "id": "autogen306"
+        },
+        {
+            "x": "1585",
+            "y": "157",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "12",
+                "typecount": {
+                    "Ljava\/util\/Formatter$FormatToken;": "13"
+                }
+            },
+            "id": "autogen307"
+        },
+        {
+            "x": "1592",
+            "y": "202",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen308"
+        },
+        {
+            "x": "1598",
+            "y": "263",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "4"
+                }
+            },
+            "id": "autogen309"
+        },
+        {
+            "x": "1599",
+            "y": "149",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "8",
+                "typecount": {
+                    "Ljava\/util\/Formatter$FormatToken;": "9"
+                }
+            },
+            "id": "autogen310"
+        },
+        {
+            "x": "1599",
+            "y": "305",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/nio\/charset\/CodingErrorAction;": "1"
+                }
+            },
+            "id": "autogen311"
+        },
+        {
+            "x": "1607",
+            "y": "107",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "4",
+                "typecount": {
+                    "Ljava\/util\/ArrayList;": "2",
+                    "Lsun\/misc\/Signal;": "3"
+                }
+            },
+            "id": "autogen312"
+        },
+        {
+            "x": "1608",
+            "y": "107",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2",
+                    "[Ljava\/util\/concurrent\/ConcurrentHashMap$HashEntry;": "2"
+                }
+            },
+            "id": "autogen313"
+        },
+        {
+            "x": "1611",
+            "y": "300",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/io\/BufferedWriter;": "1"
+                }
+            },
+            "id": "autogen314"
+        },
+        {
+            "x": "1616",
+            "y": "108",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/io\/FileInputStream;": "2"
+                }
+            },
+            "id": "autogen315"
+        },
+        {
+            "x": "1616",
+            "y": "268",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen316"
+        },
+        {
+            "x": "1621",
+            "y": "112",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1",
+                    "Lsun\/net\/www\/MessageHeader;": "1"
+                }
+            },
+            "id": "autogen317"
+        },
+        {
+            "x": "1622",
+            "y": "112",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "3"
+                }
+            },
+            "id": "autogen318"
+        },
+        {
+            "x": "1622",
+            "y": "328",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen319"
+        },
+        {
+            "x": "1623",
+            "y": "111",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "7",
+                "typecount": {
+                    "Ljava\/lang\/String;": "8"
+                }
+            },
+            "id": "autogen320"
+        },
+        {
+            "x": "1623",
+            "y": "112",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "10",
+                "typecount": {
+                    "Ljava\/lang\/String;": "11"
+                }
+            },
+            "id": "autogen321"
+        },
+        {
+            "x": "1624",
+            "y": "175",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen322"
+        },
+        {
+            "x": "1626",
+            "y": "153",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen323"
+        },
+        {
+            "x": "1629",
+            "y": "115",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "43",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "22",
+                    "Ljava\/util\/jar\/JarFile;": "22"
+                }
+            },
+            "id": "autogen324"
+        },
+        {
+            "x": "1630",
+            "y": "332",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lsun\/nio\/cs\/US_ASCII$Encoder;": "1"
+                }
+            },
+            "id": "autogen325"
+        },
+        {
+            "x": "1631",
+            "y": "309",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen326"
+        },
+        {
+            "x": "1633",
+            "y": "113",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen327"
+        },
+        {
+            "x": "1634",
+            "y": "110",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen328"
+        },
+        {
+            "x": "1636",
+            "y": "370",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen329"
+        },
+        {
+            "x": "1637",
+            "y": "373",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen330"
+        },
+        {
+            "x": "1638",
+            "y": "337",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lsun\/nio\/cs\/StreamEncoder$CharsetSE;": "1"
+                }
+            },
+            "id": "autogen331"
+        },
+        {
+            "x": "1641",
+            "y": "132",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1"
+                }
+            },
+            "id": "autogen332"
+        },
+        {
+            "x": "1644",
+            "y": "111",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/io\/ObjectStreamField;": "1"
+                }
+            },
+            "id": "autogen333"
+        },
+        {
+            "x": "1644",
+            "y": "125",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "21",
+                "typecount": {
+                    "Ljava\/util\/LinkedList$Link;": "22"
+                }
+            },
+            "id": "autogen334"
+        },
+        {
+            "x": "1648",
+            "y": "121",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "25",
+                "typecount": {
+                    "Ljava\/util\/LinkedList$Link;": "26"
+                }
+            },
+            "id": "autogen335"
+        },
+        {
+            "x": "1648",
+            "y": "176",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/util\/HashMap$Entry;": "1",
+                    "[[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen336"
+        },
+        {
+            "x": "1652",
+            "y": "129",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/HashMap;": "1"
+                }
+            },
+            "id": "autogen337"
+        },
+        {
+            "x": "1653",
+            "y": "120",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "9",
+                "typecount": {
+                    "Ljava\/util\/LinkedList$Link;": "10"
+                }
+            },
+            "id": "autogen338"
+        },
+        {
+            "x": "1653",
+            "y": "277",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/nio\/charset\/CodingErrorAction;": "1"
+                }
+            },
+            "id": "autogen339"
+        },
+        {
+            "x": "1655",
+            "y": "117",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "Ljava\/util\/LinkedList$Link;": "6"
+                }
+            },
+            "id": "autogen340"
+        },
+        {
+            "x": "1656",
+            "y": "117",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/LinkedList$Link;": "2"
+                }
+            },
+            "id": "autogen341"
+        },
+        {
+            "x": "1656",
+            "y": "156",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/security\/ProtectionDomain;": "1"
+                }
+            },
+            "id": "autogen342"
+        },
+        {
+            "x": "1661",
+            "y": "116",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/LinkedList$Link;": "1"
+                }
+            },
+            "id": "autogen343"
+        },
+        {
+            "x": "1665",
+            "y": "112",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/LinkedList$Link;": "1"
+                }
+            },
+            "id": "autogen344"
+        },
+        {
+            "x": "1665",
+            "y": "155",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lsun\/misc\/URLClassPath;": "1"
+                }
+            },
+            "id": "autogen345"
+        },
+        {
+            "x": "1687",
+            "y": "133",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/concurrent\/ConcurrentHashMap$Segment;": "1"
+                }
+            },
+            "id": "autogen346"
+        },
+        {
+            "x": "1687",
+            "y": "134",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2",
+                    "Ljava\/util\/HashMap$Entry;": "1",
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen347"
+        },
+        {
+            "x": "1698",
+            "y": "214",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/io\/FileOutputStream;": "1"
+                }
+            },
+            "id": "autogen348"
+        },
+        {
+            "x": "1706",
+            "y": "144",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1966",
+                "typecount": {
+                    "Ljava\/util\/Formatter$ParserStateMachine;": "1967"
+                }
+            },
+            "id": "autogen349"
+        },
+        {
+            "x": "1715",
+            "y": "223",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[C": "1"
+                }
+            },
+            "id": "autogen350"
+        },
+        {
+            "x": "1720",
+            "y": "136",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "10",
+                "typecount": {
+                    "Ljava\/util\/Formatter$ParserStateMachine;": "11"
+                }
+            },
+            "id": "autogen351"
+        },
+        {
+            "x": "1722",
+            "y": "134",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "12",
+                "typecount": {
+                    "Ljava\/util\/Formatter$ParserStateMachine;": "13"
+                }
+            },
+            "id": "autogen352"
+        },
+        {
+            "x": "1729",
+            "y": "180",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1",
+                    "Ljava\/util\/concurrent\/ConcurrentHashMap$HashEntry;": "1",
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen353"
+        },
+        {
+            "x": "1734",
+            "y": "239",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen354"
+        },
+        {
+            "x": "1736",
+            "y": "127",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "8",
+                "typecount": {
+                    "Ljava\/util\/Formatter$ParserStateMachine;": "9"
+                }
+            },
+            "id": "autogen355"
+        },
+        {
+            "x": "1737",
+            "y": "283",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lsun\/nio\/cs\/US_ASCII$Encoder;": "1"
+                }
+            },
+            "id": "autogen356"
+        },
+        {
+            "x": "1744",
+            "y": "85",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "16",
+                "typecount": {
+                    "Ljava\/lang\/String;": "8",
+                    "Ljava\/util\/concurrent\/ConcurrentHashMap$HashEntry;": "9"
+                }
+            },
+            "id": "autogen357"
+        },
+        {
+            "x": "1745",
+            "y": "84",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/concurrent\/ConcurrentHashMap$HashEntry;": "1"
+                }
+            },
+            "id": "autogen358"
+        },
+        {
+            "x": "1745",
+            "y": "85",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "17",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2",
+                    "Ljava\/util\/concurrent\/ConcurrentHashMap$HashEntry;": "9",
+                    "Lsun\/text\/resources\/FormatData;": "1",
+                    "Lsun\/text\/resources\/FormatData_en;": "1",
+                    "Lsun\/text\/resources\/FormatData_en_US;": "1",
+                    "Lsun\/util\/resources\/CurrencyNames;": "1",
+                    "Lsun\/util\/resources\/CurrencyNames_en_US;": "1",
+                    "[Ljava\/lang\/Object;": "2"
+                }
+            },
+            "id": "autogen359"
+        },
+        {
+            "x": "1754",
+            "y": "85",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "42",
+                "typecount": {
+                    "Ljava\/lang\/String;": "21",
+                    "Lsun\/misc\/FileURLMapper;": "22"
+                }
+            },
+            "id": "autogen360"
+        },
+        {
+            "x": "1754",
+            "y": "86",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1",
+                    "Lsun\/misc\/URLClassPath$FileLoader$1;": "2"
+                }
+            },
+            "id": "autogen361"
+        },
+        {
+            "x": "1754",
+            "y": "89",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "21",
+                "typecount": {
+                    "Ljava\/lang\/String;": "22"
+                }
+            },
+            "id": "autogen362"
+        },
+        {
+            "x": "1754",
+            "y": "108",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "7",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "4",
+                    "[Ljava\/lang\/Object;": "4"
+                }
+            },
+            "id": "autogen363"
+        },
+        {
+            "x": "1756",
+            "y": "85",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "3"
+                }
+            },
+            "id": "autogen364"
+        },
+        {
+            "x": "1756",
+            "y": "89",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen365"
+        },
+        {
+            "x": "1758",
+            "y": "84",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "5",
+                    "[Ljava\/net\/URL;": "1"
+                }
+            },
+            "id": "autogen366"
+        },
+        {
+            "x": "1758",
+            "y": "90",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1",
+                    "Lsun\/misc\/URLClassPath$FileLoader;": "1",
+                    "Lsun\/net\/www\/protocol\/file\/FileURLConnection;": "1"
+                }
+            },
+            "id": "autogen367"
+        },
+        {
+            "x": "1759",
+            "y": "306",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lsun\/nio\/cs\/US_ASCII;": "1"
+                }
+            },
+            "id": "autogen368"
+        },
+        {
+            "x": "1762",
+            "y": "153",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen369"
+        },
+        {
+            "x": "1763",
+            "y": "88",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lsun\/net\/www\/protocol\/file\/Handler;": "1"
+                }
+            },
+            "id": "autogen370"
+        },
+        {
+            "x": "1763",
+            "y": "153",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/HashMap$Entry;": "1",
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen371"
+        },
+        {
+            "x": "1766",
+            "y": "93",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "21",
+                "typecount": {
+                    "Lsun\/misc\/URLClassPath$JarLoader;": "22"
+                }
+            },
+            "id": "autogen372"
+        },
+        {
+            "x": "1766",
+            "y": "111",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "10",
+                "typecount": {
+                    "Ljava\/util\/LinkedList$Link;": "11"
+                }
+            },
+            "id": "autogen373"
+        },
+        {
+            "x": "1768",
+            "y": "101",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/security\/CodeSource;": "1"
+                }
+            },
+            "id": "autogen374"
+        },
+        {
+            "x": "1770",
+            "y": "107",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "12",
+                "typecount": {
+                    "Ljava\/util\/LinkedList$Link;": "13"
+                }
+            },
+            "id": "autogen375"
+        },
+        {
+            "x": "1772",
+            "y": "88",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen376"
+        },
+        {
+            "x": "1777",
+            "y": "100",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lsun\/net\/www\/protocol\/jar\/Handler;": "1"
+                }
+            },
+            "id": "autogen377"
+        },
+        {
+            "x": "1782",
+            "y": "102",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "4",
+                "typecount": {
+                    "Ljava\/util\/LinkedList$Link;": "5"
+                }
+            },
+            "id": "autogen378"
+        },
+        {
+            "x": "1784",
+            "y": "100",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/LinkedList$Link;": "4"
+                }
+            },
+            "id": "autogen379"
+        },
+        {
+            "x": "1790",
+            "y": "255",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Lsun\/nio\/cs\/US_ASCII$Decoder;": "2"
+                }
+            },
+            "id": "autogen380"
+        },
+        {
+            "x": "1823",
+            "y": "111",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/util\/concurrent\/ConcurrentHashMap$HashEntry;": "1"
+                }
+            },
+            "id": "autogen381"
+        },
+        {
+            "x": "1824",
+            "y": "111",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1",
+                    "[Ljava\/util\/concurrent\/ConcurrentHashMap$HashEntry;": "1"
+                }
+            },
+            "id": "autogen382"
+        },
+        {
+            "x": "1832",
+            "y": "22",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/math\/RoundingMode;": "1"
+                }
+            },
+            "id": "autogen383"
+        },
+        {
+            "x": "1835",
+            "y": "192",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/io\/BufferedOutputStream;": "1"
+                }
+            },
+            "id": "autogen384"
+        },
+        {
+            "x": "1843",
+            "y": "121",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3933",
+                "typecount": {
+                    "Ljava\/util\/Formatter$FormatToken;": "3934"
+                }
+            },
+            "id": "autogen385"
+        },
+        {
+            "x": "1852",
+            "y": "201",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/io\/BufferedWriter;": "1"
+                }
+            },
+            "id": "autogen386"
+        },
+        {
+            "x": "1852",
+            "y": "219",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/io\/OutputStreamWriter;": "1"
+                }
+            },
+            "id": "autogen387"
+        },
+        {
+            "x": "1852",
+            "y": "237",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Lsun\/nio\/cs\/StreamEncoder$CharsetSE;": "1"
+                }
+            },
+            "id": "autogen388"
+        },
+        {
+            "x": "1858",
+            "y": "114",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "21",
+                "typecount": {
+                    "Ljava\/util\/Formatter$FormatToken;": "22"
+                }
+            },
+            "id": "autogen389"
+        },
+        {
+            "x": "1859",
+            "y": "112",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "25",
+                "typecount": {
+                    "Ljava\/util\/Formatter$FormatToken;": "26"
+                }
+            },
+            "id": "autogen390"
+        },
+        {
+            "x": "1866",
+            "y": "157",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Currency;": "1"
+                }
+            },
+            "id": "autogen391"
+        },
+        {
+            "x": "1867",
+            "y": "47",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1966",
+                "typecount": {
+                    "Ljava\/text\/DigitList;": "1967"
+                }
+            },
+            "id": "autogen392"
+        },
+        {
+            "x": "1867",
+            "y": "158",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen393"
+        },
+        {
+            "x": "1873",
+            "y": "104",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "7",
+                "typecount": {
+                    "Ljava\/util\/Formatter$FormatToken;": "8"
+                }
+            },
+            "id": "autogen394"
+        },
+        {
+            "x": "1873",
+            "y": "105",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/util\/Formatter$FormatToken;": "4"
+                }
+            },
+            "id": "autogen395"
+        },
+        {
+            "x": "1874",
+            "y": "43",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "10",
+                "typecount": {
+                    "Ljava\/text\/DigitList;": "11"
+                }
+            },
+            "id": "autogen396"
+        },
+        {
+            "x": "1874",
+            "y": "104",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "5",
+                "typecount": {
+                    "Ljava\/util\/Formatter$FormatToken;": "6"
+                }
+            },
+            "id": "autogen397"
+        },
+        {
+            "x": "1874",
+            "y": "134",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen398"
+        },
+        {
+            "x": "1875",
+            "y": "42",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "12",
+                "typecount": {
+                    "Ljava\/text\/DigitList;": "13"
+                }
+            },
+            "id": "autogen399"
+        },
+        {
+            "x": "1881",
+            "y": "63",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Hashtable$Entry;": "1"
+                }
+            },
+            "id": "autogen400"
+        },
+        {
+            "x": "1882",
+            "y": "39",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "8",
+                "typecount": {
+                    "Ljava\/text\/DigitList;": "9"
+                }
+            },
+            "id": "autogen401"
+        },
+        {
+            "x": "1882",
+            "y": "62",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "12",
+                "typecount": {
+                    "Ljava\/util\/Locale;": "12",
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen402"
+        },
+        {
+            "x": "1882",
+            "y": "63",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "13",
+                "typecount": {
+                    "Ljava\/util\/Locale;": "10",
+                    "[Ljava\/lang\/String;": "4"
+                }
+            },
+            "id": "autogen403"
+        },
+        {
+            "x": "1888",
+            "y": "134",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2"
+                }
+            },
+            "id": "autogen404"
+        },
+        {
+            "x": "1889",
+            "y": "97",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "10",
+                "typecount": {
+                    "Ljava\/lang\/Integer;": "11"
+                }
+            },
+            "id": "autogen405"
+        },
+        {
+            "x": "1891",
+            "y": "63",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "25",
+                "typecount": {
+                    "Ljava\/net\/URL;": "26"
+                }
+            },
+            "id": "autogen406"
+        },
+        {
+            "x": "1891",
+            "y": "67",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "21",
+                "typecount": {
+                    "Ljava\/net\/URL;": "22"
+                }
+            },
+            "id": "autogen407"
+        },
+        {
+            "x": "1891",
+            "y": "94",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/Integer;": "1"
+                }
+            },
+            "id": "autogen408"
+        },
+        {
+            "x": "1891",
+            "y": "95",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "10",
+                "typecount": {
+                    "Ljava\/lang\/Integer;": "11"
+                }
+            },
+            "id": "autogen409"
+        },
+        {
+            "x": "1896",
+            "y": "67",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/net\/URL;": "1"
+                }
+            },
+            "id": "autogen410"
+        },
+        {
+            "x": "1899",
+            "y": "130",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen411"
+        },
+        {
+            "x": "1902",
+            "y": "72",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1966",
+                "typecount": {
+                    "Ljava\/text\/DecimalFormat;": "1967"
+                }
+            },
+            "id": "autogen412"
+        },
+        {
+            "x": "1904",
+            "y": "180",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen413"
+        },
+        {
+            "x": "1905",
+            "y": "87",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3",
+                "typecount": {
+                    "Ljava\/lang\/Integer;": "4"
+                }
+            },
+            "id": "autogen414"
+        },
+        {
+            "x": "1917",
+            "y": "65",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "10",
+                "typecount": {
+                    "Ljava\/text\/DecimalFormat;": "11"
+                }
+            },
+            "id": "autogen415"
+        },
+        {
+            "x": "1918",
+            "y": "63",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "12",
+                "typecount": {
+                    "Ljava\/text\/DecimalFormat;": "13"
+                }
+            },
+            "id": "autogen416"
+        },
+        {
+            "x": "1933",
+            "y": "47",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Integer;": "1"
+                }
+            },
+            "id": "autogen417"
+        },
+        {
+            "x": "1933",
+            "y": "56",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "8",
+                "typecount": {
+                    "Ljava\/text\/DecimalFormat;": "9"
+                }
+            },
+            "id": "autogen418"
+        },
+        {
+            "x": "1957",
+            "y": "73",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/lang\/Integer;": "2"
+                }
+            },
+            "id": "autogen419"
+        },
+        {
+            "x": "1960",
+            "y": "89",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "4",
+                "typecount": {
+                    "Ljava\/lang\/String;": "2",
+                    "Ljava\/util\/Hashtable$Entry;": "2",
+                    "Ljava\/util\/concurrent\/ConcurrentHashMap$HashEntry;": "1"
+                }
+            },
+            "id": "autogen420"
+        },
+        {
+            "x": "1961",
+            "y": "16",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/text\/FieldPosition;": "1"
+                }
+            },
+            "id": "autogen421"
+        },
+        {
+            "x": "1970",
+            "y": "0",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/math\/RoundingMode;": "1"
+                }
+            },
+            "id": "autogen422"
+        },
+        {
+            "x": "1973",
+            "y": "169",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/io\/PrintStream;": "1"
+                }
+            },
+            "id": "autogen423"
+        },
+        {
+            "x": "1977",
+            "y": "135",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1999",
+                "typecount": {
+                    "Ljava\/text\/DecimalFormatSymbols;": "2000"
+                }
+            },
+            "id": "autogen424"
+        },
+        {
+            "x": "1981",
+            "y": "99",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1966",
+                "typecount": {
+                    "Ljava\/util\/Formatter$Transformer;": "1967"
+                }
+            },
+            "id": "autogen425"
+        },
+        {
+            "x": "1992",
+            "y": "62",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen426"
+        },
+        {
+            "x": "1995",
+            "y": "91",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "10",
+                "typecount": {
+                    "Ljava\/util\/Formatter$Transformer;": "11"
+                }
+            },
+            "id": "autogen427"
+        },
+        {
+            "x": "1997",
+            "y": "89",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "12",
+                "typecount": {
+                    "Ljava\/util\/Formatter$Transformer;": "13"
+                }
+            },
+            "id": "autogen428"
+        },
+        {
+            "x": "2011",
+            "y": "82",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "8",
+                "typecount": {
+                    "Ljava\/util\/Formatter$Transformer;": "9"
+                }
+            },
+            "id": "autogen429"
+        },
+        {
+            "x": "2019",
+            "y": "40",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1"
+                }
+            },
+            "id": "autogen430"
+        },
+        {
+            "x": "2086",
+            "y": "94",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/Formatter;": "1"
+                }
+            },
+            "id": "autogen431"
+        }
+    ]
+}
