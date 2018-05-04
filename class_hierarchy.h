@@ -4,6 +4,7 @@
 #include <vector>
 #include <fstream>
 #include <deque>
+#include <map>
 #include <algorithm>
 #include "classinfo.h"
 
@@ -37,64 +38,56 @@ private:
         className.insert(0, 1, 'L');
         return className;
     }
-    
-    ClassNode<D> *getClassNode(std::string className)
-    {
-        std::deque<ClassNode<D> *> searchQueue;
 
-        ClassNode<D> *thisNode = this->root;
-        searchQueue.push_front(thisNode);
-            
-        while (!searchQueue.empty()) {
-            for (auto it = thisNode->subclasses.begin();
-                 it != thisNode->subclasses.end();
-                 ++it) {
-                searchQueue.push_front(*it);
-            }
-        
-            thisNode = searchQueue.front();
-            searchQueue.pop_front();
-            
-            if (thisNode->className == className) {
-                return thisNode;
-            }
-        }
-
-        return nullptr;
-    }
     
 public:
 
     // unnormalized = . separated, normalized = / separated
     bool normalized = true;
-    
-    ClassHierarchy(bool isNormalized) : normalized(isNormalized)
+    std::map<std::string, ClassNode<D>*> nodemap; 
+
+    ClassHierarchy(bool isNormalized) : normalized(isNormalized), nodemap()
     {
-        this->root = new ClassNode<D>("java.lang.Object");
+        string rootname = "java.lang.Object";
+        root = new ClassNode<D>(rootname);
+        nodemap[rootname] = root;
+    }
+
+    ClassNode<D> *getClassNode(std::string className)
+    {
+
+        if (nodemap.count(className)) {
+            return nodemap[className];
+        }
+        return nullptr;
     }
 
     // invariant: able to add only if parent is in the tree
     void addClass(string parentName, string childName)
     {
-        ClassNode<D> *parentNode;
-        if (this->normalized) {
-            parentNode = this->getClassNode(normalize(parentName));
-        } else {
-            parentNode = this->getClassNode(parentName);
+        if (normalized) {
+            parentName = normalize(parentName);
+            childName  = normalize(childName);
         }
+        
+        auto parentNode = getClassNode(parentName);
 
         if (!parentNode) {
             throw runtime_error("Invalid insertion into hierarchy");
         }
 
-
-        ClassNode<D> *newNode;
-        if (this->normalized) {
-            newNode = new ClassNode<D>(normalize(childName));
-        } else {
-            newNode = new ClassNode<D>(childName);
+        if (nodemap.count(childName)) {
+            std::cerr << "Encountered duplicate name: " << childName
+                      << "Discarding" << endl;
+            return;
         }
+
+ 
+        auto *newNode = new ClassNode<D>(childName);
+
         parentNode->subclasses.push_back(newNode);
+        nodemap[childName] = newNode;
+
     }
 
     std::vector<std::string> getSubclasses(std::string className)
