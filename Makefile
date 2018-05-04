@@ -13,6 +13,7 @@ class_hierarchy_driver: class_hierarchy_driver.cpp class_hierarchy.o
 	g++ $(FLAGS) -o $@ $^
 
 
+
 embed_trace: embed_trace.cpp embed.o simulator.o execution.o heap.o \
              classinfo.o tokenizer.o components.o planar_tree_discrete.o rollup_tree.o
 	$(CXX) $(FLAGS) $(LDFLAGS) -o $@ $^
@@ -33,6 +34,9 @@ planar_discrete_driver: planar_discrete_driver.cpp rollup_tree.o planar_tree_dis
 class_hierarchy.o: class_hierarchy.cpp class_hierarchy.h
 	$(CXX) $(FLAGS)  -c -o $@ $<
 
+heap_hierarchy.o: heap_hierarchy.cpp heap_hierarchy.h heap.h class_hierarchy.h
+	$(CXX) $(FLAGS)  -c -o $@ $<
+	
 
 embed.o: embed.cpp embed.h components.h
 	$(CXX) $(FLAGS)  -c -o $@ $<
