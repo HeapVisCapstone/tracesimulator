@@ -8,6 +8,11 @@ LDFLAGS =  -L /usr/lib $(LIBS:%=-l%)
 
 FLAGS=-O2 $(CXXFLAGS) 
 
+
+class_hierarchy_driver: class_hierarchy_driver.cpp class_hierarchy.o
+	g++ $(FLAGS) -o $@ $^
+
+
 embed_trace: embed_trace.cpp embed.o simulator.o execution.o heap.o \
              classinfo.o tokenizer.o components.o planar_tree_discrete.o rollup_tree.o
 	$(CXX) $(FLAGS) $(LDFLAGS) -o $@ $^
@@ -23,6 +28,11 @@ simulator_driver: simulator_driver.o simulator.o execution.o heap.o classinfo.o 
 
 planar_discrete_driver: planar_discrete_driver.cpp rollup_tree.o planar_tree_discrete.o
 	$(CXX) $(FLAGS)$(LDFLAGS) -o $@ $^
+
+
+class_hierarchy.o: class_hierarchy.cpp class_hierarchy.h
+	$(CXX) $(FLAGS)  -c -o $@ $<
+
 
 embed.o: embed.cpp embed.h components.h
 	$(CXX) $(FLAGS)  -c -o $@ $<

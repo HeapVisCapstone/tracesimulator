@@ -7,17 +7,24 @@
 #include <algorithm>
 #include "classinfo.h"
 
+template <class D>
 class ClassNode {
 public:
     ClassNode(std::string cls) : className(cls) {}
     std::string className;
     std::vector<ClassNode *> subclasses;
-    void addClass(std::string parentName, std::string childName);
+
+    D data;
+
+    // Unimplemented
+    // void addClass(std::string parentName, std::string childName);
+
 };
 
+template <class D>
 class ClassHierarchy {
 private:
-    ClassNode *root;
+    ClassNode<D> *root;
 
     static string unnormalize(std::string className) {
         std::replace(className.begin(), className.end(), '/', '.');
@@ -31,11 +38,11 @@ private:
         return className;
     }
     
-    ClassNode *getClassNode(std::string className)
+    ClassNode<D> *getClassNode(std::string className)
     {
-        std::deque<ClassNode *> searchQueue;
+        std::deque<ClassNode<D> *> searchQueue;
 
-        ClassNode *thisNode = this->root;
+        ClassNode<D> *thisNode = this->root;
         searchQueue.push_front(thisNode);
             
         while (!searchQueue.empty()) {
@@ -63,14 +70,78 @@ public:
     
     ClassHierarchy(bool isNormalized) : normalized(isNormalized)
     {
-        this->root = new ClassNode("java.lang.Object");
+        this->root = new ClassNode<D>("java.lang.Object");
     }
+
     // invariant: able to add only if parent is in the tree
-    void addClass(std::string parentName, std::string childName);
-    std::vector<std::string> getSubclasses(std::string className);
-    std::string getParent(std::string className);
-    static ClassHierarchy fromDumpFile(std::ifstream inputFileStream,
-        bool normalize);
+    void addClass(string parentName, string childName)
+    {
+        ClassNode<D> *parentNode;
+        if (this->normalized) {
+            parentNode = this->getClassNode(normalize(parentName));
+        } else {
+            parentNode = this->getClassNode(parentName);
+        }
+
+        if (!parentNode) {
+            throw runtime_error("Invalid insertion into hierarchy");
+        }
+
+
+        ClassNode<D> *newNode;
+        if (this->normalized) {
+            newNode = new ClassNode<D>(normalize(childName));
+        } else {
+            newNode = new ClassNode<D>(childName);
+        }
+        parentNode->subclasses.push_back(newNode);
+    }
+
+    std::vector<std::string> getSubclasses(std::string className)
+    {
+        ClassNode<D> *parentNode;
+        if (this->normalized) {
+            parentNode = this->getClassNode(normalize(className));
+        } else {
+            parentNode = this->getClassNode(className);
+        }
+        
+        if (!parentNode) {
+            throw runtime_error("Invalid insertion into hierarchy");
+        }
+
+        auto children = parentNode->subclasses;
+
+        vector<string> childNames;
+        
+        for (auto it = children.begin(); it != children.end(); ++it) {
+            string name = (*it)->className;
+
+            if (this->normalized) {
+                childNames.push_back(normalize(name));
+            } else {
+                childNames.push_back(name);
+            }
+        }
+
+        return childNames;
+    }
+
+    // unimplemented
+    // std::string getParent(std::string className);
+
+
+    static ClassHierarchy fromDumpFile(std::ifstream inputFileStream, bool normalize)
+    {
+        ClassHierarchy ch(normalize);
+        string child, parent;
+        while (!inputFileStream.eof()) {
+            string discard;
+            inputFileStream >> child >> discard >> parent;
+            ch.addClass(parent, child);
+        }
+        return ch;
+    }
 };
 
 #endif
