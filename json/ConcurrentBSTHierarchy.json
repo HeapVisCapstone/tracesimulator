@@ -1,0 +1,284 @@
+{
+    "size": "479320",
+    "id": "Ljava\/lang\/Object;",
+    "children": [
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/invoke\/MethodHandle;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/invoke\/MethodHandleImpl;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/invoke\/MethodHandleImpl$1;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/invoke\/MethodHandleImpl$2;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/invoke\/MethodHandleImpl$3;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/ClassValue;",
+            "children": [
+                {
+                    "size": "0",
+                    "id": "Ljava\/lang\/invoke\/MethodHandleImpl$4;"
+                }
+            ]
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/ClassValue$Identity;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/ClassValue$Version;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/invoke\/MemberName$Factory;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/invoke\/MethodHandleStatics;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/invoke\/MethodHandleStatics$1;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/invoke\/MemberName;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/invoke\/MethodHandleNatives;"
+        },
+        {
+            "size": "0",
+            "id": "Lsun\/misc\/PostVMInitHook;"
+        },
+        {
+            "size": "0",
+            "id": "Lsun\/usagetracker\/UsageTrackerClient;"
+        },
+        {
+            "size": "32",
+            "id": "Ljava\/util\/concurrent\/atomic\/AtomicBoolean;"
+        },
+        {
+            "size": "0",
+            "id": "Lsun\/usagetracker\/UsageTrackerClient$1;"
+        },
+        {
+            "size": "0",
+            "id": "Lsun\/usagetracker\/UsageTrackerClient$4;"
+        },
+        {
+            "size": "0",
+            "id": "Lsun\/usagetracker\/UsageTrackerClient$3;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/io\/FileOutputStream$1;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/net\/URLClassLoader$1;"
+        },
+        {
+            "size": "0",
+            "id": "Lsun\/net\/util\/URLUtil;"
+        },
+        {
+            "size": "0",
+            "id": "Lsun\/misc\/URLClassPath$3;"
+        },
+        {
+            "size": "1976",
+            "id": "Lsun\/misc\/URLClassPath$Loader;",
+            "children": [
+                {
+                    "size": "1936",
+                    "id": "Lsun\/misc\/URLClassPath$JarLoader;"
+                },
+                {
+                    "size": "40",
+                    "id": "Lsun\/misc\/URLClassPath$FileLoader;"
+                }
+            ]
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/util\/zip\/ZipFile;"
+        },
+        {
+            "size": "2128",
+            "id": "Ljava\/util\/zip\/ZipFile$1;"
+        },
+        {
+            "size": "360",
+            "id": "Lsun\/misc\/Resource;",
+            "children": [
+                {
+                    "size": "360",
+                    "id": "Lsun\/misc\/URLClassPath$FileLoader$1;"
+                }
+            ]
+        },
+        {
+            "size": "0",
+            "id": "Lsun\/misc\/PerfCounter;"
+        },
+        {
+            "size": "0",
+            "id": "Lsun\/misc\/Perf$GetPerfAction;"
+        },
+        {
+            "size": "0",
+            "id": "Lsun\/misc\/Perf;"
+        },
+        {
+            "size": "0",
+            "id": "Lsun\/misc\/PerfCounter$CoreCounters;"
+        },
+        {
+            "size": "128",
+            "id": "Ljava\/security\/PermissionCollection;",
+            "children": [
+                {
+                    "size": "40",
+                    "id": "Ljava\/security\/Permissions;"
+                },
+                {
+                    "size": "40",
+                    "id": "Ljava\/io\/FilePermissionCollection;"
+                },
+                {
+                    "size": "48",
+                    "id": "Ljava\/security\/BasicPermissionCollection;"
+                }
+            ]
+        },
+        {
+            "size": "176",
+            "id": "Ljava\/net\/URLConnection;",
+            "children": [
+                {
+                    "size": "176",
+                    "id": "Lsun\/net\/www\/URLConnection;",
+                    "children": [
+                        {
+                            "size": "176",
+                            "id": "Lsun\/net\/www\/protocol\/file\/FileURLConnection;"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "size": "48",
+            "id": "Lsun\/net\/www\/MessageHeader;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/io\/FilePermission$1;"
+        },
+        {
+            "size": "0",
+            "id": "Lsun\/launcher\/LauncherHelper$FXHelper;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/Class$MethodArray;"
+        },
+        {
+            "size": "40",
+            "id": "LConcurrentBST;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/Void;"
+        },
+        {
+            "size": "48",
+            "id": "Ljava\/util\/Random;"
+        },
+        {
+            "size": "24",
+            "id": "LConcurrentBST$StartSentinel;"
+        },
+        {
+            "size": "224000",
+            "id": "LConcurrentBST$Node;"
+        },
+        {
+            "size": "48",
+            "id": "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock;"
+        },
+        {
+            "size": "80",
+            "id": "Ljava\/util\/concurrent\/locks\/AbstractOwnableSynchronizer;",
+            "children": [
+                {
+                    "size": "80",
+                    "id": "Ljava\/util\/concurrent\/locks\/AbstractQueuedSynchronizer;",
+                    "children": [
+                        {
+                            "size": "80",
+                            "id": "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock$Sync;",
+                            "children": [
+                                {
+                                    "size": "80",
+                                    "id": "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock$NonfairSync;"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "size": "249536",
+            "id": "Ljava\/util\/concurrent\/locks\/AbstractQueuedSynchronizer$Node;"
+        },
+        {
+            "size": "32",
+            "id": "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock$ReadLock;"
+        },
+        {
+            "size": "32",
+            "id": "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock$WriteLock;"
+        },
+        {
+            "size": "128",
+            "id": "LConcurrentBST$TreeRW;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/util\/ArrayList$Itr;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/util\/concurrent\/locks\/LockSupport;"
+        },
+        {
+            "size": "24",
+            "id": "LConcurrentBST$EndSentinel;"
+        },
+        {
+            "size": "0",
+            "id": "Ljava\/lang\/Shutdown;"
+        },
+        {
+            "size": "48",
+            "id": "Ljava\/lang\/Shutdown$Lock;"
+        }
+    ]
+}

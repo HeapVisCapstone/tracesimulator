@@ -21,7 +21,7 @@ using namespace std;
 // 
 // Make use of global state under the covers, so don't call
 // more than once
-pair<HeapState, ExecState> read_trace_file(char* nameFile, FILE *f);
+pair<HeapState, ExecState> read_trace_file(const char* nameFile, FILE *f);
 
 
 #endif

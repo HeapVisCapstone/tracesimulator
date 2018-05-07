@@ -1,7 +1,7 @@
 #include "simulator.h"
 
 
-pair<HeapState, ExecState> read_trace_file(char* nameFile, FILE *f) {
+pair<HeapState, ExecState> read_trace_file(const char* nameFile, FILE *f) {
   ExecState Exec(1);
 
   ClassInfo::read_names_file(nameFile);

@@ -7,6 +7,7 @@
 #include <map>
 #include <algorithm>
 #include "classinfo.h"
+#include "rollup_tree.h"
 
 template <class D>
 class ClassNode {
@@ -16,6 +17,26 @@ public:
     std::vector<ClassNode *> subclasses;
 
     D data;
+
+    void print(int indent) {
+        for (int i = 0; i < indent; i++)
+            cout << "  " ;
+        cout << className << endl;
+        for (auto child : subclasses) {
+            child->print(indent + 1);
+        }
+    }
+
+    std::vector<ClassNode *> getChildren() {
+        return subclasses;
+    }    
+
+    RollupNode<D>* asRollupNode() {
+        auto node = new RollupNode<D>(className, data);
+        for (auto child : subclasses)
+            node->addChild(child->asRollupNode());
+        return node;
+    }
 
     // Unimplemented
     // void addClass(std::string parentName, std::string childName);
@@ -30,12 +51,14 @@ private:
     static string unnormalize(std::string className) {
         std::replace(className.begin(), className.end(), '/', '.');
         className.erase(0, 1);
+        className.pop_back();
         return className;
     }
 
     static string normalize(std::string className) {
         std::replace(className.begin(), className.end(), '.', '/');
         className.insert(0, 1, 'L');
+        className.push_back(';');
         return className;
     }
 
@@ -46,9 +69,25 @@ public:
     bool normalized = true;
     std::map<std::string, ClassNode<D>*> nodemap; 
 
+    RollupNode<D>* asRollupNode() {
+        return root->asRollupNode();
+    }
+
+    ClassNode<D>* getRoot() {
+        return root;
+    }
+
+
+    int size() { return nodemap.size(); }
+
+    void print() {
+        root->print(0);
+    }
+
     ClassHierarchy(bool isNormalized) : normalized(isNormalized), nodemap()
     {
         string rootname = "java.lang.Object";
+        if (isNormalized) rootname = normalize(rootname);   
         root = new ClassNode<D>(rootname);
         nodemap[rootname] = root;
     }
@@ -65,6 +104,9 @@ public:
     // invariant: able to add only if parent is in the tree
     void addClass(string parentName, string childName)
     {
+        // cout << "child : " << childName 
+        //      << "<<  parent" << parentName << endl; 
+
         if (normalized) {
             parentName = normalize(parentName);
             childName  = normalize(childName);
@@ -73,7 +115,9 @@ public:
         auto parentNode = getClassNode(parentName);
 
         if (!parentNode) {
-            throw runtime_error("Invalid insertion into hierarchy");
+            // throw runtime_error("Invalid insertion into hierarchy");
+            cerr << "invalid parent "<< parentName << " discarding" << endl;
+            return;
         }
 
         if (nodemap.count(childName)) {
@@ -124,7 +168,7 @@ public:
     // std::string getParent(std::string className);
 
 
-    static ClassHierarchy fromDumpFile(std::ifstream inputFileStream, bool normalize)
+    static ClassHierarchy fromDumpFile(std::ifstream &inputFileStream, bool normalize)
     {
         ClassHierarchy ch(normalize);
         string child, parent;
@@ -135,6 +179,7 @@ public:
         }
         return ch;
     }
+
 };
 
 #endif
