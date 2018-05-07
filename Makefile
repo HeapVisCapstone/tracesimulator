@@ -1,6 +1,6 @@
 PROGRAMS = simulator_driver planar_discrete_driver eigen-ex component_test
 
-CXX := g++
+CXX := clang++
 CXXFLAGS = -g -std=c++11
 
 LIBS = boost_program_options
@@ -14,7 +14,7 @@ SIMULATOR_DEPS = simulator.o execution.o heap.o \
 class_hierarchy_driver: class_hierarchy_driver.cpp class_hierarchy.o \
 	                    $(SIMULATOR_DEPS) planar_tree_discrete.o rollup_tree.o \
 	                    heap_hierarchy.o 
-	g++ $(FLAGS) -o $@ $^
+	$(CXX) $(FLAGS) -o $@ $^
 
 
 
@@ -26,10 +26,10 @@ eigen-ex: eigen-ex.cpp
 	$(CXX) $(FLAGS) -o $@ $<
 
 component_test: component_test.cpp embed.o
-	g++ $(FLAGS) -o $@ $^
+	$(CXX) $(FLAGS) -o $@ $^
 
 simulator_driver: simulator_driver.o simulator.o execution.o heap.o classinfo.o tokenizer.o components.o
-	g++ $(FLAGS) -o $@ $^
+	$(CXX) $(FLAGS) -o $@ $^
 
 planar_discrete_driver: planar_discrete_driver.cpp rollup_tree.o planar_tree_discrete.o
 	$(CXX) $(FLAGS)$(LDFLAGS) -o $@ $^
