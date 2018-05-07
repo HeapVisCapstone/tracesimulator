@@ -1,0 +1,453 @@
+{
+    "x": "0",
+    "y": "0",
+    "dx": "439",
+    "dy": "190",
+    "rollup_data": {
+        "size": "7909",
+        "typecount": {
+            "LConcurrentBST$Node;": "4000",
+            "LConcurrentBST$TreeRW;": "4",
+            "LConcurrentBST;": "1",
+            "Ljava\/lang\/String;": "4",
+            "Ljava\/lang\/StringBuilder;": "3",
+            "Ljava\/lang\/Thread$ThreadLock;": "4",
+            "Ljava\/lang\/Thread;": "4",
+            "Ljava\/security\/AccessControlContext;": "4",
+            "Ljava\/util\/AbstractList$SimpleListIterator;": "2",
+            "Ljava\/util\/ArrayList;": "1",
+            "Ljava\/util\/concurrent\/locks\/AbstractQueuedSynchronizer$Node;": "3898",
+            "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock$NonfairSync;": "1",
+            "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock$ReadLock;": "1",
+            "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock$Sync$ThreadLocalHoldCounter;": "1",
+            "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock$WriteLock;": "1",
+            "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock;": "1",
+            "[C": "4",
+            "[Ljava\/lang\/Object;": "1",
+            "[Ljava\/lang\/Thread;": "1",
+            "[Ljava\/security\/ProtectionDomain;": "4"
+        }
+    },
+    "id": "<0,0><439,190>",
+    "children": [
+        {
+            "x": "0",
+            "y": "181",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "LConcurrentBST;": "1"
+                }
+            },
+            "id": "autogen"
+        },
+        {
+            "x": "50",
+            "y": "91",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock;": "1"
+                }
+            },
+            "id": "autogen0"
+        },
+        {
+            "x": "70",
+            "y": "125",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "LConcurrentBST$TreeRW;": "1"
+                }
+            },
+            "id": "autogen1"
+        },
+        {
+            "x": "70",
+            "y": "126",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "LConcurrentBST$TreeRW;": "1"
+                }
+            },
+            "id": "autogen2"
+        },
+        {
+            "x": "71",
+            "y": "126",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "LConcurrentBST$TreeRW;": "1"
+                }
+            },
+            "id": "autogen3"
+        },
+        {
+            "x": "72",
+            "y": "128",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "LConcurrentBST$TreeRW;": "1"
+                }
+            },
+            "id": "autogen4"
+        },
+        {
+            "x": "100",
+            "y": "0",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock$NonfairSync;": "1"
+                }
+            },
+            "id": "autogen5"
+        },
+        {
+            "x": "105",
+            "y": "185",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "944",
+                "typecount": {
+                    "LConcurrentBST$Node;": "945"
+                }
+            },
+            "id": "autogen6"
+        },
+        {
+            "x": "105",
+            "y": "186",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3054",
+                "typecount": {
+                    "LConcurrentBST$Node;": "3055"
+                }
+            },
+            "id": "autogen7"
+        },
+        {
+            "x": "120",
+            "y": "34",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/Thread;": "1"
+                }
+            },
+            "id": "autogen8"
+        },
+        {
+            "x": "120",
+            "y": "35",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/Thread;": "1"
+                }
+            },
+            "id": "autogen9"
+        },
+        {
+            "x": "121",
+            "y": "35",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/Thread;": "1"
+                }
+            },
+            "id": "autogen10"
+        },
+        {
+            "x": "122",
+            "y": "37",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/Thread;": "1"
+                }
+            },
+            "id": "autogen11"
+        },
+        {
+            "x": "128",
+            "y": "47",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock$ReadLock;": "1",
+                    "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock$WriteLock;": "1"
+                }
+            },
+            "id": "autogen12"
+        },
+        {
+            "x": "205",
+            "y": "3",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1924",
+                "typecount": {
+                    "Ljava\/util\/concurrent\/locks\/AbstractQueuedSynchronizer$Node;": "1924",
+                    "[Ljava\/lang\/Object;": "1"
+                }
+            },
+            "id": "autogen13"
+        },
+        {
+            "x": "206",
+            "y": "3",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "986",
+                "typecount": {
+                    "Ljava\/util\/concurrent\/locks\/AbstractQueuedSynchronizer$Node;": "987"
+                }
+            },
+            "id": "autogen14"
+        },
+        {
+            "x": "206",
+            "y": "4",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "986",
+                "typecount": {
+                    "Ljava\/util\/concurrent\/locks\/AbstractQueuedSynchronizer$Node;": "986",
+                    "Ljava\/util\/concurrent\/locks\/ReentrantReadWriteLock$Sync$ThreadLocalHoldCounter;": "1"
+                }
+            },
+            "id": "autogen15"
+        },
+        {
+            "x": "219",
+            "y": "27",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "[Ljava\/lang\/Thread;": "1"
+                }
+            },
+            "id": "autogen16"
+        },
+        {
+            "x": "225",
+            "y": "38",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1",
+                    "Ljava\/lang\/Thread$ThreadLock;": "1",
+                    "Ljava\/security\/AccessControlContext;": "1"
+                }
+            },
+            "id": "autogen17"
+        },
+        {
+            "x": "226",
+            "y": "39",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1",
+                    "Ljava\/lang\/Thread$ThreadLock;": "1",
+                    "Ljava\/security\/AccessControlContext;": "1"
+                }
+            },
+            "id": "autogen18"
+        },
+        {
+            "x": "227",
+            "y": "39",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1",
+                    "Ljava\/lang\/Thread$ThreadLock;": "1",
+                    "Ljava\/security\/AccessControlContext;": "1"
+                }
+            },
+            "id": "autogen19"
+        },
+        {
+            "x": "227",
+            "y": "41",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "2",
+                "typecount": {
+                    "Ljava\/lang\/String;": "1",
+                    "Ljava\/lang\/Thread$ThreadLock;": "1",
+                    "Ljava\/security\/AccessControlContext;": "1"
+                }
+            },
+            "id": "autogen20"
+        },
+        {
+            "x": "311",
+            "y": "7",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/ArrayList;": "1",
+                    "Ljava\/util\/concurrent\/locks\/AbstractQueuedSynchronizer$Node;": "1"
+                }
+            },
+            "id": "autogen21"
+        },
+        {
+            "x": "331",
+            "y": "42",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[C": "1",
+                    "[Ljava\/security\/ProtectionDomain;": "1"
+                }
+            },
+            "id": "autogen22"
+        },
+        {
+            "x": "332",
+            "y": "43",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[C": "1",
+                    "[Ljava\/security\/ProtectionDomain;": "1"
+                }
+            },
+            "id": "autogen23"
+        },
+        {
+            "x": "332",
+            "y": "44",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[C": "1",
+                    "[Ljava\/security\/ProtectionDomain;": "1"
+                }
+            },
+            "id": "autogen24"
+        },
+        {
+            "x": "333",
+            "y": "45",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "[C": "1",
+                    "[Ljava\/security\/ProtectionDomain;": "1"
+                }
+            },
+            "id": "autogen25"
+        },
+        {
+            "x": "417",
+            "y": "11",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "1",
+                "typecount": {
+                    "Ljava\/util\/AbstractList$SimpleListIterator;": "2"
+                }
+            },
+            "id": "autogen26"
+        },
+        {
+            "x": "437",
+            "y": "46",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/StringBuilder;": "1"
+                }
+            },
+            "id": "autogen27"
+        },
+        {
+            "x": "437",
+            "y": "47",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/StringBuilder;": "1"
+                }
+            },
+            "id": "autogen28"
+        },
+        {
+            "x": "438",
+            "y": "48",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "Ljava\/lang\/StringBuilder;": "1"
+                }
+            },
+            "id": "autogen29"
+        }
+    ]
+}
