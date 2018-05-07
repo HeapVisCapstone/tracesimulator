@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
 
 #include "simulator.h"
 #include "class_hierarchy.h"
@@ -22,6 +23,7 @@ int main(int argc, char *argv[]) {
 
     if (argc < 4) {
         cerr << "Usage: class_hierarchy_driver [file].hierarchy [file].names [outfile].json < [file].trace" << endl;
+        exit(EXIT_FAILURE);
     }
     string hierarchyFile(argv[1]);
     string nameFile(argv[2]);
