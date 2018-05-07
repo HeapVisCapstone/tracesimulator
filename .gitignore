@@ -4,6 +4,7 @@ planar_discrete_driver
 eigen-ex
 component_test
 embed_trace
+class_hierarchy_driver
 
 ~*
 traces/*
