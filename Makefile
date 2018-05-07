@@ -1,6 +1,6 @@
 PROGRAMS = simulator_driver planar_discrete_driver eigen-ex component_test
-	
-CXX := clang++
+
+CXX := g++
 CXXFLAGS = -g -std=c++11
 
 LIBS = boost_program_options
@@ -24,7 +24,7 @@ embed_trace: embed_trace.cpp embed.o $(SIMULATOR_DEPS) \
 
 eigen-ex: eigen-ex.cpp
 	$(CXX) $(FLAGS) -o $@ $<
-	
+
 component_test: component_test.cpp embed.o
 	g++ $(FLAGS) -o $@ $^
 
@@ -40,7 +40,7 @@ class_hierarchy.o: class_hierarchy.cpp class_hierarchy.h
 
 heap_hierarchy.o: heap_hierarchy.cpp heap_hierarchy.h heap.h class_hierarchy.h
 	$(CXX) $(FLAGS)  -c -o $@ $<
-	
+
 
 embed.o: embed.cpp embed.h components.h
 	$(CXX) $(FLAGS)  -c -o $@ $<
