@@ -20,12 +20,15 @@ namespace pt = boost::property_tree;
 
 int main(int argc, char *argv[]) {
 
+    if (argc < 4) {
+        cerr << "Usage: class_hierarchy_driver [file].hierarchy [file].names [outfile].json < [file].trace" << endl;
+    }
     string hierarchyFile(argv[1]);
     string nameFile(argv[2]);
-
+    
     ofstream outfile;
     outfile.open(argv[3]);
-
+    
 
     cout << "hello world" << endl;
 
