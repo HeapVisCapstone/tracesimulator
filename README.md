@@ -1,6 +1,11 @@
 To install boost statically linked libraries:
 https://stackoverflow.com/a/24086375
 
+## Getting the Data
+For each dataset, you will need a .hierarchy, .trace and .names file. 
+
+See [here](https://github.com/HeapVisCapstone/documents) for more information.
+
 ## Scatterplot of Embedding
 To run the planar embedding visualization
 
