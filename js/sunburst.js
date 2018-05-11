@@ -48,7 +48,7 @@ function init(id, file) {
     // root.sum( (d) => d.size );
 
     root.each( (d) => {
-      d.value = d.data.rollup_data.size
+      d.value = +d.data.size
     } )
 
     svg.selectAll("path")

@@ -1,0 +1,42 @@
+{
+    "x": "0",
+    "y": "0",
+    "dx": "63",
+    "dy": "0",
+    "rollup_data": {
+        "size": "3999",
+        "typecount": {
+            "LConcurrentBST$Node;": "4000",
+            "LConcurrentBST;": "1"
+        }
+    },
+    "id": "root",
+    "children": [
+        {
+            "x": "0",
+            "y": "0",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "0",
+                "typecount": {
+                    "LConcurrentBST;": "1"
+                }
+            },
+            "id": "autogen"
+        },
+        {
+            "x": "63",
+            "y": "0",
+            "dx": "1",
+            "dy": "1",
+            "rollup_data": {
+                "size": "3999",
+                "typecount": {
+                    "LConcurrentBST$Node;": "4000"
+                }
+            },
+            "id": "autogen0"
+        }
+    ]
+}

@@ -71,9 +71,37 @@ void trimGraph(Graph* g, int n) {
   }
 
   g->nodes = move(newNodeMap);
-
-
 }
+
+// Removes all nodes with order less equal tothan n
+// Side effects other nodes to remove broken edges to trimmed nodes
+
+
+void filterGraph(Graph* g, Predicate p) {
+  set<Node*> toRetain;
+
+
+  for (auto node : g->nodes) {
+    if (p(node.first))
+      toRetain.insert(node.second);
+  }
+
+  map<NodeID, Node*> newNodeMap;
+
+  for (auto node : toRetain) {
+    set<Node*> newSucc;
+    for (auto succ : node->successors) {
+      if (contains(toRetain, succ) ) {
+        newSucc.insert(succ);
+      }
+    }
+    node->successors = newSucc;
+    newNodeMap[node->id] = node;
+  }
+
+  g->nodes = move(newNodeMap);
+}
+
 
 // Extracts one component from graph, removes those edges and nodes from the graph
 Component partitionComponent(Graph* graph) {

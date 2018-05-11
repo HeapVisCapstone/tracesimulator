@@ -1,60 +1,210 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Zoomable Treemaps</title>
 <style>
 
-#chart {
-  width: 960px;
-  height: 500px;
-  background: #ddd;
-}
-
 text {
-  pointer-events: none;
+  font: 10px sans-serif;
 }
 
-.grandparent text {
-  font-weight: bold;
+tspan:last-child {
+  font-size: 9px;
+  fill-opacity: 0.8;
 }
 
-rect {
-  fill: none;
-  stroke: #fff;
+.node rect {
+  shape-rendering: crispEdges;
 }
 
-rect.parent,
-.grandparent rect {
-  stroke-width: 2px;
-}
-
-.grandparent rect {
-  fill: orange;
-}
-
-.grandparent:hover rect {
-  fill: #ee9700;
-}
-
-.children rect.parent,
-.grandparent rect {
-  cursor: pointer;
-}
-
-.children rect.parent {
-  fill: #bbb;
-  fill-opacity: .5;
-}
-
-.children:hover rect.child {
-  fill: #bbb;
+.node--hover rect {
+  stroke: #000;
 }
 
 </style>
+<svg width="1500" height="800"></svg>
+<script src="//d3js.org/d3.v4.0.0-alpha.35.min.js"></script>
+<script>
 
-<h1>Zoomable Treemaps</h1>
+var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height");
 
-<p id="chart">
+var format = d3.format(",d");
+
+var color = d3.scaleMagma()
+    .domain([-4, 4]);
+
+var stratify = d3.stratify()
+    .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
+
+var treemap = d3.treemap()
+    .size([width, height])
+    .paddingOuter(3)
+    .paddingTop(19)
+    .paddingInner(1)
+    .round(true);
+
+function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+var file = getParameterByName("file")
 
 
-<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+d3.json("../json/"+file, function(error, data) {
+  if (error) throw error;
+
+  console.log(data)
+
+
+  function trim(node, depth) {
+      if (node.children) {
+        if (depth > 0) {
+          node.children.forEach((d) => trim(d, depth - 1))
+        } else {
+          node.children = []
+        }
+      }
+  }
+
+  // consolidates a nodes children
+  function consolidate(node, cutoff) {
+    if (node.children) {
+
+      var small = node.children.filter((d) => d.size <= cutoff)
+      var large = node.children.filter((d) => d.size >  cutoff)
+
+      large.forEach((d) => consolidate(d, cutoff))
+
+      if (small.length > 0) {
+
+        var sum = 0;
+        small.forEach((d) => sum = sum + (+d.size))
+
+        console.log("SMALL", small)
+        var newnode = {
+          id : "Other"
+        , size : sum
+        , children : []
+        }
+
+        large.push(newnode)
+        node.children = large
+      }
+    }
+  }
+
+  consolidate(data, 100000)
+
+  console.log(data)
+  // trim(data, 1)
+
+  var root = d3.hierarchy(data, (d) => d.children)
+      .each(d => d.value = +d.data.size)
+      // .sum(function(d) { return d.size; })
+      .sort(function(a, b) { return b.height - a.height || b.value - a.value; });
+
+  console.log(root)
+
+  treemap(root);
+
+  var cell = svg
+    .selectAll(".node")
+    .data(root.descendants())
+    .enter().append("g")
+      .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; })
+      .attr("class", "node")
+      .each(function(d) { d.node = this; })
+      .on("mouseover", hovered(true))
+      .on("mouseout", hovered(false));
+
+  cell.append("rect")
+      .attr("id", function(d) { return "rect-" + d.id; })
+      .attr("width", function(d) { return d.x1 - d.x0; })
+      .attr("height", function(d) { return d.y1 - d.y0; })
+      .style("fill", function(d) { return color(d.depth); });
+
+  cell.append("clipPath")
+      .attr("id", function(d) { return "clip-" + d.id; })
+    .append("use")
+      .attr("xlink:href", function(d) { return "#rect-" + d.id + ""; });
+
+  var label = cell.append("text")
+      .attr("clip-path", function(d) { return "url(#clip-" + d.id + ")"; });
+
+  label
+    .filter(function(d) { return d.children && d.value > 200000; })
+    .selectAll("tspan")
+      .data(function(d) { 
+        console.log(d)
+        var name = d.data.id
+        return name.substring(name.lastIndexOf("/") + 1).split(/(?=[A-Z][^A-Z])/g).concat("\xa0" + format(d.value)); })
+    .enter().append("tspan")
+      .attr("x", function(d, i) { return i ? null : 4; })
+      .attr("y", 13)
+      .text(function(d) { return d; });
+
+  label
+    .filter(function(d) { return !d.children && d.value > 200000; })
+    .selectAll("tspan")
+      .data(function(d) { 
+        var name = d.data.id
+        return name.substring(name.lastIndexOf("/") + 1).split(/(?=[A-Z][^A-Z])/g).concat(format(d.value)); })
+    .enter().append("tspan")
+      .attr("x", 4)
+      .attr("y", function(d, i) { return 13 + i * 10; })
+      .text(function(d) { return d; });
+
+  cell.append("title")
+      .text(function(d) { return d.data.id + "\n" + format(d.value); });
+});
+
+function hovered(hover) {
+  return function(d) {
+    d3.selectAll(d.ancestors().map(function(d) { return d.node; }))
+        .classed("node--hover", hover)
+      .select("rect")
+        .attr("width", function(d) { return d.x1 - d.x0 - hover; })
+        .attr("height", function(d) { return d.y1 - d.y0 - hover; });
+  };
+}
+
+</script> 
+
+<!-- <!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 960px;
+}
+form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.node {
+  border: solid 1px white;
+  font: 10px sans-serif;
+  line-height: 12px;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 2px;
+}
+</style>
+<form>
+  <label><input type="radio" name="mode" value="size" checked> Size</label>
+  <label><input type="radio" name="mode" value="count"> Count</label>
+</form>
+<script src="//d3js.org/d3.v4.min.js"></script>
 <script src="treemap.js"></script>
+
+ -->

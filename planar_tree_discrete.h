@@ -109,9 +109,10 @@ struct DPInfo {
 
 
 template <typename D>
-RollupNode<DPInfo<D>>* lower(const DPNode<D>& n) {
+RollupNode<DPInfo<D>>* lower(const DPNode<D> *n) {
+
     const DPLayer<D>* layer;
-    if ((layer = dynamic_cast<const DPLayer<D>*>(&n))) {
+    if ((layer = dynamic_cast<const DPLayer<D>*>(n))) {
         // Process layer
         auto info = DPInfo<D> { layer->data
                               , layer->p0
@@ -121,14 +122,14 @@ RollupNode<DPInfo<D>>* lower(const DPNode<D>& n) {
         auto rnode = node(layer->id, info);
         for (auto c : layer->children) {
             if (c)
-                rnode->addChild(lower(*c));
+                rnode->addChild(lower(c));
         }
 
         return rnode;
     }
 
     const DPLeaf<D>* l;
-    if ((l = dynamic_cast<const DPLeaf<D>*>(&n))) {
+    if ((l = dynamic_cast<const DPLeaf<D>*>(n))) {
         auto info = DPInfo<D> { l->data
                               , l->p0
                               , Point(1, 1)
@@ -137,7 +138,7 @@ RollupNode<DPInfo<D>>* lower(const DPNode<D>& n) {
         // Process leaf
     }
 
-    assert(true);
+    assert(false);
     return nullptr;
 
 } 
@@ -150,7 +151,7 @@ RollupNode<DPInfo<D>>* lower(const DPNode<D>& n) {
  *********************************************************************/
 
 template <typename D, typename EncodingFn>
-boost::property_tree::ptree ptreeOf(const DPNode<D>& n,
+boost::property_tree::ptree ptreeOf(const DPNode<D>* n,
                                     EncodingFn writeData) {
     auto encodeInfo = [&](const DPInfo<D>& d) {
                             boost::property_tree::ptree pt;
@@ -170,6 +171,7 @@ boost::property_tree::ptree ptreeOf(const DPNode<D>& n,
     return ptree;
 
 }
+
 
 
 
@@ -246,6 +248,32 @@ DPNode<D>* partitionBy( std::vector<DPLeaf<D>*> points
     return nullptr;
   }
 }
+
+template <typename D, typename Aggregator>
+DPNode<D>* partitionOne( std::vector<DPLeaf<D>*> points
+                       , Aggregator aggregate) {
+
+    int ymax = 0 , xmax = 0;
+    for (auto p : points) {
+      ymax = max(p->p0.y, ymax);
+      xmax = max(p->p0.x, xmax);
+    }
+
+    std::vector<DPNode<D>*> children;
+    for (auto leaf : points) {
+      if (leaf)
+        children.push_back(leaf);
+    }
+
+
+    auto layer = new DPLayer<D>( Point(0, 0), Point(xmax, ymax)
+                               , "root"
+                               , aggregate(children));
+    layer->children = std::move(children);
+    return layer;
+
+}
+
 
 
 

@@ -4,6 +4,7 @@
 #include <set>
 #include <algorithm>
 #include <iterator>
+#include <functional>
 
 #include "heap.h"
 using namespace std;
@@ -44,6 +45,10 @@ Graph makeGraph(HeapState& heap);
 // Removes all nodes with order less equal tothan n
 // Side effects other nodes to remove broken edges to trimmed nodes
 void trimGraph(Graph* g, int n);
+
+using Predicate = function<bool(NodeID)>;
+void filterGraph(Graph* g, Predicate p);
+
 
 // Extracts one component from graph, removes those edges and nodes from the graph
 Component partitionComponent(Graph* graph);

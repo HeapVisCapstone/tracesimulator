@@ -354,7 +354,10 @@ std::pair<Eigen::MatrixXd, std::map<int, int>> build_dist_matrix(Component compn
 	}
 
 
-
+	// for (int i = 0; i < nnodes; i++)
+	// 	for (int j = 0; j < nnodes; j++)
+	// 		if (i != j)
+	// 			distances(i, j) += 50; 
 
 	delete [] idx;
 	delete [] ids;

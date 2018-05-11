@@ -121,6 +121,13 @@ int main(int argc, char *argv[]) {
   cout << "AFTER TRIM GRAPH #: " << gTrim.nodes.size() << endl;
 
 
+  filterGraph(&gTrim, [&](NodeID id) {
+    return Heap.get(id)->getType() == "LConcurrentBST$Node;"
+        or Heap.get(id)->getType() == "LConcurrentBST;";
+  });
+
+
+
   auto components = allComponents(&gTrim);
   cout << "COMPONENT #: " << components.size() << endl;
 
@@ -205,21 +212,15 @@ int main(int argc, char *argv[]) {
   }
 
 
-    Point initial =  Point(0, 0);
-    Point distance = Point(xMax, yMax);
-    Range scale    = Range(10000, 10000);
 
-
-  auto root = partitionBy( leaves
-                         , initial
-                         , distance
-                         , scale
-                         , AggregateData);
+  auto root = partitionOne( leaves, AggregateData);
 
   ofstream outfile;
   outfile.open(argv[2]);
 
-  auto ptree = ptreeOf(*root, writePT);
+
+  assert(root);
+  auto ptree = ptreeOf(root, writePT);
 
   write_json(outfile, ptree);
 
